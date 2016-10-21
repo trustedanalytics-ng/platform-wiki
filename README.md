@@ -1,4 +1,4 @@
-Here are links to edit the documentation pages:
+Here are links to edit the documentation pages: **Do not edit the meta data in the table at the top of each page!** 
 
 ##Use Case Examples
 
