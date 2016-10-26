@@ -22,4 +22,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ![EditName_ICON_DataCatalog.jpg]({{site.baseurl}}/pages/mydoc/EditName_ICON_DataCatalog.jpg)
 
 
-{% include links.html %}
+
