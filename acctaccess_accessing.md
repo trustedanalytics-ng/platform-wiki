@@ -19,15 +19,16 @@ Example External Link: [http://idratherbewriting.com](http://idratherbewriting.c
 
 Example Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-### Example List Items
-
-
-
 ### Example Image:
 
 You must first upload the image you want to display into the "images" folder in this repository then use the following example to embed your image:
 
 ![EditField_DataCatalog.jpg](/images/EditField_DataCatalog.jpg)
+
+### Markdown Cheatsheet
+
+Below is a link to the Github Markdown Cheatsheet 
+[https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 
 
