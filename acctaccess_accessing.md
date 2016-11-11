@@ -31,7 +31,7 @@ TAP then displays a confirmation screen (shown below). Click on the login link i
 
 ![Account Creation Confirmation](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/images/Onboard_Confirm_Screen_v7_Crpd.png)
 
-For more information about organizations and spaces, [go here](https://docs.cloudfoundry.org/concepts/roles.html).
+For more information about organizations and spaces, [go here](https://docs.cloudfoundry.org/concepts/roles.html) (Cloud Foundry page).
 
 # Responding to an initial organization/space invite
 
@@ -47,7 +47,7 @@ TAP then displays a confirmation screen (shown below). Click on the login link i
 
 ![Account Creation Confirmation](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/images/Onboard_Confirm_Screen_v7_Crpd.png)
 
-For more information about organizations and spaces, [go here](https://docs.cloudfoundry.org/concepts/roles.html).
+For more information about organizations and spaces, [go here](https://docs.cloudfoundry.org/concepts/roles.html) (Cloud Foundry page).
 
 >If you *already* have a TAP user account, then when a system admin or organization/space owner adds you to organizations/spaces, you will *not* receive an email invite. It is the responsibility of the system admin or organization/space owner to notify you of these additions.
 
