@@ -29,7 +29,7 @@ TAP creates a platform  account with your email address as a login name. TAP als
 
 TAP then displays a confirmation screen (shown below). Click on the login link in the confirmation screen to log into the platform. (Remember to save the login link for future use.)
 
-![Account Creation Confirmation](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/images/Onboard_Confirm_Screen_v7_Crpd.png)
+![Account Creation Confirmation](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/images/Signon_Screen_v7_Crpd.jpg)
 
 For more information about organizations and spaces, [go here](https://docs.cloudfoundry.org/concepts/roles.html).
 
@@ -55,4 +55,4 @@ For more information about organizations and spaces, [go here](https://docs.clou
 
 Once you have a TAP account, you can log in using the following screen:
 
-![Ongoing User Access TAP](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/Signon_Screen_v7_Cropped.jpg)
+![Ongoing User Access TAP](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/images/Signon_Screen_v7_Crpd.jpg)
