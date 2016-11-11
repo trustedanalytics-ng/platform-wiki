@@ -13,22 +13,46 @@ folder: mydoc
 published: true
 ---
 
-## Accessing Your Account
+This page shows you how to respond to an initial TAP platform invitation and an initial invitation to an organization/space. It also covers ongoing TAP login.
 
-Insert content here: [http://idratherbewriting.com](http://idratherbewriting.com). Use Markdown format.
+# Initial user access to platform
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Initial access to the *platform*, along with the request to create an organization, is available only by invitation from a system admin. Contact your system admin for this type of platform invitation. (See the next topic for the other type of invite, which does *not* include the request to create an organization.)
 
-### Example Image:
+After receiving a TAP invitation email from the admin, click on the link inside the email. This lands you on the registration page shown below, where you specify your TAP password and create/name an organization.
 
-You must first upload the image you want to display into the "images" folder in this repository then use the following example to embed your image:
+![User Name Password With Organization Creation TAP](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/Onboard_Invite_Screen_v7.jpg)
 
-![EditField_DataCatalog.jpg](/images/EditField_DataCatalog.jpg)
+Enter your password choice (twice) and the name you choose for your organization, select the Terms of Service checkbox, and click **Create account**. 
 
-### Markdown Cheatsheet
+TAP creates a platform  account with your email address as a login name. TAP also creates an organization associated with your account, with a default space under the organization (named `default`).
 
-Below is a link to the Github Markdown Cheatsheet 
-[https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+TAP then displays a confirmation screen (shown below). Click on the login link in the confirmation screen to log into the platform. (Remember to save the login link for future use.)
 
-My Edit Here
+![Account Creation Confirmation](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/Onboard_Confirmation_v7_Cropped.png)
 
+For more information about organizations and spaces, [go here](https://docs.cloudfoundry.org/concepts/roles.html).
+
+# Responding to an initial organization/space invite
+
+If you are *not* a member of the platform yet, an organization/space owner can invite you to an existing organization or space, which *also* invites you to the platform. After receiving the email invite and clicking on the link in the email, you will land on the registration page below.
+
+![Ongoing User Access TAP](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/OrgSpace_Invite_Screen_v7_Cropped.jpg)
+
+Enter your password choice (twice), select the Terms of Service checkbox, and click **Create account**.
+
+TAP creates your platform account and gives you access to the organization you were invited to.
+
+TAP then displays a confirmation screen (shown below). Click on the login link in the confirmation screen to log into the platform. (Remember to save the login link for future use.)
+
+![Account Creation Confirmation](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/Onboard_Confirmation_v7_Cropped.png)
+
+For more information about organizations and spaces, [go here](https://docs.cloudfoundry.org/concepts/roles.html).
+
+>If you *already* have a TAP user account, then when a system admin or organization/space owner adds you to organizations/spaces, you will *not* receive an email invite. It is the responsibility of the system admin or organization/space owner to notify you of these additions.
+
+# Ongoing user access
+
+Once you have a TAP account, you can log in using the following screen:
+
+![Ongoing User Access TAP](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/Signon_Screen_v7_Cropped.jpg)
