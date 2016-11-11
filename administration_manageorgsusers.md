@@ -86,12 +86,12 @@ Here are the steps to delete a user from an existing organization:
 1. Navigate to **Manage organization users** (or **Manage space users**).
 
 2. Choose the organization (and space) to manage from the dropdown menu in the upper right of the screen, as shown below:
-![](/images/Space_Selection_v7_Cropped.PNG)
+![](/images/Space_Selection_v7_Crpd.PNG)
 
 3. Click the **x** (delete symbol) next to user you wish to delete.
 
 4. Confirm the deletion.
-![](/images/Delete_User_Organization_v7_Cropped.png)
+![](/images/Delete_User_Organization_v7_Crpd.png)
 
 5. TAP deletes the organization (or space) and displays a confirmation message in the upper right of the screen. Refresh your browser after several seconds to see the deletion reflected on the screen.
 
