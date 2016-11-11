@@ -11,14 +11,18 @@ folder: mydoc
 published: true
 ---
 
-## Inviting User to a TAP Instance
+The TAP user interface allows system admins to invite new users to the platform along with a request to create an organization. (For information on inviting users to existing organizations and spaces, [go here](https://github.com/trustedanalytics/platform-wiki-0.7/wiki/0.7-Managing-organizations-spaces-and-users).)
 
-Insert content here: [http://idratherbewriting.com](http://idratherbewriting.com). Use Markdown format.
+# Inviting a user to the platform
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+To invite a new user to the platform, perform the following steps:
 
-### Example Image:
+1. Log into TAP as system admin.
 
-You must first upload the image you want to display into the "images" folder in this repository then use the following example to embed your image:
+9. Navigate to **User Management** and choose the **Onboarding** tab. 
+![](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/Onboard_Invite_User_v7_Cropped.png)
 
-![EditField_DataCatalog.jpg](/images/EditField_DataCatalog.jpg)
+9. Enter the e-mail address of the user you want to invite and click **Send invitation**.
+
+Invited users receive an email with a link to the registration page, where they specify their own password and create/name their own organization. To see this flow from the user’s perspective, [go here](https://github.com/trustedanalytics/platform-wiki-0.7/wiki/0.7-Accessing-your-user-account).
+
