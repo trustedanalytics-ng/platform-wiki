@@ -4,7 +4,7 @@ keywords: platform administration
 last_updated: 'October, 2016'
 tags:
   - Platform Administration
-summary: Insert the summary paragraph here.  To edit the summary you must edit the meta data for this post. 
+summary: How to create new orgs, invite users, delete orgs and users. 
 sidebar: mydoc_sidebar
 permalink: administration_manageorgsusers.html
 folder: mydoc
@@ -26,7 +26,7 @@ Here are the steps to create a new organization:
 3. Specify a name for the organization in the **Name** field.
 
 4. Click the **Add organization** button.
-![](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/Add_Organization_v7_Cropped.png)
+![](/images/Add_Organization_v7_Crpd.png)
 
 5. TAP creates the organization and displays a confirmation message in the upper right of the screen.
 
@@ -45,7 +45,7 @@ Here are the steps to delete an existing organization:
 3. Select the organization you wish to delete on the left side.
 
 4. Click the red **Delete organization** button on the lower right side.
-![](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/Delete_Organization_v7_Cropped.png)
+![](/images/Delete_Organization_v7_Crpd.png)
 
 5. Confirm the deletion.
 
@@ -60,7 +60,7 @@ Here are the steps to invite a user to an existing organization:
 1. Navigate to **User management** and click on **Manage organization users**.
 
 2. Choose an organization from the dropdown menu at the upper right of the screen.
-![](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/Organization_Selection_v7_Cropped.png)
+![](/images/Organization_Selection_v7_Crpd.png)
 
 3. Choose the **Add user** tab.
 
@@ -69,11 +69,11 @@ Here are the steps to invite a user to an existing organization:
 5. The only role available is the TBD role.
 
 6. Click the **Add user** button.
-![](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/Add_User_v7_Cropped.png)
+![](/images/Add_User_v7_Crpd.png)
 
 For existing platform users, TAP will notify you that the user has been added to the organization. But *you must notify the user* of this addition, as TAP does *not* send any notifications.
 
-If the user does *not* yet have a TAP account, TAP sends an email invitation to the user. For the user view of this process, read Responding to an Initial Organization/Space Invite [here](https://github.com/trustedanalytics/platform-wiki-0.7/wiki/0.7-Accessing-your-user-account).
+If the user does *not* yet have a TAP account, TAP sends an email invitation to the user. For the user view of this process, read Responding to an Initial Organization/Space Invite [here](accessing_account.md).
 
 For more information about organizations, [go here](https://docs.cloudfoundry.org/concepts/roles.html) (Cloud Foundry page).
 
@@ -86,12 +86,12 @@ Here are the steps to delete a user from an existing organization:
 1. Navigate to **Manage organization users** (or **Manage space users**).
 
 2. Choose the organization (and space) to manage from the dropdown menu in the upper right of the screen, as shown below:
-![](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/Space_Selection_v7_Cropped.PNG)
+![](/images/Space_Selection_v7_Cropped.PNG)
 
 3. Click the **x** (delete symbol) next to user you wish to delete.
 
 4. Confirm the deletion.
-![](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/Delete_User_Organization_v7_Cropped.png)
+![](/images/Delete_User_Organization_v7_Cropped.png)
 
 5. TAP deletes the organization (or space) and displays a confirmation message in the upper right of the screen. Refresh your browser after several seconds to see the deletion reflected on the screen.
 
