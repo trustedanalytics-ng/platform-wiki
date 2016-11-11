@@ -21,7 +21,7 @@ Initial access to the *platform*, along with the request to create an organizati
 
 After receiving a TAP invitation email from the admin, click on the link inside the email. This lands you on the registration page shown below, where you specify your TAP password and create/name an organization.
 
-![User Name Password With Organization Creation TAP](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/Onboard_Invite_Screen_v7.jpg)
+![User Name Password With Organization Creation TAP](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/images/Onboard_Invite_Screen_v7_Crpd.jpg)
 
 Enter your password choice (twice) and the name you choose for your organization, select the Terms of Service checkbox, and click **Create account**. 
 
@@ -29,7 +29,7 @@ TAP creates a platform  account with your email address as a login name. TAP als
 
 TAP then displays a confirmation screen (shown below). Click on the login link in the confirmation screen to log into the platform. (Remember to save the login link for future use.)
 
-![Account Creation Confirmation](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/Onboard_Confirmation_v7_Cropped.png)
+![Account Creation Confirmation](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/images/Onboard_Confirm_Screen_v7_Crpd.png)
 
 For more information about organizations and spaces, [go here](https://docs.cloudfoundry.org/concepts/roles.html).
 
@@ -37,7 +37,7 @@ For more information about organizations and spaces, [go here](https://docs.clou
 
 If you are *not* a member of the platform yet, an organization/space owner can invite you to an existing organization or space, which *also* invites you to the platform. After receiving the email invite and clicking on the link in the email, you will land on the registration page below.
 
-![Ongoing User Access TAP](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/OrgSpace_Invite_Screen_v7_Cropped.jpg)
+![Ongoing User Access TAP](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/images/OrgSpace_Invite_Screen_v7_Crpd.jpg)
 
 Enter your password choice (twice), select the Terms of Service checkbox, and click **Create account**.
 
@@ -45,7 +45,7 @@ TAP creates your platform account and gives you access to the organization you w
 
 TAP then displays a confirmation screen (shown below). Click on the login link in the confirmation screen to log into the platform. (Remember to save the login link for future use.)
 
-![Account Creation Confirmation](https://github.com/trustedanalytics/platform-wiki/blob/master/wikiImages/Onboard_Confirmation_v7_Cropped.png)
+![Account Creation Confirmation](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/images/Onboard_Confirm_Screen_v7_Crpd.png)
 
 For more information about organizations and spaces, [go here](https://docs.cloudfoundry.org/concepts/roles.html).
 
