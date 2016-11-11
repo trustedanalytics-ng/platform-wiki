@@ -73,7 +73,7 @@ Here are the steps to invite a user to an existing organization:
 
 For existing platform users, TAP will notify you that the user has been added to the organization. But *you must notify the user* of this addition, as TAP does *not* send any notifications.
 
-If the user does *not* yet have a TAP account, TAP sends an email invitation to the user. For the user view of this process, read Responding to an Initial Organization/Space Invite [here](/accessing_account.md).
+If the user does *not* yet have a TAP account, TAP sends an email invitation to the user. For the user view of this process, read Responding to an Initial Organization/Space Invite [here](acctaccess_accessing.md).
 
 For more information about organizations, [go here](https://docs.cloudfoundry.org/concepts/roles.html) (Cloud Foundry page).
 
@@ -93,6 +93,6 @@ Here are the steps to delete a user from an existing organization:
 4. Confirm the deletion.
 ![](/images/Delete_User_Organization_v7_Crpd.png)
 
-5. TAP deletes the organization (or space) and displays a confirmation message in the upper right of the screen. Refresh your browser after several seconds to see the deletion reflected on the screen.
+5. TAP deletes the organization and displays a confirmation message in the upper right of the screen. Refresh your browser after several seconds to see the deletion reflected on the screen.
 
 >This only deletes the user from the organization; their user account still exists at the platform level.
