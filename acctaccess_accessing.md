@@ -59,3 +59,4 @@ Once you have a TAP account, you can log in using the following screen:
 
 If you have access to more than one organization, remember to select the organization you want to work in before starting work. You do this using the dropdown menu in the upper right of the TAP Console, as shown below:
 
+![](/images/Organization_Selection_v7_Crpd.png)
