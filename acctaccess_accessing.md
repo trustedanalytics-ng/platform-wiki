@@ -56,3 +56,6 @@ For more information about organizations, [go here](future link).
 Once you have a TAP account, you can log in using the following screen:
 
 ![Ongoing User Access TAP](/images/Signon_Screen_v7_Crpd.jpg)
+
+If you have access to more than one organization, remember to select the organization you want to work in before starting work. You do this using the dropdown menu in the upper right of the TAP Console, as shown below:
+
