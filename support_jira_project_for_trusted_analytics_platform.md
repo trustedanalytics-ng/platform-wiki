@@ -11,7 +11,7 @@ folder: mydoc
 published: true
 ---
 
-# JIRA Project
+## JIRA Project
 To ease TAP development and use, a JIRA project for TAP has been created.  
 
 > See https://trustedanalytics.atlassian.net to submit issues/requests now.
@@ -28,7 +28,7 @@ You can view JIRA entries as an anonymous user (you don't need to register as a 
 
 However, to create JIRA items (defects, change requests, etc.) you will need to register as a user in the project JIRA.
 
-#Contribution to the project
+## Contribution to the project
 If you want to contribute to project, to see all defects and features, and/or to enter new issues, register as follows:
 
 1. Visit https://trustedanalytics.atlassian.net
@@ -38,7 +38,7 @@ If you want to contribute to project, to see all defects and features, and/or to
  
 Once you log in using your new credentials, you can see all issues and create new ones.
 
-##Entering new defect on JIRA project
+### Entering new defect on JIRA project
 Entering a new defect to Trusted Analytics means you create an issue in JIRA project that describes that issue. This is easily done using the **Create** button on the main menu bar at the top of the page.
 
 To enter a new defect, follow these steps:
