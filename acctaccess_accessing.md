@@ -23,7 +23,7 @@ After receiving a TAP invitation email from the admin, click on the link inside 
 
 ![User Name Password With Organization Creation TAP](/images/Onboard_Invite_Screen_v7_Crpd.jpg)
 
-Enter your password choice (twice) and the name you choose for your organization, select the Terms of Service checkbox, and click **Create account**. 
+Enter your password choice (twice) and the name you choose for your organization, select the Terms of Service checkbox, and click **Create account**. (It's a good idea to read the Terms of Service.)
 
 TAP creates a platform  account with your email address as a login name. TAP also creates an organization associated with your account, with a default space under the organization (named `default`).
 
