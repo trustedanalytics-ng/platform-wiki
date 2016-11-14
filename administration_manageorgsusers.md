@@ -1,7 +1,7 @@
 ---
 title: Platform Administration
 keywords: platform administration
-last_updated: 'October, 2016'
+last_updated: 'November, 2016'
 tags:
   - Platform Administration
 summary: How to create new orgs, invite users, delete orgs and users. 
