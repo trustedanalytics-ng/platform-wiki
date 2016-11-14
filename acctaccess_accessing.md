@@ -1,12 +1,11 @@
 ---
 title: Account Access
-keywords: TAP enabling IOT
-last_updated: 'October, 2016'
+keywords: account access login
+last_updated: 'November, 2016'
 tags:
   - account_access
 summary: >-
-  Insert the summary paragraph here.  To edit the summary you must edit the meta
-  data for this post.
+  Logging into your TAP account
 sidebar: mydoc_sidebar
 permalink: acctaccess_accessing.html
 folder: mydoc
