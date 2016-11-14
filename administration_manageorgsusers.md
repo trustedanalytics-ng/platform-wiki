@@ -13,7 +13,7 @@ published: true
 
 This page shows you how to create a new organization, how to invite users to an existing organization, and how to delete organizations (and users from organizations).
 
-# Adding a new organization
+## Adding a new organization
 
 > You must be a system admin to do this.
 
@@ -32,7 +32,7 @@ Here are the steps to create a new organization:
 
 For more information about organizations, go [here](future link).
 
-# Deleting an organization
+## Deleting an organization
 
 > You must be a system admin to do this.
 
@@ -51,7 +51,7 @@ Here are the steps to delete an existing organization:
 
 6. TAP deletes the organization and displays a confirmation message in the upper right of the screen. Refresh your browser after several seconds to see the deletion reflected on the screen.
 
-#Adding users to an organization
+##Adding users to an organization
 
 > System admins can add users to any organization. Others can add users to organizations they manage. If the user does *not* already have a user account on the platform, TAP generates an invitation email to the user.
 
@@ -77,7 +77,7 @@ If the user does *not* yet have a TAP account, TAP sends an email invitation to 
 
 For more information about organizations, [go here](future link).
 
-#Deleting users from an organization
+##Deleting users from an organization
 
 > System admins can delete users from any organization. Others can delete users from organizations they manage.
 
