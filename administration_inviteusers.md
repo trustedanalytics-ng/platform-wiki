@@ -11,7 +11,7 @@ folder: mydoc
 published: true
 ---
 
-The TAP user interface allows system admins to invite new users to the platform along with a request to create an organization. (For information on inviting users to existing organizations and spaces, [go here](administration_manageorgsusers.md).)
+The TAP user interface allows system admins to invite new users to the platform along with a request to create an organization. (For information on inviting users to existing organizations, [go here](administration_manageorgsusers.md).)
 
 # Inviting a user to the platform
 
