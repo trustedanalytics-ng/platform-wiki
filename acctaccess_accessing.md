@@ -16,7 +16,7 @@ This page shows you how to respond to an initial TAP platform invitation and an 
 
 # Initial user access to platform
 
-Initial access to the *platform*, along with the request to create an organization, is available only by invitation from a system admin. Contact your system admin for this type of platform invitation. (See the next topic for the other type of invite, which does *not* include the request to create an organization.)
+Initial access to the *platform*, along with the request to create an organization, is available only by invitation from a system admin. Contact your system admin for this type of platform invitation. (See [the next topic](#Responding to an initial organization invite) for the other type of invite, which does *not* include the request to create an organization.)
 
 After receiving a TAP invitation email from the admin, click on the link inside the email. This lands you on the registration page shown below, where you specify your TAP password and create and name an organization.
 
@@ -32,7 +32,7 @@ TAP then displays a confirmation screen (shown below). Click on the login link i
 
 For more information about organizations, [go here](future link).
 
-# Responding to an initial organization/space invite
+# Responding to an initial organization invite
 
 If you are *not* a member of the platform yet, an organization owner can invite you to an existing organization, which *also* invites you to the platform. After receiving the email invite and clicking on the link in the email, you will land on the registration page below.
 
