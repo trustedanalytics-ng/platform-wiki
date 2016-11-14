@@ -19,7 +19,7 @@ This page shows you how to respond to an initial TAP platform invitation and an 
 
 Initial access to the *platform*, along with the request to create an organization, is available only by invitation from a system admin. Contact your system admin for this type of platform invitation. (See the next topic for the other type of invite, which does *not* include the request to create an organization.)
 
-After receiving a TAP invitation email from the admin, click on the link inside the email. This lands you on the registration page shown below, where you specify your TAP password and create/name an organization.
+After receiving a TAP invitation email from the admin, click on the link inside the email. This lands you on the registration page shown below, where you specify your TAP password and create and name an organization.
 
 ![User Name Password With Organization Creation TAP](/images/Onboard_Invite_Screen_v7_Crpd.jpg)
 
@@ -35,11 +35,11 @@ For more information about organizations, [go here](future link).
 
 # Responding to an initial organization/space invite
 
-If you are *not* a member of the platform yet, an organization/space owner can invite you to an existing organization or space, which *also* invites you to the platform. After receiving the email invite and clicking on the link in the email, you will land on the registration page below.
+If you are *not* a member of the platform yet, an organization owner can invite you to an existing organization, which *also* invites you to the platform. After receiving the email invite and clicking on the link in the email, you will land on the registration page below.
 
 ![Ongoing User Access TAP](/images/OrgSpace_Invite_Screen_v7_Crpd.jpg)
 
-Enter your password choice (twice), select the Terms of Service checkbox, and click **Create account**.
+Enter your password choice (twice), select the Terms of Service checkbox, and click **Create account**. (It's a good idea to read the Terms of Service.)
 
 TAP creates your platform account and gives you access to the organization you were invited to.
 
@@ -49,7 +49,7 @@ TAP then displays a confirmation screen (shown below). Click on the login link i
 
 For more information about organizations, [go here](future link).
 
->If you *already* have a TAP user account, then when a system admin or organization/space owner adds you to organizations/spaces, you will *not* receive an email invite. It is the responsibility of the system admin or organization/space owner to notify you of these additions.
+>If you *already* have a TAP user account, then when a system admin or organization owner adds you to organizations, you will *not* receive an email invite. It is the responsibility of the system admin or organization owner to notify you of these additions.
 
 # Ongoing user access
 
