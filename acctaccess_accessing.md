@@ -30,7 +30,7 @@ TAP then displays a confirmation screen (shown below). Click on the login link i
 
 ![Account Creation Confirmation](images/Onboard_Confirm_Screen_v7_Crpd.png)
 
-For more information about organizations, [go here](future link).
+For more information about organizations, [go here](/administration_orgsusersrolespermissions.md).
 
 ## <a name="Responding">Responding to an initial organization invite
 
@@ -46,7 +46,7 @@ TAP then displays a confirmation screen (shown below). Click on the login link i
 
 ![Account Creation Confirmation](/images/Onboard_Confirm_Screen_v7_Crpd.png)
 
-For more information about organizations, [go here](future link).
+For more information about organizations, [go here](/administration_orgsusersrolespermissions.md).
 
 >If you *already* have a TAP user account, then when a system admin or organization owner adds you to organizations, you will *not* receive an email invite. It is the responsibility of the system admin or organization owner to notify you of these additions.
 
