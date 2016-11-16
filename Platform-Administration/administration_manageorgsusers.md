@@ -73,7 +73,7 @@ Here are the steps to invite a user to an existing organization:
 
 For existing platform users, TAP will notify you that the user has been added to the organization. But *you must notify the user* of this addition, as TAP does *not* send any notifications.
 
-If the user does *not* yet have a TAP account, TAP sends an email invitation to the user. For the user view of this process, read Responding to an Initial Organization Invite [here](acctaccess_accessing.md).
+If the user does *not* yet have a TAP account, TAP sends an email invitation to the user. For the user view of this process, read Responding to an Initial Organization Invite [here](/Account-Access/acctaccess_accessing.md).
 
 For more information about organizations, go [here](/administration_orgsusersrolespermissions.md).
 
