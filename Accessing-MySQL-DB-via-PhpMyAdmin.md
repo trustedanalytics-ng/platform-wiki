@@ -35,7 +35,7 @@ Proceed as follows:
 
     `cf env <the name of your instance of PhpMyAdmin>`
 
- !Getting_Credentials_for_MySQL[](/images/platform-getting-credentials-for-mysql.png)
+ ![Getting_Credentials_for_MySQL](/images/MySQL_Getting_Credentials_MyPhpAdmin_v7.png)
 
 9. Get the credentials for your MySQL DB.
 
