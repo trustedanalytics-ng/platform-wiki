@@ -13,7 +13,7 @@ published: true
 
 ## Enabling Hue
 
-TAP uses Hue, which is an open-source Web interface for analyzing data with Hadoop and Spark. For more information on HUE, see http://gethue.com. 
+TAP uses Hue, which is an open-source Web interface, for analyzing data with Hadoop and Spark. For more information on HUE, see http://gethue.com. 
 
 To enable HUE on TAP, follow these instructions:
 
