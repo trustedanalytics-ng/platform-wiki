@@ -30,7 +30,7 @@ Here are the steps to create a new organization:
 
 5. TAP creates the organization and displays a confirmation message in the upper right of the screen.
 
-For more information about organizations, go [here](/administration_orgsusersrolespermissions.md).
+For more information about organizations, go [here](administration_orgsusersrolespermissions.md).
 
 ## Deleting an organization
 
@@ -75,7 +75,7 @@ For existing platform users, TAP will notify you that the user has been added to
 
 If the user does *not* yet have a TAP account, TAP sends an email invitation to the user. For the user view of this process, read Responding to an Initial Organization Invite [here](/Account-Access/acctaccess_accessing.md).
 
-For more information about organizations, go [here](/administration_orgsusersrolespermissions.md).
+For more information about organizations, go [here](administration_orgsusersrolespermissions.md).
 
 ##Deleting users from an organization
 
