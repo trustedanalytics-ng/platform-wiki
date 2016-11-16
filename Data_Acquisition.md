@@ -23,7 +23,7 @@ At its basic implementation, the DAS process can be divided into four independen
 
 This is an outline of the data acquisition functionality. The DAS repository can be found at [https://github.com/trustedanalytics/data-acquisition](https://github.com/trustedanalytics/data-acquisition).
 
-![](DAS/Das.png)
+![DAS Flow](/images/DAS_Flow_v7.png)
 
 ## Kafka
 All internal communications in DAS uses Kafka. If you are not familiar with Kafka, check the Kafka [website](http://kafka.apache.org/).
@@ -37,7 +37,7 @@ Kafka is a distributed, partitioned, replicated commit log service. It provides 
 
 
 #### Messages flow
-![DAS Downloader](DAS/downloader.png)
+![DAS Downloader](/images/DAS_Downloader_v7.png)
 
 **Description**
 * **Kafka client:** Communication API with Kafka. Consuming messages – looks like high level consumer will do: https://cwiki.apache.org/confluence/display/KAFKA/Consumer+Group+Example. Due to idempotent services and Status manager, we do not need to handle request retransmissions/request loss.
@@ -50,4 +50,4 @@ uServices should be atomic and idempotent. As a result, they can be invoked as m
 
 #### Request’s status lifecycle
 Status should have some kind of lifecycle. It can be implemented as a FSM.  
-![Status Lifecycle FSM](DAS/status_fsm.png)
+![Status Lifecycle FSM](/images/DAS_Status_FSM_v7.png)
