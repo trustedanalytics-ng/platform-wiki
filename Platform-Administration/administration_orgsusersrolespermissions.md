@@ -1,4 +1,6 @@
-Placeholder for new page that replaces the CF page we used to link to in TAP 0.7 Wiki.
+(Development note: Wikis for previous version linked to a CF page that explained the complex relationships between organizations, spaces, roles, and permissions. We no longer need that for TAP 0.8 and later. This page will contain the simplified information regarding Organizations, Users, Roles, and Permissions.)
+
+This page describes organizations, users, roles, and permissions for TAP 0.8. The interaction between these elements has been greatly simplified from previous TAP versions. (Previouse versions relied on Cloud Foundry technology in this area, which also included the element called spaces. Spaces are no longer supported at all.)
 
 Dan's Questions:  
 Is there only one organization per TAP instance?  
