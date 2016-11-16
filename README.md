@@ -2,11 +2,11 @@ Here are links to edit the documentation pages: **Do not edit the meta data in t
 
 ##Use Case Examples
 
-[Space Shuttle Example](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Use-Case_Examples/examples_spaceshuttle.md)
+[Space Shuttle Example](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Use-Case-Examples/examples_spaceshuttle.md)
 
-[Data Ingestion Through Kafka](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Use-Case_Examples/examples_dataingestkafka.md)
+[Data Ingestion Through Kafka](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Use-Case-Examples/examples_dataingestkafka.md)
 
-[Enable IOT](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Use-Case_Examples/examples_enableiot.md)
+[Enable IOT](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Use-Case-Examples/examples_enableiot.md)
 
 
 ##Account Access
