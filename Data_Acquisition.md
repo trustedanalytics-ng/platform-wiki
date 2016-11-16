@@ -49,5 +49,5 @@ Kafka is a distributed, partitioned, replicated commit log service. It provides 
 uServices should be atomic and idempotent. As a result, they can be invoked as many times as needed to obtain the desired results. 
 
 #### Request’s status lifecycle
-Status should have some kind of lifecycle. It can be implemented as a FSM.  
+Status should have some kind of lifecycle. It can be implemented as an FSM.  
 ![Status Lifecycle FSM](/images/DAS_Status_FSM_v7.png)
