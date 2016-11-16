@@ -19,7 +19,7 @@ published: true
 2.	Select the tab **Submit Transfer**.
 3.	Choose **Link** to input a URL to a data set _or_ **Local Path** to activate a “Choose File” file browser button, which opens your local file directory browser.  _The upload button will not be active until a file has been chosen or a URL provided._
 
-![Ingesting Data Screen 2]/images/Data_Ingest_v7_Step2.jpg)
+![Ingesting Data Screen 2](/images/Data_Ingest_v7_Step2.jpg)
 
 4.	Enter a title in the form field labeled “title for link…” _The upload button will not be active until a title has been provided._ 
 5.	Select a category to help others find your data easily. (**Other** is the default.)
