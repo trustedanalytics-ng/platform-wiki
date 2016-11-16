@@ -4,7 +4,7 @@ keywords: Managing User Accounts Kerberos
 last_updated: 'November, 2016'
 tags:
   - Managing Accounts Kerberos
-summary: How users create a Jupyter notebook instance. 
+summary: Managing User Accounts in Kerberos. 
 sidebar: mydoc_sidebar
 permalink: managing_user_acct_kerberos.html
 folder: mydoc
