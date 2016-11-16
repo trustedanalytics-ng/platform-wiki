@@ -4,7 +4,7 @@ keywords: Cloudera PostgreSQL Backup Restore
 last_updated: 'November, 2016'
 tags:
   - Cloudera PostgreSQL Backup Restore
-summary: Backing up and restoring PostgreSQL backups. 
+summary: Backing up and restoring PostgreSQL to/from Cloudera. 
 sidebar: mydoc_sidebar
 permalink: creating_jupyter_notebook.html
 folder: mydoc
@@ -18,7 +18,6 @@ published: true
 * The database is installed by the `cloudera-manager-server-db-2` package, and is an postgreSQL database 8.0 listening on port 7432.
 
 * The default root user is `cloudera-scm` and the default root password is located in the `/var/lib/cloudera-scm-server-db/data/generated_password.txt` file:
-
 
 * The backup script is scheduled to run automatically and store log information in syslog, located in the `/var/log/messages` file. It is also possible to run the backup script manually as root user:
 ```
