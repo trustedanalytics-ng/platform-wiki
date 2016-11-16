@@ -19,11 +19,11 @@ Proceed as follows:
 
       `git clone https://github.com/cloudfoundry-community/phpmyadmin-cf`
 
-9. Log onto a platform with your cf client. (Choose an appropriate organization and space.)
+9. Log onto a platform with your cf client. (Choose an appropriate organization.)
 
-9. Go to the phpmyadmin folder and push the downloaded application to the target organization and space. 
+9. Go to the phpmyadmin folder and push the downloaded application to the target organization. 
 
-9. Log onto the TAP platform using your TAP user/password credentials and choose the target organization and space.
+9. Log onto the TAP platform using your TAP user/password credentials and choose the target organization.
 
 9. Go to **Marketplace>Services** and create a new instance of MySQL database. 
 
