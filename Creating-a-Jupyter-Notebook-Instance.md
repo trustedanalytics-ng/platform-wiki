@@ -27,5 +27,5 @@ After 30-60 seconds, refresh your browser screen. Your new Jupyter instance will
 
 ![Creating a Jupyter Instance Step 3](/images/Create_Jupyter_Inst_v7_STEP3.jpg)
 
->Click the the **Show** button to show your Jupyter password so you can copy it for logging in. Click on the link to access your Jupyter instance.
+>Click the **Show** button to show your Jupyter password, so you can copy it for logging into your instance. Click on the link to access your Jupyter instance.
 
