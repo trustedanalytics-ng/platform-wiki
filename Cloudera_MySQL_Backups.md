@@ -1,12 +1,12 @@
 ---
-title: Jupyter
-keywords: Jupyter Notebook
+title: Cloudera mySQL Backups
+keywords: Cloudera mySQL Backup Restore
 last_updated: 'November, 2016'
 tags:
-  - Jupyter
-summary: How users create a Jupyter notebook instance. 
+  - Cloudera mySQL Backup Restore
+summary: How to do mySQL backups to/from Cloudera
 sidebar: mydoc_sidebar
-permalink: creating_jupyter_notebook.html
+permalink: cloudera-mysql_backups.html
 folder: mydoc
 published: true
 ---
