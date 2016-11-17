@@ -1,12 +1,12 @@
 ---
-title: Jupyter
-keywords: Jupyter Notebook
+title: Enabling Hue
+keywords: Enabling Hue
 last_updated: 'November, 2016'
 tags:
-  - Jupyter
-summary: How users create a Jupyter notebook instance. 
+  - Enabling Hue
+summary: Enabling Hue. 
 sidebar: mydoc_sidebar
-permalink: creating_jupyter_notebook.html
+permalink: enabling_hue.html
 folder: mydoc
 published: true
 ---
