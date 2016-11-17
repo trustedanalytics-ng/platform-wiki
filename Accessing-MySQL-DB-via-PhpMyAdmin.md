@@ -4,9 +4,9 @@ keywords: MySQL Credentials
 last_updated: 'November, 2016'
 tags:
   - MySQL Credentials
-summary: How to get you MySQL credentials for PhpMyAdmin 
+summary: How to get your MySQL credentials for PhpMyAdmin 
 sidebar: mydoc_sidebar
-permalink: creating_jupyter_notebook.html
+permalink: mysql_credentials.html
 folder: mydoc
 published: true
 ---
