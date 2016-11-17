@@ -18,7 +18,7 @@ TAP monitoring architecture consists of two main elements:
 
 We are using Zabbix version 2.4 due to its automatic configuration capabilities.
 ##### Monitoring architecture
-![](wikiImages/TrustedAnalyticsZabbix.png)
+![Monitoring Architecture](/images/TAP_Monitoring_Zabbix_v7.png)
 
 
 
