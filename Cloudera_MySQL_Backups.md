@@ -4,7 +4,7 @@ keywords: Cloudera mySQL Backup Restore
 last_updated: 'November, 2016'
 tags:
   - Cloudera mySQL Backup Restore
-summary: How to do mySQL backups to/from Cloudera
+summary: How to do mySQL backups and restores to/from Cloudera
 sidebar: mydoc_sidebar
 permalink: cloudera-mysql_backups.html
 folder: mydoc
