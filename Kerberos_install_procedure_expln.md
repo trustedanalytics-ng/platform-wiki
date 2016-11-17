@@ -1,9 +1,9 @@
 ---
 title: Kerberos Installation Procedure Explained
-keywords: Kerboeros Installk
+keywords: Kerboeros Install
 last_updated: 'November, 2016'
 tags:
-  - Jupyter
+  - Kerboeros Install
 summary: Eplanation of Kerberos installation procedure. 
 sidebar: mydoc_sidebar
 permalink: Kerberos_install_procedure_expln.html
