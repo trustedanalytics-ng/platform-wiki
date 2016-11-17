@@ -6,7 +6,7 @@ tags:
   - Cloudera PostgreSQL Backup Restore
 summary: Backing up and restoring PostgreSQL to/from Cloudera. 
 sidebar: mydoc_sidebar
-permalink: creating_jupyter_notebook.html
+permalink: cloudere_postgresql_backups.html
 folder: mydoc
 published: true
 ---
