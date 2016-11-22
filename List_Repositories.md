@@ -4,7 +4,7 @@ keywords: List of Repositories
 last_updated: 'November, 2016'
 tags:
   - Repositories
-summary: List of repsotories for TAP 0.8. 
+summary: List of repsitories for TAP 0.8. 
 sidebar: mydoc_sidebar
 permalink: list_repositories.html
 folder: mydoc
@@ -88,32 +88,32 @@ https://github.com/trustedanalytics/h2o-scoring-engine-publisher
 H2O Provisioner:  
 https://github.com/trustedanalytics/h2o-provisioner 
 
-Repo Name:  
-(link)
+H2O Broker:  
+https://github.com/trustedanalytics/h2o-broker 
 
-Repo Name:  
-(link)
+Zookeeper broker:  
+https://github.com/trustedanalytics/zookeeper-broker 
 
-Repo Name:  
-(link)
+Parent POM for Spring Cloud enabled projects:  
+https://github.com/trustedanalytics/trustedanalytics-cloud-parent 
 
-Repo Name:  
-(link)
+Hive broker:  
+https://github.com/trustedanalytics/hive-broker 
 
-Repo Name:  
-(link)
+HDFS Broker:  
+https://github.com/trustedanalytics/hdfs-broker 
 
-Repo Name:  
-(link)
+Hadoop utils:  
+https://github.com/trustedanalytics/hadoop-utils 
 
-Repo Name:  
-(link)
+TAP H2O:  
+https://github.com/intel-data/h2o-3 
 
-Repo Name:  
-(link)
+H2O scoring engine base:  
+https://github.com/intel-data/h2o-scoring-engine-base 
 
-Repo Name:  
-(link)
+TAP kerberos:  
+https://github.com/intel-data/kerberos
 
 Repo Name:  
 (link)
