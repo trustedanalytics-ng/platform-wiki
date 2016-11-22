@@ -14,31 +14,31 @@ published: true
 ## List of Repositories for TAP 0.8
 
 Dataset Publisher Service
-[[https://github.com/trustedanalytics/dataset-publisher]]
+https://github.com/trustedanalytics/dataset-publisher
 
-Repo Name
-[[Link]]
+Broker metadata repository
+https://github.com/trustedanalytics/broker-store
 
-Repo Name
-[[Link]]
+UAA
+https://github.com/trustedanalytics/uaa
 
-Repo Name
-[[Link]]
+Console
+https://github.com/trustedanalytics/console
 
-Repo Name
-[[Link]]
+Objext store
+https://github.com/trustedanalytics/object-store
 
-Repo Name
-[[Link]]
+Auth gateway
+https://github.com/trustedanalytics/auth-gateway
 
-Repo Name
-[[Link]]
+Workflow scheduler
+https://github.com/trustedanalytics/workflow-scheduler
 
-Repo Name
-[[Link]]
+Metadata Parser
+https://github.com/trustedanalytics/metadata-parser
 
-Repo Name
-[[Link]]
+Data Acquisition Service
+https://github.com/trustedanalytics/data-acquisition
 
 Repo Name
 [[Link]]
