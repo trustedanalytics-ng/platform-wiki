@@ -14,79 +14,79 @@ published: true
 ## List of Repositories for TAP 0.8
 
 Platform Tests:  
-https://github.com/trustedanalytics/platform-tests
+https://github.com/trustedanalytics/platform-tests 
 
 Uploader:  
-https://github.com/trustedanalytics/uploader
+https://github.com/trustedanalytics/uploader 
 
 Dataset Publisher Service:  
-https://github.com/trustedanalytics/dataset-publisher
+https://github.com/trustedanalytics/dataset-publisher 
 
 Broker metadata repository:  
-https://github.com/trustedanalytics/broker-store
+https://github.com/trustedanalytics/broker-store 
 
 UAA:  
-https://github.com/trustedanalytics/uaa
+https://github.com/trustedanalytics/uaa 
 
 Console:  
-https://github.com/trustedanalytics/console
+https://github.com/trustedanalytics/console 
 
 Objext store:  
-https://github.com/trustedanalytics/object-store
+https://github.com/trustedanalytics/object-store 
 
 Auth gateway:  
-https://github.com/trustedanalytics/auth-gateway
+https://github.com/trustedanalytics/auth-gateway 
 
 Workflow scheduler:  
-https://github.com/trustedanalytics/workflow-scheduler
+https://github.com/trustedanalytics/workflow-scheduler 
 
 Metadata Parser:  
-https://github.com/trustedanalytics/metadata-parser
+https://github.com/trustedanalytics/metadata-parser 
 
 Data Acquisition Service:  
-https://github.com/trustedanalytics/data-acquisition
+https://github.com/trustedanalytics/data-acquisition 
 
 Artifact discovery:  
-https://github.com/trustedanalytics/platform-snapshot
+https://github.com/trustedanalytics/platform-snapshot 
 
 Parent POM for plain Java projects:  
-https://github.com/trustedanalytics/project-template
+https://github.com/trustedanalytics/project-template 
 
 DP2 Downloader:  
-https://github.com/trustedanalytics/downloader
+https://github.com/trustedanalytics/downloader 
 
 ingestion-ws-kafka-gearpump-hbase:  
-https://github.com/trustedanalytics/ingestion-ws-kafka-gearpump-hbase
+https://github.com/trustedanalytics/ingestion-ws-kafka-gearpump-hbase 
 
-Gearpump broker: 
-https://github.com/intel-data/gearpump-broker
+Gearpump broker:  
+https://github.com/intel-data/gearpump-broker 
 
-Gateway Service: 
-https://github.com/trustedanalytics/gateway
+Gateway Service:  
+https://github.com/trustedanalytics/gateway 
 
-REST Error Handling Library: 
-https://github.com/trustedanalytics/rest-error-handling
+REST Error Handling Library:  
+https://github.com/trustedanalytics/rest-error-handling 
 
 Data-Catalog:  
-https://github.com/trustedanalytics/data-catalog
+https://github.com/trustedanalytics/data-catalog 
 
 OrientDB dashboard:  
-https://github.com/trustedanalytics/orientdb-dashboard
+https://github.com/trustedanalytics/orientdb-dashboard 
 
 Space shuttle demo:  
-https://github.com/trustedanalytics/space-shuttle-demo
+https://github.com/trustedanalytics/space-shuttle-demo 
 
-Repo Name:  
-(link)
+DP2 User-Management:  
+https://github.com/trustedanalytics/user-management 
 
-Repo Name:  
-(link)
+Example of ingesting data WebSocket/Kafka/HDFS:  
+https://github.com/trustedanalytics/ingestion-ws-kafka-hdfs 
 
-Repo Name:  
-(link)
+H2O SE publisher:  
+https://github.com/trustedanalytics/h2o-scoring-engine-publisher 
 
-Repo Name:  
-(link)
+H2O Provisioner:  
+https://github.com/trustedanalytics/h2o-provisioner 
 
 Repo Name:  
 (link)
