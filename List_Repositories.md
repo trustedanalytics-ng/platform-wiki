@@ -13,66 +13,96 @@ published: true
 
 ## List of Repositories for TAP 0.8
 
-Dataset Publisher Service: 
+Dataset Publisher Service:  
 https://github.com/trustedanalytics/dataset-publisher
 
-Broker metadata repository: 
+Broker metadata repository:  
 https://github.com/trustedanalytics/broker-store
 
-UAA: 
+UAA:  
 https://github.com/trustedanalytics/uaa
 
-Console: 
+Console:  
 https://github.com/trustedanalytics/console
 
-Objext store: 
+Objext store:  
 https://github.com/trustedanalytics/object-store
 
-Auth gateway: 
+Auth gateway:  
 https://github.com/trustedanalytics/auth-gateway
 
-Workflow scheduler: 
+Workflow scheduler:  
 https://github.com/trustedanalytics/workflow-scheduler
 
-Metadata Parser: 
+Metadata Parser:  
 https://github.com/trustedanalytics/metadata-parser
 
-Data Acquisition Service: 
+Data Acquisition Service:  
 https://github.com/trustedanalytics/data-acquisition
 
-Artifact discovery: 
+Artifact discovery:  
 https://github.com/trustedanalytics/platform-snapshot
 
-Parent POM for plain Java projects: 
+Parent POM for plain Java projects:  
 https://github.com/trustedanalytics/project-template
 
-DP2 Downloader: 
+DP2 Downloader:  
 https://github.com/trustedanalytics/downloader
 
-ingestion-ws-kafka-gearpump-hbase: 
+ingestion-ws-kafka-gearpump-hbase:  
 https://github.com/trustedanalytics/ingestion-ws-kafka-gearpump-hbase
 
-Repo Name: 
-[[Link]]
+Gearpump broker: 
+https://github.com/intel-data/gearpump-broker
+
+Gateway Service: 
+https://github.com/trustedanalytics/gateway
+
+REST Error Handling Library: 
+https://github.com/trustedanalytics/rest-error-handling
 
 Repo Name: 
-[[Link]]
+(link)
 
 Repo Name: 
-[[Link]]
+(link)
 
 Repo Name: 
-[[Link]]
+(link)
 
 Repo Name: 
-[[Link]]
+(link)
 
 Repo Name: 
-[[Link]]
+(link)
 
 Repo Name: 
-[[Link]]
+(link)
 
 Repo Name: 
-[[Link]]
+(link)
+
+Repo Name: 
+(link)
+
+Repo Name: 
+(link)
+
+Repo Name: 
+(link)
+
+Repo Name: 
+(link)
+
+Repo Name: 
+(link)
+
+Repo Name: 
+(link)
+
+Repo Name: 
+(link)
+
+Repo Name: 
+(link)
 
