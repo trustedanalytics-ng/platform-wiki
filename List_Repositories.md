@@ -13,66 +13,66 @@ published: true
 
 ## List of Repositories for TAP 0.8
 
-Repo Name
-Link
+Dataset Publisher Service
+[[https://github.com/trustedanalytics/dataset-publisher]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
 Repo Name
-Link
+[[Link]]
 
