@@ -13,6 +13,12 @@ published: true
 
 ## List of Repositories for TAP 0.8
 
+Platform Tests:  
+https://github.com/trustedanalytics/platform-tests
+
+Uploader:  
+https://github.com/trustedanalytics/uploader
+
 Dataset Publisher Service:  
 https://github.com/trustedanalytics/dataset-publisher
 
@@ -61,48 +67,48 @@ https://github.com/trustedanalytics/gateway
 REST Error Handling Library: 
 https://github.com/trustedanalytics/rest-error-handling
 
-Repo Name: 
+Data-Catalog:  
+https://github.com/trustedanalytics/data-catalog
+
+OrientDB dashboard:  
+https://github.com/trustedanalytics/orientdb-dashboard
+
+Space shuttle demo:  
+https://github.com/trustedanalytics/space-shuttle-demo
+
+Repo Name:  
 (link)
 
-Repo Name: 
+Repo Name:  
 (link)
 
-Repo Name: 
+Repo Name:  
 (link)
 
-Repo Name: 
+Repo Name:  
 (link)
 
-Repo Name: 
+Repo Name:  
 (link)
 
-Repo Name: 
+Repo Name:  
 (link)
 
-Repo Name: 
+Repo Name:  
 (link)
 
-Repo Name: 
+Repo Name:  
 (link)
 
-Repo Name: 
+Repo Name:  
 (link)
 
-Repo Name: 
+Repo Name:  
 (link)
 
-Repo Name: 
+Repo Name:  
 (link)
 
-Repo Name: 
-(link)
-
-Repo Name: 
-(link)
-
-Repo Name: 
-(link)
-
-Repo Name: 
+Repo Name:  
 (link)
 
