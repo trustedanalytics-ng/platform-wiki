@@ -1,6 +1,6 @@
 Here are links to edit the documentation pages: **Do not edit the meta data in the table at the top of each page!** 
 
-##Use Case Examples
+##Use Case Examples (Review Team: Dan Smith, Shari Benko)
 
 [Space Shuttle Example](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Use-Case-Examples/examples_spaceshuttle.md)
 
@@ -9,7 +9,7 @@ Here are links to edit the documentation pages: **Do not edit the meta data in t
 [Enable IOT](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Use-Case-Examples/examples_enableiot.md)
 
 
-##Account Access
+##Account Access (Review Team: Iman Saleh)
 
 [Account Access](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Account-Access/acctaccess_accessing.md)
 
@@ -28,7 +28,7 @@ Here are links to edit the documentation pages: **Do not edit the meta data in t
 [Data Import SQL combined with Job Scheduler FAQ](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Data-Ingestion/dataingest_sqlimport_scheduler.md)
 
 
-##Bulding Analytics
+##Bulding Analytics (Review Team: )
 
 [Using H2O](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Building-Analytics/buildanalytics_h2o.md)
 
