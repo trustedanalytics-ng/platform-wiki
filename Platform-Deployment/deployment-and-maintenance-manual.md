@@ -21,7 +21,7 @@ Trusted Analytics Platform 0.8
 # Introduction
 
 
-Welcome to the TAP Deployment and Maintenance Manual.
+Welcome to the TAP 0.8 Deployment and Maintenance Manual.
 
 
 The goal of this document is to explain TAP deployment automation and its architecture design, and how to perform essential maintenance procedures.
