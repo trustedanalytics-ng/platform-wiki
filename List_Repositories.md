@@ -141,3 +141,58 @@ https://github.com/intel-data/tap-container-broker
 
 TAP CLI:  
 https://github.com/intel-data/tap-cli
+
+TAP catalog:  
+https://github.com/intel-data/tap-catalog
+
+TAP blob-store:  
+https://github.com/intel-data/tap-blob-store
+
+TAP API service:  
+https://github.com/intel-data/tap-api-service
+
+TAP certificate authority:  
+https://github.com/intel-data/tap-ca 
+
+repo:  
+link
+
+repo:  
+link
+
+repo:  
+link
+
+repo:  
+link
+
+repo:  
+link
+
+repo:  
+link
+
+repo:  
+link
+
+repo:  
+link
+
+repo:  
+link
+
+repo:  
+link
+
+repo:  
+link
+
+repo:  
+link
+
+repo:  
+link
+
+repo:  
+link
+
