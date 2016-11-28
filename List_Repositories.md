@@ -115,9 +115,14 @@ https://github.com/intel-data/h2o-scoring-engine-base
 TAP kerberos:  
 https://github.com/intel-data/kerberos
 
-Repo Name:  
-(link)
+TAP go common:  
+https://github.com/intel-data/tap-go-common
 
-Repo Name:  
-(link)
+grand-platform-factory:  
+https://github.com/intel-data/grand-platform-factory
 
+TAP template-repository
+https://github.com/intel-data/tap-template-repository
+
+TAP monitor
+https://github.com/intel-data/tap-monitor
