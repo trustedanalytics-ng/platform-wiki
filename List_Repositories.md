@@ -121,8 +121,8 @@ https://github.com/intel-data/tap-go-common
 grand-platform-factory:  
 https://github.com/intel-data/grand-platform-factory
 
-TAP template-repository
+TAP template-repository:  
 https://github.com/intel-data/tap-template-repository
 
-TAP monitor
+TAP monitor:  
 https://github.com/intel-data/tap-monitor
