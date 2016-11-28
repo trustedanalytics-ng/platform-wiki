@@ -169,14 +169,14 @@ https://github.com/intel-data/tap-image-factory
 micro-reverse-proxy:  
 https://github.com/intel-data/micro-reverse-proxy
 
-repo:  
-link
+UAA client register job :  
+https://github.com/intel-data/tap-uaa-client-register-job
 
-repo:  
-link
+TAP infrastructure deploy:  
+https://github.com/intel-data/tap-infrastructure-deploy
 
-repo:  
-link
+TAP metricx:  
+https://github.com/intel-data/tap-metrics
 
 repo:  
 link
