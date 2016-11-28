@@ -175,24 +175,17 @@ https://github.com/intel-data/tap-uaa-client-register-job
 TAP infrastructure deploy:  
 https://github.com/intel-data/tap-infrastructure-deploy
 
-TAP metricx:  
+TAP metrics:  
 https://github.com/intel-data/tap-metrics
 
-repo:  
-link
+HSO model provider:  
+https://github.com/intel-data/h2o-model-provider
 
-repo:  
-link
+Model catalog:  
+https://github.com/intel-data/model-catalog
 
-repo:  
-link
+Key counter:  
+https://github.com/intel-data/key-counter
 
-repo:  
-link
-
-repo:  
-link
-
-repo:  
-link
-
+Gearpump dashboard:  
+https://github.com/intel-data/gearpump-dashboard
