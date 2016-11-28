@@ -13,13 +13,13 @@ published: true
 
 ## List of Repositories for TAP 0.8
 
-Platform Tests:  
+Platform tests:  
 https://github.com/trustedanalytics/platform-tests 
 
 Uploader:  
 https://github.com/trustedanalytics/uploader 
 
-Dataset Publisher Service:  
+Dataset publisher service:  
 https://github.com/trustedanalytics/dataset-publisher 
 
 Broker metadata repository:  
@@ -40,10 +40,10 @@ https://github.com/trustedanalytics/auth-gateway
 Workflow scheduler:  
 https://github.com/trustedanalytics/workflow-scheduler 
 
-Metadata Parser:  
+Metadata parser:  
 https://github.com/trustedanalytics/metadata-parser 
 
-Data Acquisition Service:  
+Data acquisition service:  
 https://github.com/trustedanalytics/data-acquisition 
 
 Artifact discovery:  
@@ -52,7 +52,7 @@ https://github.com/trustedanalytics/platform-snapshot
 Parent POM for plain Java projects:  
 https://github.com/trustedanalytics/project-template 
 
-DP2 Downloader:  
+DP2 downloader:  
 https://github.com/trustedanalytics/downloader 
 
 ingestion-ws-kafka-gearpump-hbase:  
@@ -61,10 +61,10 @@ https://github.com/trustedanalytics/ingestion-ws-kafka-gearpump-hbase
 Gearpump broker:  
 https://github.com/intel-data/gearpump-broker 
 
-Gateway Service:  
+Gateway service:  
 https://github.com/trustedanalytics/gateway 
 
-REST Error Handling Library:  
+REST error handling library:  
 https://github.com/trustedanalytics/rest-error-handling 
 
 Data-Catalog:  
@@ -85,10 +85,10 @@ https://github.com/trustedanalytics/ingestion-ws-kafka-hdfs
 H2O SE publisher:  
 https://github.com/trustedanalytics/h2o-scoring-engine-publisher 
 
-H2O Provisioner:  
+H2O provisioner:  
 https://github.com/trustedanalytics/h2o-provisioner 
 
-H2O Broker:  
+H2O broker:  
 https://github.com/trustedanalytics/h2o-broker 
 
 Zookeeper broker:  
@@ -100,7 +100,7 @@ https://github.com/trustedanalytics/trustedanalytics-cloud-parent
 Hive broker:  
 https://github.com/trustedanalytics/hive-broker 
 
-HDFS Broker:  
+HDFS broker:  
 https://github.com/trustedanalytics/hdfs-broker 
 
 Hadoop utils:  
@@ -126,3 +126,18 @@ https://github.com/intel-data/tap-template-repository
 
 TAP monitor:  
 https://github.com/intel-data/tap-monitor
+
+TAP ingress:  
+https://github.com/intel-data/tap-nginx-ingress
+
+Redis encryption library:  
+https://github.com/intel-data/redis-encryption-libk
+
+TAP deploy:  
+https://github.com/intel-data/tap-deploy
+
+TAP container broker:  
+https://github.com/intel-data/tap-container-broker
+
+TAP CLI:  
+https://github.com/intel-data/tap-cli
