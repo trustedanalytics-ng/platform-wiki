@@ -154,20 +154,20 @@ https://github.com/intel-data/tap-api-service
 TAP certificate authority:  
 https://github.com/intel-data/tap-ca 
 
-repo:  
-link
+TAP base images:  
+https://github.com/intel-data/tap-base-images
 
-repo:  
-link
+CEPH broker:  
+https://github.com/intel-data/tap-ceph-broker
 
-repo:  
-link
+UAA client library:  
+https://github.com/intel-data/uaa-lib
 
-repo:  
-link
+TAP image factory:  
+https://github.com/intel-data/tap-image-factory
 
-repo:  
-link
+micro-reverse-proxy:  
+https://github.com/intel-data/micro-reverse-proxy
 
 repo:  
 link
