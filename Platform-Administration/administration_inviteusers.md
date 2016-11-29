@@ -11,6 +11,8 @@ folder: mydoc
 published: true
 ---
 
+>You must be a system admin to do this.
+
 The TAP user interface allows system admins to invite new users to the platform.
 
 ## Inviting a user to the platform
