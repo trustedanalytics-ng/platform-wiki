@@ -32,7 +32,7 @@ TAP then displays a confirmation screen (shown below). Click on the login link i
 
 ## Ongoing user access
 
-Once you have a TAP account, you can log in using the following screen by accessing the platform link:
+Once you have a TAP account, click your saved link to TAP and log in using the following screen:
 
 ![Ongoing User Access TAP](/images/Signon_Screen_v7_Crpd.jpg)
 
