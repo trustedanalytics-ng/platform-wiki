@@ -23,9 +23,11 @@ published: true
 | Consul 0.3.1 | A tool for discovering and configuring services in your infrastructure. | Configuration |   |
 | CouchDB 1.6 | A distributed database that stores data in JSON documents, queryable with HTTP. | Database |   |
 | Elasticsearch 2.3 | A search engine based on Lucene. | System Monitoring |   |
+| Elasticsearch 1.7 Multinode | A Multinode search engine based on Lucene. | System Monitoring |   |
 | ELK - Multinode | Elasticsearch + Kibana service for application development and testing. | System Monitoring |   |
 | Etcd 0.4.6 | A distributed key value store, often used as a configuration server. | Configuration |   |
 | Gateway | A proxy that relays WebSocket messages to a Kafka queue. | Ingestion |   |
+| H2O | Simple H20 broker. | Ingestion |   |
 | HBase | A non-relational database that provides Google’s Bigtable-like capabilities. | Database |   |
 | HDFS | A Hadoop distributed, fault tolerant file system. | Storage |   |
 | Hive | A warehouse for managing datasets in distributed storage using SQL. | Database |   |
@@ -36,11 +38,15 @@ published: true
 | Logstash 1.4 | A data collection engine with real-time pipelining capabilities. | System Monitoring |   |
 | Memcached 1.4 | A distributed memory object caching system. | Database |   |
 | MongoDB 2.6 | A scalable, high-performance document database. | Database |   |
+| MongoDB 3.0 | A scalable, high-performance document database. | Database |   |
+| MongoDB Clustered | A scalable, high-performance document database. | Database |   |
 | Mosquitto 1.4 | A message broker that implements the MQTT protocol. | Messaging |   |
 | MySQL 5.6 | A relational database management system. | Database |   |
+| MySQL 5.6 Clustered | A relational database management system. | Database |   |
 | NATS | A messaging system for distributed systems and scalable cloud applications. | Messaging |   |
 | Neo4j 2.1 | A highly-scalable native graph database. | Database |   |
 | OrientDB | A distributed graph database with the flexibility of Documents. | Database |   |
+| OrientDB Dashboard | Dashboard for distributed graph database with the flexibility of Documents. | Database |   |
 | PostgreSQL 9.3 | An object-relational database system. | Database |   |
 | RabbitMQ 3.3 | A messaging broker, an intermediary for messaging. | Messaging |   |
 | Redis 2.8 | In-memory data structure store, used as database, cache, and message broker. | Database |   |
