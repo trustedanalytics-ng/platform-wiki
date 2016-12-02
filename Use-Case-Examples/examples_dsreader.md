@@ -12,4 +12,4 @@ published: true
 ---
 ## Dataset Reader
 
-You can find a self-paced tutorial for the dataset reader example application on the [TAP community website](https://community.trustedanalytics.org/docs/DOC-1042).
+You can find a self-paced tutorial for the dataset reader example application on the TAP community website titled [Data to Dashboard](https://community.trustedanalytics.org/docs/DOC-1042).
