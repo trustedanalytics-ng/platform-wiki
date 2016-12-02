@@ -1,10 +1,10 @@
 ---
 title: Marketplace
 keywords: TAP marketplace available services
-last_updated: 'October, 2016'
+last_updated: 'December, 2016'
 tags:
-  - Marketplace
-summary: Insert the summary paragraph here.  To edit the summary you must edit the meta data for this post. 
+  - Marketplace services
+summary: List and summary of services found in TAP 0.8 marketplace. 
 sidebar: mydoc_sidebar
 permalink: marketplace_services.html
 folder: mydoc
