@@ -48,13 +48,13 @@ published: true
 | OrientDB | A distributed graph database with the flexibility of Documents. | Database |   |
 | OrientDB Dashboard | Dashboard for distributed graph database with the flexibility of Documents. | Database |   |
 | PostgreSQL 9.3 | An object-relational database system. | Database |   |
+| PostgreSQL 9.4 Clustered | An object-relational database system. | Database |   |
 | RabbitMQ 3.3 | A messaging broker, an intermediary for messaging. | Messaging |   |
 | Redis 2.8 | In-memory data structure store, used as database, cache, and message broker. | Database |   |
+| Scoring Engine for Spark-tk | Produces predictions using a trained machine learning model. | Analytics |  |
 | Seahorse | An analytics platform for creating Spark applications using a web user interface. | Analytics |   |
 | SMTP | A configuration of SMTP, an internet standard for email transmission. | Messaging |   |
-| TAP Analytics Toolkit | Enables feature engineering, graph construction, and machine learning in an extensible, modular framework. | Analytics |   |
-| TAP Scoring Engine | Produces predictions using a trained machine learning model. | Analytics |   |
 | TAP Scoring Pipelines | A python app used to perform ETL transformations followed by scoring on a deployed model, on a stream of records. | Analytics |   |
 | YARN | A multi-node resource-management platform. | Resource Management |   |
 | ZooKeeper | A distributed coordination service for distributed applications. | Configuration |   |
-
+| ZooKeeper WSSB | Shared service for ZooKeeper WSSB. | Configuration |   |
