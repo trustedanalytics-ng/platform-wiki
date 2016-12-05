@@ -20,7 +20,7 @@ The mechanisms of trust embodied in TAP are based on principles of layered defen
 
 TAP architecture centers around two core components – Cloudera Hadoop (CDH) and Kubernetes (K8s). TAP integrates these two components in a seamless manner. Remaining TAP elements build upon these core components or provide services for them, as follows:
 
-**Amazon Web Services (AWS) or OpenStack** – an Infrastructure as a Service (IaaS) layer needed to operate CDH and K8s. It provides APIs for VM creation, storage, and network machinery. 
+**Amazon Web Services (AWS)** – an Infrastructure as a Service (IaaS) layer needed to operate CDH and K8s. It provides APIs for VM creation, storage, and network machinery. 
 
 **Deployment Automation** – a set of tools and configuration scripts that help deploy the whole system, including end-user applications, in a target environment.
 
