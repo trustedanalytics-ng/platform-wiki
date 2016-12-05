@@ -18,15 +18,15 @@ The Trusted Analytics Platform (TAP) is a big data analytics platform designed w
 
 The mechanisms of trust embodied in TAP are based on principles of layered defense implemented with proven success in trusted operating systems and cloud security.  
 
-TAP architecture centers around two core components – Cloudera Hadoop (CDH) and Cloud Foundry (CF). TAP integrates these two components in a seamless manner. Remaining TAP elements build upon these core components or provide services for them, as follows:
+TAP architecture centers around two core components – Cloudera Hadoop (CDH) and Kubernetes (K8s). TAP integrates these two components in a seamless manner. Remaining TAP elements build upon these core components or provide services for them, as follows:
 
-**Amazon Web Services (AWS) or OpenStack** – an Infrastructure as a Service (IaaS) layer needed to operate CDH and CF. It provides APIs for VM creation, storage, and network machinery. 
+**Amazon Web Services (AWS) or OpenStack** – an Infrastructure as a Service (IaaS) layer needed to operate CDH and K8s. It provides APIs for VM creation, storage, and network machinery. 
 
 **Deployment Automation** – a set of tools and configuration scripts that help deploy the whole system, including end-user applications, in a target environment.
 
 **Cloudera Distribution of Hadoop (CDH)** – a Big Data software stack.
 
-**Cloud Foundry (CF)** – platform for developing and hosting cloud applications.
+**Kubernetes (K8s)** – platform for developing and hosting cloud applications.
 
 **TAP Integrated and Custom-Built Services** – This layer is comprised of different types of services for users to create applications. These services include a myriad of component types including primitive open-source services, like MySQL or Redis, as well as in-house developed components, like Data Catalog.
 
