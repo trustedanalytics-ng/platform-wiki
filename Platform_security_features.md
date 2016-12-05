@@ -28,7 +28,7 @@ TAP architecture centers around two core components – Cloudera Hadoop (CDH) an
 
 **Kubernetes (K8s)** – platform for developing and hosting cloud applications.
 
-**TAP Integrated and Custom-Built Services** – This layer is comprised of different types of services for users to create applications. These services include a myriad of component types including primitive open-source services, like MySQL or Redis, as well as in-house developed components, like Data Catalog.
+**TAP Integrated and Custom-Built Services** – This layer is comprised of different types of services for users to create applications. These services include a myriad of component types including primitive open-source services, like MySQL or Redis, as well as in-house developed components, like Data Catalog and Model Catelog.
 
 **End-User Applications** – This layer enables application developers to build custom application on top of the TAP stack by leveraging the platform services.
 
