@@ -103,7 +103,7 @@ Here are links to edit the documentation pages: **Do not edit the meta data in t
 
 [Development Environment Setup](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Contributing-to-TAP/contributing_devenvironment.md)
 
-[Develpment Guidelines](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Contributing-to-TAP/contributing_devguidelines.md)
+[Development Guidelines](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Contributing-to-TAP/contributing_devguidelines.md)
 
 [Adding new Component to TAP deployment](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Contributing-to-TAP/contributing_addnew.md)
 
