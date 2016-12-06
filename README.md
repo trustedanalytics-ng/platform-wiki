@@ -14,21 +14,21 @@ Here are links to edit the documentation pages: **Do not edit the meta data in t
 [Account Access](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Account-Access/acctaccess_accessing.md)
 
 
-##Marketplace
+##Marketplace (Review Team: Shari Benko, Dan Smith)
 
 [Creating a Service Instance](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Marketplace/marketplace_createinstance.md)
 
 [Services Available](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Marketplace/marketplace_services.md)
 
 
-##Data Ingestion
+##Data Ingestion (Review Team: Iman Saleh, Shari Benko)
 
 [Data Catalog](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Data-Ingestion/dataingest_datacatalog.md)
 
 [Data Import SQL combined with Job Scheduler FAQ](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Data-Ingestion/dataingest_sqlimport_scheduler.md)
 
 
-##Bulding Analytics (Review Team: )
+##Bulding Analytics (Review Team: Ling Yao, Shari Benko)
 
 [Using H2O](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Building-Analytics/buildanalytics_h2o.md)
 
@@ -38,19 +38,19 @@ Here are links to edit the documentation pages: **Do not edit the meta data in t
 
 
 
-##Model Publishing
+##Model Publishing (Review Team: Ling Yao, Dan Smith)
 
 [New Pages](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Model-Publishing/models_newpages.md)
 
 [.mar file format](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Model-Publishing/models_marformat.md)
 
 
-##TAP Integration
+##TAP Integration (Review Team: Marek S., Dan Smith)
 
 [REST API's](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/integration/integration_restapis.md)
 
 
-##Application Deployment
+##Application Deployment (Review Team: Marek S., Shari Benko)
 
 [Binding Apps to Services](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Application-Development/appdev_bindingapps.md)
 
@@ -61,7 +61,7 @@ Here are links to edit the documentation pages: **Do not edit the meta data in t
 [Tips and Tricks for Java](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Application-Development/appdev_tipstricks.md)
 
 
-##Troubleshooting
+##Troubleshooting (Review Team: Dan Smith, Marek S.)
 
 [FAQs](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Troubleshooting/troubleshoot_faqs.md)
 
@@ -70,14 +70,14 @@ Here are links to edit the documentation pages: **Do not edit the meta data in t
 [Components and Versions](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Troubleshooting/troubleshoot_components.md)
 
 
-##Platform Administration
+##Platform Administration (Review Team: Anna K., Dan Smith)
 
 [Inviting Users to a TAP envirnonment](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Administration/administration_inviteusers.md)
 
 [Managing Orgs and Users](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Administration/administration_manageorgsusers.md)
 
 
-##Platform Deployment
+##Platform Deployment (Review Team: Marek S., Shari Benko)
 
 [Overview](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/deployment_overview.md)
 
@@ -92,12 +92,12 @@ Here are links to edit the documentation pages: **Do not edit the meta data in t
 [Migrating Data from 0.7 to 0.8](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/deployment_migratedata.md)
 
 
-##TAP Reference Documents
+##TAP Reference Documents (Review Team: Marek S., Anna K.)
 
 [TAP CLI Reference page](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Reference-Documents/reference_cli.md)
 
 
-##Contributing to TAP
+##Contributing to TAP (Review Team: Marek S., Dan Smith)
 
 [Service Application Development](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Contributing-to-TAP/contributing_appdev.md)
 
