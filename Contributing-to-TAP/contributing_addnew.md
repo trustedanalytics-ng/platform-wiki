@@ -23,6 +23,8 @@ You must first upload the image you want to display into the "images" folder in 
 
 ![EditField_DataCatalog.jpg](/images/EditField_DataCatalog.jpg)
 
+[pdf file link](/pdfs/TAPUserManagementDocumentation.docx.pdf)
+
 ### Markdown Cheatsheet
 
 Below is a link to the Github Markdown Cheatsheet 
