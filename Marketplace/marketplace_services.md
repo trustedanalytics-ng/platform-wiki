@@ -22,7 +22,7 @@ published: true
 | Apache GearPump Dashboard | A dashboard for managing Gearpump service. | Ingestion | https://gearpump.apache.org |
 | Apache Kafka | A messaging queue designed as a distributed commit log. | Messaging | https://kafka.apache.org/ |
 | ArangoDB 2.2 | A distributed database with a data model for documents, graphs, and key-values. | Database | https://www.arangodb.com/ |
-| CDH | A configuration of Cloudera’s platform for end-to-end big data workflows. | Resource Management |   |
+| CDH | A configuration of Cloudera’s platform for end-to-end big data workflows. | Resource Management | http://www.cloudera.com/ |
 | Consul 0.3.1 | A tool for discovering and configuring services in your infrastructure. | Configuration | https://chocolatey.org/packages/consul/0.3.1 |
 | Elasticsearch 2.3 | A search engine based on Lucene. | System Monitoring | https://www.elastic.co/ |
 | Elasticsearch 1.7 Multinode | A Multinode search engine based on Lucene. | System Monitoring | https://www.elastic.co/ |
