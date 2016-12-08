@@ -21,7 +21,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 You must first upload the image you want to display into the "images" folder in this repository then use the following example to embed your image:
 
-![EditField_DataCatalog.jpg](/images/EditField_DataCatalog.jpg)
+![EditField_DataCatalog.jpg](images/EditField_DataCatalog.jpg)
 
 ### Markdown Cheatsheet
 
