@@ -15,25 +15,26 @@ published: true
 
 | Service Name | Description | Service Type | Documentation |
 |-------|--------|---------|---------|
-| Apache Gearpump | A real-time big data event/message based streaming engine. | Ingestion |   |
-| Apache GearPump Dashboard | A dashboard for managing Gearpump service. | Ingestion |   |
-| ArangoDB 2.2 | A distributed database with a data model for documents, graphs, and key-values. | Database | https://www.arangodb.com/  |
-| Cassandra | A distributed database management system. | Database |   |
+| Apache Cassandra 2.2 | A distributed database management system. | Database | http://cassandra.apache.org/ |
+| Apache Cassandra 3.3 | A distributed database management system. | Database | http://cassandra.apache.org/ |
+| Apache CouchDB 1.6 | A distributed database that stores data in JSON documents, queryable with HTTP. | Database | http://couchdb.apache.org/ |
+| Apache Gearpump 0.8.0 | A real-time big data event/message based streaming engine. | Ingestion | https://gearpump.apache.org |
+| Apache GearPump Dashboard | A dashboard for managing Gearpump service. | Ingestion | https://gearpump.apache.org |
+| Apache Kafka | A messaging queue designed as a distributed commit log. | Messaging | https://kafka.apache.org/ |
+| ArangoDB 2.2 | A distributed database with a data model for documents, graphs, and key-values. | Database | https://www.arangodb.com/ |
 | CDH | A configuration of Cloudera’s platform for end-to-end big data workflows. | Resource Management |   |
-| Consul 0.3.1 | A tool for discovering and configuring services in your infrastructure. | Configuration |   |
-| CouchDB 1.6 | A distributed database that stores data in JSON documents, queryable with HTTP. | Database |   |
-| Elasticsearch 2.3 | A search engine based on Lucene. | System Monitoring |   |
-| Elasticsearch 1.7 Multinode | A Multinode search engine based on Lucene. | System Monitoring |   |
-| ELK - Multinode | Elasticsearch + Kibana service for application development and testing. | System Monitoring |   |
-| Etcd 0.4.6 | A distributed key value store, often used as a configuration server. | Configuration |   |
-| Gateway | A proxy that relays WebSocket messages to a Kafka queue. | Ingestion |   |
+| Consul 0.3.1 | A tool for discovering and configuring services in your infrastructure. | Configuration | https://chocolatey.org/packages/consul/0.3.1 |
+| Elasticsearch 2.3 | A search engine based on Lucene. | System Monitoring | https://www.elastic.co/ |
+| Elasticsearch 1.7 Multinode | A Multinode search engine based on Lucene. | System Monitoring | https://www.elastic.co/ |
+| ELK - Multinode | Elasticsearch + Kibana service for application development and testing. | System Monitoring | https://www.elastic.co/ |
+| Etcd 0.4.6 | A distributed key value store, often used as a configuration server. | Configuration | https://github.com/coreos/etcd/ |
+| Gateway (REST-to-Kafka) | A proxy that relays WebSocket messages to a Kafka queue. | Ingestion | link? |
 | H2O | Simple H20 broker. | Ingestion |   |
 | HBase | A non-relational database that provides Google’s Bigtable-like capabilities. | Database |   |
 | HDFS | A Hadoop distributed, fault tolerant file system. | Storage |   |
 | Hive | A warehouse for managing datasets in distributed storage using SQL. | Database |   |
 | InfluxDB 0.8.8 | A time series database written in Go. | Database |   |
 | Jupyter Notebook | A web application for creating and sharing documents containing live code. | IDE |   |
-| Kafka | A messaging queue designed as a distributed commit log. | Messaging |   |
 | Kerberos | A configuration of a computer network authentication protocol for added security. | Security |   |
 | Logstash 1.4 | A data collection engine with real-time pipelining capabilities. | System Monitoring |   |
 | Memcached 1.4 | A distributed memory object caching system. | Database |   |
