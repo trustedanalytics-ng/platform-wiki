@@ -49,4 +49,4 @@ Here are the steps to delete a user from the organization:
 
 >This only deletes the user from the organization; their user account still exists at the platform level.
 
-For in depth specifications see ![TAPUserManagementDocumentation.docx.pdf](/pdfs/TAPUserManagementDocumentation.docx.pdf)
+For in depth specifications see [TAPUserManagementDocumentation.docx.pdf](/pdfs/TAPUserManagementDocumentation.docx.pdf)
