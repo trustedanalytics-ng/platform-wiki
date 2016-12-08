@@ -32,8 +32,8 @@ published: true
 | HDFS | A Hadoop distributed, fault tolerant file system. | Storage | https://hadoop.apache.org |
 | HIVE | A warehouse for managing datasets in distributed storage using SQL. | Database | https://hive.apache.org/ |
 | H2O 3.5.0 | Simple H20 broker. | Ingestion | http://www.h2o.ai/ |
-| InfluxDB 0.8.8 | A time series database written in Go. | Database | https://docs.influxdata.com/influxdb/v0.10/guides/hardware_sizing/#general-hardware-guidelines-for-a-single-node |
-| InfluxDB 1.1.0 | A time series database written in Go. | Database | https://docs.influxdata.com/influxdb/v0.10/guides/hardware_sizing/#general-hardware-guidelines-for-a-single-node |
+| InfluxDB 0.8.8 | A time series database written in Go. | Database | https://docs.influxdata.com/ |
+| InfluxDB 1.1.0 | A time series database written in Go. | Database | https://docs.influxdata.com/ |
 | Jupyter Notebook | A web application for creating and sharing documents containing live code. | IDE | http://jupyter.org/ |
 | Kafka | A messaging queue designed as a distributed commit log. | Messaging | https://kafka.apache.org/ |
 | Kerberos 1.13| A configuration of a computer network authentication protocol for added security. | Security | https://web.mit.edu/kerberos/ |
