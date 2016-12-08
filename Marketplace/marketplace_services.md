@@ -15,32 +15,33 @@ published: true
 
 | Service Name | Description | Service Type | Documentation |
 |-------|--------|---------|---------|
-| Apache Cassandra 2.2 | A distributed database management system. | Database | http://cassandra.apache.org/ |
-| Apache Cassandra 3.3 | A distributed database management system. | Database | http://cassandra.apache.org/ |
-| Apache CouchDB 1.6 | A distributed database that stores data in JSON documents, queryable with HTTP. | Database | http://couchdb.apache.org/ |
-| Apache Gearpump 0.8.0 | A real-time big data event/message based streaming engine. | Ingestion | https://gearpump.apache.org |
-| Apache GearPump Dashboard | A dashboard for managing Gearpump service. | Ingestion | https://gearpump.apache.org |
-| Apache Kafka | A messaging queue designed as a distributed commit log. | Messaging | https://kafka.apache.org/ |
 | ArangoDB 2.2 | A distributed database with a data model for documents, graphs, and key-values. | Database | https://www.arangodb.com/ |
+| Cassandra 2.2 | A distributed database management system. | Database | http://cassandra.apache.org/ |
+| Cassandra 3.3 | A distributed database management system. | Database | http://cassandra.apache.org/ |
 | CDH | A configuration of Cloudera’s platform for end-to-end big data workflows. | Resource Management | http://www.cloudera.com/ |
 | Consul 0.3.1 | A tool for discovering and configuring services in your infrastructure. | Configuration | https://chocolatey.org/packages/consul/0.3.1 |
+| CouchDB 1.6 | A distributed database that stores data in JSON documents, queryable with HTTP. | Database | http://couchdb.apache.org/ |
 | Elasticsearch 2.3 | A search engine based on Lucene. | System Monitoring | https://www.elastic.co/ |
 | Elasticsearch 1.7 Multinode | A Multinode search engine based on Lucene. | System Monitoring | https://www.elastic.co/ |
 | ELK - Multinode | Elasticsearch + Kibana service for application development and testing. | System Monitoring | https://www.elastic.co/ |
 | Etcd 0.4.6 | A distributed key value store, often used as a configuration server. | Configuration | https://github.com/coreos/etcd/ |
 | Gateway (REST-to-Kafka) | A proxy that relays WebSocket messages to a Kafka queue. | Ingestion | link? |
-| H2O | Simple H20 broker. | Ingestion |   |
-| HBase | A non-relational database that provides Google’s Bigtable-like capabilities. | Database |   |
-| HDFS | A Hadoop distributed, fault tolerant file system. | Storage |   |
-| Hive | A warehouse for managing datasets in distributed storage using SQL. | Database |   |
-| InfluxDB 0.8.8 | A time series database written in Go. | Database |   |
-| Jupyter Notebook | A web application for creating and sharing documents containing live code. | IDE |   |
-| Kerberos | A configuration of a computer network authentication protocol for added security. | Security |   |
-| Logstash 1.4 | A data collection engine with real-time pipelining capabilities. | System Monitoring |   |
-| Memcached 1.4 | A distributed memory object caching system. | Database |   |
-| MongoDB 2.6 | A scalable, high-performance document database. | Database |   |
-| MongoDB 3.0 | A scalable, high-performance document database. | Database |   |
-| MongoDB Clustered | A scalable, high-performance document database. | Database |   |
+| Gearpump 0.8.0 | A real-time big data event/message based streaming engine. | Ingestion | https://gearpump.apache.org |
+| GearPump Dashboard | A dashboard for managing Gearpump service. | Ingestion | https://gearpump.apache.org |
+| HBase | A non-relational database that provides Google’s Bigtable-like capabilities. | Database | https://hbase.apache.org/ |
+| HDFS | A Hadoop distributed, fault tolerant file system. | Storage | https://hadoop.apache.org |
+| HIVE | A warehouse for managing datasets in distributed storage using SQL. | Database | https://hive.apache.org/ |
+| H2O 3.5.0 | Simple H20 broker. | Ingestion | http://www.h2o.ai/ |
+| InfluxDB 0.8.8 | A time series database written in Go. | Database | https://docs.influxdata.com/influxdb/v0.10/guides/hardware_sizing/#general-hardware-guidelines-for-a-single-node |
+| InfluxDB 1.1.0 | A time series database written in Go. | Database | https://docs.influxdata.com/influxdb/v0.10/guides/hardware_sizing/#general-hardware-guidelines-for-a-single-node |
+| Jupyter Notebook | A web application for creating and sharing documents containing live code. | IDE | http://jupyter.org/ |
+| Kafka | A messaging queue designed as a distributed commit log. | Messaging | https://kafka.apache.org/ |
+| Kerberos 1.13| A configuration of a computer network authentication protocol for added security. | Security | https://web.mit.edu/kerberos/ |
+| Logstash 1.4 | A data collection engine with real-time pipelining capabilities. | System Monitoring | https://www.elastic.co |
+| Memcached 1.4 | A distributed memory object caching system. | Database | https://memcached.org/ |
+| MongoDB 2.6 | A scalable, high-performance document database. | Database | https://www.mongodb.com/ |
+| MongoDB 3.0 | A scalable, high-performance document database. | Database | https://www.mongodb.com/ |
+| MongoDB Clustered | A scalable, high-performance document database. | Database | https://www.mongodb.com/ |
 | Mosquitto 1.4 | A message broker that implements the MQTT protocol. | Messaging |   |
 | MySQL 5.6 | A relational database management system. | Database |   |
 | MySQL 5.6 Clustered | A relational database management system. | Database |   |
