@@ -42,20 +42,19 @@ published: true
 | MongoDB 2.6 | A scalable, high-performance document database. | Database | https://www.mongodb.com/ |
 | MongoDB 3.0 | A scalable, high-performance document database. | Database | https://www.mongodb.com/ |
 | MongoDB Clustered | A scalable, high-performance document database. | Database | https://www.mongodb.com/ |
-| Mosquitto 1.4 | A message broker that implements the MQTT protocol. | Messaging |   |
-| MySQL 5.6 | A relational database management system. | Database |   |
-| MySQL 5.6 Clustered | A relational database management system. | Database |   |
-| NATS | A messaging system for distributed systems and scalable cloud applications. | Messaging |   |
-| Neo4j 2.1 | A highly-scalable native graph database. | Database |   |
-| OrientDB | A distributed graph database with the flexibility of Documents. | Database |   |
-| OrientDB Dashboard | Dashboard for distributed graph database with the flexibility of Documents. | Database |   |
-| PostgreSQL 9.3 | An object-relational database system. | Database |   |
-| PostgreSQL 9.4 Clustered | An object-relational database system. | Database |   |
-| RabbitMQ 3.3 | A messaging broker, an intermediary for messaging. | Messaging |   |
-| Redis 2.8 | In-memory data structure store, used as database, cache, and message broker. | Database |   |
-| Scoring Engine for Spark-tk | Produces predictions using a trained machine learning model. | Analytics |  |
-| Seahorse | An analytics platform for creating Spark applications using a web user interface. | Analytics |   |
-| SMTP | A configuration of SMTP, an internet standard for email transmission. | Messaging |   |
+| Mosquitto 1.4 | A message broker that implements the MQTT protocol. | Messaging | https://mosquitto.org/ |
+| Trusted Mosquitto 1.4 | A message broker that implements the MQTT protocol. | Messaging | https://mosquitto.org/ || MySQL 5.6 | A relational database management system. | Database | https://www.mysql.com/ |
+| MySQL 5.6 Clustered | A relational database management system. | Database | https://www.mysql.com/ |
+| NATS | A messaging system for distributed systems and scalable cloud applications. | Messaging | https://www.nats.io/ |
+| Neo4j 2.1 | A highly-scalable native graph database. | Database | https://neo4j.com/ |
+| OrientDB 2.1.2 | A distributed graph database with the flexibility of Documents. | Database | http://orientdb.com/ |
+| OrientDB Dashboard | Dashboard for distributed graph database with the flexibility of Documents. | Database | http://orientdb.com/ |
+| PostgreSQL 9.3 | An object-relational database system. | Database | https://www.postgresql.org/ |
+| PostgreSQL 9.4 Clustered | An object-relational database system. | Database | https://www.postgresql.org/ |
+| RabbitMQ 3.6 | A messaging broker, an intermediary for messaging. | Messaging | https://www.rabbitmq.com/ |
+| Redis 3.0 | In-memory data structure store, used as database, cache, and message broker. | Database | www.redislabs.com/ |
+| Scoring Engine for Spark-tk | Produces predictions using a trained machine learning model. | Analytics | https://github.com/trustedanalytics/scoring-engine |
+| | SMTP | A configuration of SMTP, an internet standard for email transmission. | Messaging |   |
 | TAP Scoring Pipelines | A python app used to perform ETL transformations followed by scoring on a deployed model, on a stream of records. | Analytics |   |
 | YARN | A multi-node resource-management platform. | Resource Management |   |
 | ZooKeeper | A distributed coordination service for distributed applications. | Configuration |   |
