@@ -79,19 +79,10 @@ Here are links to edit the documentation pages: **Do not edit the meta data in t
 
 ##Platform Deployment (Review Team: Marek S., Shari Benko)
 
-[Overview](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/deployment_overview.md)
+[Deployment and Maintenance Manual](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/deployment-and-maintenance-manual.md)
 
-[Access to TAP Sources and Binaries](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/deployment_buildfromsources.md)
+[Security Recommendations](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/deployment_securityrecommends.md)
 
-[Platform Deployment on AWS](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/deployment_procedures_aws.md)
-
-[Platform Deployment Bare Metal](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/deployment_procedures_baremetal.md)
-
-[Building TAP artifacts from sources](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/deployment_sourcesbinaries.md)
-
-[Migrating Data from 0.7 to 0.8](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/deployment_migratedata.md)
-
-[Security Recommendations] (https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/deployment_securityrecommends.md)
 
 ##TAP Reference Documents (Review Team: Marek S., Anna K.)
 
