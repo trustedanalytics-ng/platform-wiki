@@ -17,7 +17,7 @@ published: true
 |-------|--------|---------|---------|
 | Apache Gearpump | A real-time big data event/message based streaming engine. | Ingestion |   |
 | Apache GearPump Dashboard | A dashboard for managing Gearpump service. | Ingestion |   |
-| ArangoDB 2.2 | A distributed database with a data model for documents, graphs, and key-values. | Database |   |
+| ArangoDB 2.2 | A distributed database with a data model for documents, graphs, and key-values. | Database | https://www.arangodb.com/  |
 | Cassandra | A distributed database management system. | Database |   |
 | CDH | A configuration of Cloudera’s platform for end-to-end big data workflows. | Resource Management |   |
 | Consul 0.3.1 | A tool for discovering and configuring services in your infrastructure. | Configuration |   |
