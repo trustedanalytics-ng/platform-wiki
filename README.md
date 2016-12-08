@@ -91,6 +91,7 @@ Here are links to edit the documentation pages: **Do not edit the meta data in t
 
 [Migrating Data from 0.7 to 0.8](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/deployment_migratedata.md)
 
+[Security Recommendations] (https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/deployment_securityrecommends.md)
 
 ##TAP Reference Documents (Review Team: Marek S., Anna K.)
 
