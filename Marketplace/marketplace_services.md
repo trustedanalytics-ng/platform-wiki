@@ -54,8 +54,8 @@ published: true
 | RabbitMQ 3.6 | A messaging broker, an intermediary for messaging. | Messaging | https://www.rabbitmq.com/ |
 | Redis 3.0 | In-memory data structure store, used as database, cache, and message broker. | Database | www.redislabs.com/ |
 | Scoring Engine for Spark-tk | Produces predictions using a trained machine learning model. | Analytics | https://github.com/trustedanalytics/scoring-engine |
-| | SMTP | A configuration of SMTP, an internet standard for email transmission. | Messaging |   |
-| TAP Scoring Pipelines | A python app used to perform ETL transformations followed by scoring on a deployed model, on a stream of records. | Analytics |   |
-| YARN | A multi-node resource-management platform. | Resource Management |   |
-| ZooKeeper | A distributed coordination service for distributed applications. | Configuration |   |
-| ZooKeeper WSSB | Shared service for ZooKeeper WSSB. | Configuration |   |
+| SMTP | A configuration of SMTP, an internet standard for email transmission. | Messaging | https://www.smtp.com |
+| TAP Scoring Pipelines | A python app used to perform ETL transformations followed by scoring on a deployed model, on a stream of records. | Analytics | https://github.com/trustedanalytics/scoring-pipelines |
+| YARN | A multi-node resource-management platform. | Resource Management | https://hadoop.apache.org |
+| ZooKeeper | A distributed coordination service for distributed applications. | Configuration | https://zookeeper.apache.org/ |
+| ZooKeeper WSSB | Shared service for ZooKeeper WSSB. | Configuration | https://zookeeper.apache.org/ |
