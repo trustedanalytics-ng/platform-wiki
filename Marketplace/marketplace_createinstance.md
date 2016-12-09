@@ -22,5 +22,5 @@ published: true
     - If a key-value pair is needed as a parameter for the service, click on **+ Add an extra parameter** to show the  fields for one Key-Value pair. Enter the key and value. (You can click the link again to add another key-value pair. You can also remove a key-value pair by clicking the **x** symbol after a pair.)
 1. Click the **Create new instance** button to begin the process for creating an instance of the service you selected and named. (The button is *not* available until you input a name for your instance.) 
 
-When the install process completes, your instance will be included in the **Running instances** table at the bottom of the service details page.  
+When the install process completes, your instance will be included in the **Running instances** table at the bottom of the **Marketplace**  page. You can also see a list of *all* services instances by clicking on **Services > Instances**.  
 
