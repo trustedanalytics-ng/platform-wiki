@@ -1,10 +1,10 @@
 ---
 title: Marketplace
 keywords: TAP marketplace creating a service instance
-last_updated: 'October, 2016'
+last_updated: 'Deceber, 2016'
 tags:
   - Marketplace
-summary: Insert the summary paragraph here.  To edit the summary you must edit the meta data for this post. 
+summary: How to create a service instances in the Marketplace. 
 sidebar: mydoc_sidebar
 permalink: marketplace_createinstance.html
 folder: mydoc
