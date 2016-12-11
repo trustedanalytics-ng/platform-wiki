@@ -21,7 +21,7 @@ Trusted Analytics Platform 0.8
 # Introduction
 
 
-Welcome to the TAP 0.8 Deployment and Maintenance Manual.
+Welcome to TAP 0.8 Deployment and Maintenance Manual.
 
 
 The goal of this document is to explain TAP deployment automation and its architecture design, and how to perform essential maintenance procedures.
@@ -73,67 +73,65 @@ These are “typical” TAP installation configurations:
 
 This configuration is recommended for trying out TAP and its analytics features.
 
-* The suggested Minimum Configuration layout consist of 2 nodes (hosts) only: 
-      1. 1 node:
+* The minimum layout consists of 2 nodes (hosts) with the following roles assigned:
+      1 node:
          * compute-master (in TAP 0.8: kubernetes master)
          * storage-master (in TAP 0.8: ceph master)
          * compute-worker (in TAP 0.8: kubernetes worker)
          * storage-slave (in TAP 0.8: ceph worker)
-      1. 1 node:
+      1 node:
          * jumpbox
          * hadoop-master (in TAP 0.8: CDH Master Primary)
          * hadoop-manager (in TAP 0.8: CDH Manager)
          * hadoop-worker (in TAP 0.8: CDH Worker)
 
-
 * Hardware requirements for each node:
      * 24 GB of RAM
      * 4 CPU cores
-     * 250 GB of HDD
-
+     * 200 GB of HDD + space needed to store user's data
 
 **Note:** The minimal configuration does *not* provide important reliability features that are required for production deployments.
-
 
 ## Medium configuration
 
 Characteristics of this configuration:
 
-* Redundant functions are distributed among separate nodes to provide high availability and data replication [UPDATE HOST ROLES TO REFLECT HA REQUIREMENTS]
+* Redundant functions are distributed among separate nodes to provide high availability and data replication
+
 * *Not* focused on raw platform performance
 
-* Suggested Medium Configuration layout consist of 8 nodes (hosts):
-      1. 1 node:
+* Suggested layout of this configuration consists of 8 nodes (hosts) with these roles assigned:
+      1 node:
          * compute-master (in TAP 0.8: kubernetes master)
          * storage-master (in TAP 0.8: ceph master)
          * load-balancer
-      1. 3 nodes:
+      3 nodes:
          * compute-worker (in TAP 0.8: kubernetes workers)
          * storage-slave (in TAP 0.8: ceph workers)
-      1. 1 node:
+      1 node:
          * jumpbox
          * hadoop-master (in TAP 0.8: CDH Master Primary)
          * hadoop-manager (in TAP 0.8: CDH Manager)
-      1. 3 nodes:
+      3 nodes:
         * hadoop-worker (in TAP 0.8: CDH Workers)
 
 * Hardware requirements for each node:
      * 16 GB of RAM
      * 4 CPU cores
-     * 200 GB of HDD
+     * 200 GB of HDD + space needed to store user's data
 
 
 ## Production configuration
 
 Characteristics of this configuration:
-* Redundant functions are distributed among separate nodes to provide performance, high availability and replication [UPDATE HOST ROLES TO REFLECT HA REQUIREMENTS
+* Redundant functions are distributed among separate nodes to provide performance, High Availability and replication
 
-* Suggested Production Configuration layout consist of 20+ nodes (hosts):
+* Suggested HA layout consist of 20+ nodes (hosts):
       1. 1 node [PROVIDE H/W REQUIREMENTS]:
-         * bastion host [jumpbox ?]
+         * jumpbox
       1. 3 nodes [PROVIDE H/W REQUIREMENTS]:
          * load-balancer
-      1. 1 node [PROVIDE H/W REQUIREMENTS][UPDATE FOR HA]:
+      1. 1 node [PROVIDE H/W REQUIREMENTS]:
          * compute-master (in TAP 0.8: kubernetes master)
       1. 3+ nodes [PROVIDE H/W REQUIREMENTS]:
          * compute-worker (in TAP 0.8: kubernetes workers)
