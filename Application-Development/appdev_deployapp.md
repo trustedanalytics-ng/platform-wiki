@@ -17,7 +17,7 @@ If you are new to deploying applications on the Trusted Analytics platform (TAP)
 
 ### Tools
 
-Aside from having an IDE to code your application, the primary tool to deploy applications is the CLI (Command Line Interface) for TAP. You can prepare your environment and install this tool by visiting [this page](Development-environment-setup) or going to TAP Console >> Main navigation panel >> App Development.
+Aside from having an IDE to code your application, the primary tool to deploy applications is the CLI (Command Line Interface) for TAP. You can prepare your environment and install this tool by visiting [this page](Contributing-to-TAP/contributing_devenvironment.md) or going to TAP Console >> Main navigation panel >> App Development.
 
 ### Sample Application
 
@@ -74,4 +74,8 @@ Go to Console >> Marketplace >> Services and browse to the "Redis" service. Clic
 
 Going back to Console >> Applications, view your "spring-music" profile by clicking the "See details" link. Click on the "Bindings" tab. You should see the "redis" instance listed in the "Available service instances" to the right. Click "Bind". You will now be prompted to click "Restage" so the application will be restaged and bound to the Redis instance you created. Once restaged, all data entered will be stored in the Redis instance, thus creating a persistent data store for the application.
 
+After binding redis service all it's environment variables, like hostname or password, will be visible for spring-music as environment variables. 
+
 ![TAP_console_bind_service.png](/images/TAP_console_bind_service.png)
+
+That's all, you have deployed your first application on TAP if you would like to know more about binding please follow [this page](/Application-Development/appdev_bindingapps.md)
