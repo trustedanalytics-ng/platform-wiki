@@ -11,27 +11,27 @@ folder: mydoc
 published: true
 ---
 
-# Deploying Your First Application
+## Deploying Your First Application
 
-If you are new to deploying apps on the Trusted Analytics platform (TAP), these steps will guide you through the process.
+If you are new to deploying applications on the Trusted Analytics platform (TAP), these steps will guide you through the process.
 
-## Tools
+### Tools
 
-Aside from having an IDE to code your application, the primary tool to deploy apps is the CLI (Command Line Interface) for TAP. You can prepare your environment and install this tool by visiting [this page](Development-environment-setup) or going to TAP Console >> Main navigation panel >> App Development.
+Aside from having an IDE to code your application, the primary tool to deploy applications is the CLI (Command Line Interface) for TAP. You can prepare your environment and install this tool by visiting [this page](Development-environment-setup) or going to TAP Console >> Main navigation panel >> App Development.
 
-## Sample Application
+### Sample Application
 
 A helpful application is "Spring Music", which you can clone from github here: https://github.com/trustedanalytics/spring-music. This application requires little knowledge of the platform and also features hooks for Redis, a good service to be familiar with.
 
 The TAP team has also built a sample application for working with this platform and pulling data from hdfs. While more advanced, this is also a good application example to clone and explore: https://github.com/trustedanalytics/dataset-reader-sample. We've created a full workflow around this application as it explains in more detail how to build applications around data ingested into TAP.
 
-## Preparing the Application
+### Preparing the Application
 
-### Assembly
+#### Assembly
 
 In order to deploy Java applications to the Trusted Analytics platform, you must assemble them using a tool like Maven. You can download Maven here: https://maven.apache.org/download.cgi. If you are new to Maven, here are the steps to better understand the building/assembly process: https://maven.apache.org/guides/getting-started/.
 
-### Prepare run.sh script which will start an application:
+#### Prepare run.sh script which will start an application:
 
 ```
 #!/usr/bin/env bash
@@ -39,13 +39,13 @@ In order to deploy Java applications to the Trusted Analytics platform, you must
 exec java -jar your-app.jar
 ```
 
-### Create an archive containing all files loosely:
+#### Create an archive containing all files loosely:
 
 ```
 tar czvf your-app.tar.gz ./*
 ```
 
-## Pushing the Application
+### Pushing the Application
 
 Use TAP CLI to push the application to your TAP instance.
 
@@ -56,13 +56,13 @@ $ tap-cli login <Your TAP instance Endpoint> <username> <password>
 $ tap-cli push your-app.tar.gz
 ```
 
-## Viewing the Application and its Instance in TAP
+### Viewing the Application and its Instance in TAP
 
 With the application successfully pushed, you can now view it on your instance of TAP. Go the TAP Console >> Applications to view the app's instance. Clicking the URL will load the app. Clicking "See details" will reveal the profile of the application with controls to start|stop|restart it.
 
 ![TAP_console_spring_music_app_instance.png](/images/TAP_console_spring_music_app_instance.png)
 
-## Binding a Service
+### Binding a Service
 
 The service brokerage of TAP, found in Console >> Marketplace, makes it easy to add popular services like MongoDB to your application. This highlight extensible aspect of TAP allows you to easily integrate instances of data stores as well as 3rd party services to your app. You can also programmatically add services, including making your own server logs available as a service.
 
