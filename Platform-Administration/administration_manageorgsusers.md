@@ -23,7 +23,7 @@ Here are the steps to invite a user to the single platform organization:
 
 3. Enter the email address of the user you wish to add.
 
-4. The only role available is the **Regular User** role.
+4. Choose between the **Regular User** and **Organizational Admin** roles. (Most users will likely be **Regular Users**.)
 
 5. Click the **Add user** button.
 ![](/images/Add_User_v7_Crpd.png)
