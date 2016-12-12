@@ -22,7 +22,7 @@ After receiving the email invite and clicking on the link in the email, you will
 
 ![Ongoing User Access TAP](/images/OrgSpace_Invite_Screen_v7_Crpd.jpg)
 
-Enter your password choice (twice), select the Terms of Service checkbox, and click **Create account**. (It's a good idea to read the Terms of Service.)
+Enter your password choice (twice), select the **Terms of Service** checkbox, and click **Create account**. (It's a good idea to read the Terms of Service.)
 
 TAP creates your platform account and gives you access to the single platform organization.
 
