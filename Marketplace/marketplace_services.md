@@ -17,7 +17,7 @@ published: true
 |-------|--------|---------|---------|
 | CouchDB 1.6 | A distributed database that stores data in JSON documents, queryable with HTTP. | Database | http://couchdb.apache.org/ |
 | Elasticsearch 1.7 Multinode | A Multinode search engine based on Lucene. | System Monitoring | https://www.elastic.co/ |
-| Gateway (REST-to-Kafka) | A proxy that relays WebSocket messages to a Kafka queue. | Ingestion | link? |
+| Gateway (REST-to-Kafka) | A proxy that relays WebSocket messages to a Kafka queue. | Ingestion |https://github.com/trustedanalytics/gateway |
 | Gearpump 0.8.0 | A real-time big data event/message based streaming engine. | Ingestion | https://gearpump.apache.org |
 | GearPump Dashboard | A dashboard for managing Gearpump service. | Ingestion | https://gearpump.apache.org |
 | HBase | A non-relational database that provides Google’s Bigtable-like capabilities. | Database | https://hbase.apache.org/ |
