@@ -30,7 +30,7 @@ Here are the steps to invite a user to the single platform organization:
 
 For existing platform users, TAP will notify you that the user has been added to the organization. But *you must notify the user* of this addition, as TAP does *not* send any notifications.
 
-If the user does *not* yet have a TAP account, TAP sends an email invitation to the user. For the user view of this process, go [here](/Account-Access/acctaccess_accessing.md).
+If the user does *not* yet have a TAP account, TAP sends an email invitation to the user. For the user view of this process, [go here](/Account-Access/acctaccess_accessing.md).
 
 ##Deleting users from the organization
 
@@ -49,4 +49,4 @@ Here are the steps to delete a user from the organization:
 
 >This only deletes the user from the organization; their user account still exists at the platform level.
 
-For in depth specifications see [TAPUserManagementDocumentation.docx.pdf](/pdfs/TAPUserManagementDocumentation.docx.pdf)
+For in depth technical specifications, see [TAPUserManagementDocumentation.docx.pdf](/pdfs/TAPUserManagementDocumentation.docx.pdf)
