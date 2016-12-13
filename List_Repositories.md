@@ -157,7 +157,7 @@ https://github.com/intel-data/tap-ca
 TAP base images:  
 https://github.com/intel-data/tap-base-images
 
-CEPH broker:  
+Ceph broker:  
 https://github.com/intel-data/tap-ceph-broker
 
 UAA client library:  
@@ -169,7 +169,7 @@ https://github.com/intel-data/tap-image-factory
 micro-reverse-proxy:  
 https://github.com/intel-data/micro-reverse-proxy
 
-UAA client register job :  
+UAA client register job:  
 https://github.com/intel-data/tap-uaa-client-register-job
 
 TAP infrastructure deploy:  
@@ -190,20 +190,23 @@ https://github.com/intel-data/key-counter
 Gearpump dashboard:  
 https://github.com/intel-data/gearpump-dashboard
 
-Ansible Ceph common  
+Ansible Ceph common:  
 https://github.com/intel-data/ansible-ceph-common
 
-Ansible Ceph monitor  
+Ansible Ceph monitor:  
 https://github.com/intel-data/ansible-ceph-mon
 
-Ansible Ceph OSD  
+Ansible Ceph OSD:  
 https://github.com/intel-data/ansible-ceph-osd
 
-Ansible Ceph client  
+Ansible Ceph client:  
 https://github.com/intel-data/ansible-ceph-client
 
-TAP offering images  
+TAP offering images:  
 https://github.com/intel-data/tap-offering-images
 
-Spring music example application  
+Spring music example application:  
 https://github.com/intel-data/spring-music
+
+TAP Nginx docker image with dynamic configuration support:
+https://github.com/intel-data/tap-nginx-dyn-stream
