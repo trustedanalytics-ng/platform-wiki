@@ -160,6 +160,18 @@ https://github.com/intel-data/tap-base-images
 Ceph broker:  
 https://github.com/intel-data/tap-ceph-broker
 
+Ansible Ceph common:  
+https://github.com/intel-data/ansible-ceph-common
+
+Ansible Ceph monitor:  
+https://github.com/intel-data/ansible-ceph-mon
+
+Ansible Ceph OSD:  
+https://github.com/intel-data/ansible-ceph-osd
+
+Ansible Ceph client:  
+https://github.com/intel-data/ansible-ceph-client
+
 UAA client library:  
 https://github.com/intel-data/uaa-lib
 
@@ -189,18 +201,6 @@ https://github.com/intel-data/key-counter
 
 Gearpump dashboard:  
 https://github.com/intel-data/gearpump-dashboard
-
-Ansible Ceph common:  
-https://github.com/intel-data/ansible-ceph-common
-
-Ansible Ceph monitor:  
-https://github.com/intel-data/ansible-ceph-mon
-
-Ansible Ceph OSD:  
-https://github.com/intel-data/ansible-ceph-osd
-
-Ansible Ceph client:  
-https://github.com/intel-data/ansible-ceph-client
 
 TAP offering images:  
 https://github.com/intel-data/tap-offering-images
