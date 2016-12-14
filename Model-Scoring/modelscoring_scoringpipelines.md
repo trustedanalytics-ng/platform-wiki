@@ -11,7 +11,7 @@ folder: mydoc
 published: true
 ---
 
-## Model Scoring using a TAP Scoring Pipeline
+## TAP Scoring Pipelines
 
 Insert content here: [http://idratherbewriting.com](http://idratherbewriting.com). Use Markdown format.
 
