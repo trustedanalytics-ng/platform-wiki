@@ -20,7 +20,7 @@ Initial access to the *platform* is available only by invitation from a system a
 
 After receiving the email invite and clicking on the link in the email, you will land on the registration page below.
 
-![Ongoing User Access TAP](/images/OrgSpace_Invite_Screen_v7_Crpd.jpg)
+![Ongoing User Access TAP](/images/Account_Access__Invite1_v7_Crpd.jpg)
 
 Enter your password choice (twice), select the **Terms of Service** checkbox, and click **Create account**. (It's a good idea to read the Terms of Service.)
 
@@ -28,11 +28,11 @@ TAP creates your platform account and gives you access to the single platform or
 
 TAP then displays a confirmation screen (shown below). Click on the login link in the confirmation screen to log into the platform. (Remember to save the login link for future use.)
 
-![Account Creation Confirmation](/images/Onboard_Confirm_Screen_v7_Crpd.png)
+![Account Creation Confirmation](/images/Account_Access_Onboard_Confirm1_v7_Crpd.png)
 
 ## Ongoing user access
 
 Once you have a TAP account, click your saved link to TAP and log in using the following screen:
 
-![Ongoing User Access TAP](/images/Signon_Screen_v7_Crpd.jpg)
+![Ongoing User Access TAP](/images/Account_Access_Signon1_v7_Crpd.jpg)
 
