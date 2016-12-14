@@ -12,7 +12,7 @@ folder: mydoc
 published: true
 ---
 
-This page shows you how to respond to an initial TAP platform invitation. It also covers ongoing TAP login.
+This page shows you how to respond to an initial TAP platform invitation. It also covers ongoing TAP login. 
 
 ## Initial user access to platform
 
