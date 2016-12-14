@@ -45,6 +45,15 @@ Here are links to edit the documentation pages: **Do not edit the meta data in t
 [.mar file format](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Model-Publishing/models_marformat.md)
 
 
+
+##Model Scoring (Review Team: Ling Yao, Shari Benko)
+
+[Scoring Engines](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Model-Scoring/modelscoring_scoringengine.md)
+
+[Scoring Pipelines](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Model-Scoring/modelscoring_scoringpipeline.md)
+
+
+
 ##TAP Integration (Review Team: Marek S., Dan Smith)
 
 [REST API's](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/integration/integration_restapis.md)
