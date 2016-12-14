@@ -17,7 +17,7 @@ If you are new to deploying applications on the Trusted Analytics platform (TAP)
 
 ### Tools
 
-Aside from having an IDE to code your application, the primary tool to deploy applications is the CLI (Command Line Interface) for TAP. You can prepare your environment and install this tool by visiting [this page](Contributing-to-TAP/contributing_devenvironment.md) or going to TAP Console >> Main navigation panel >> App Development.
+Aside from having an IDE to code your application, the primary tool to deploy applications is the CLI (Command Line Interface) for TAP. You can prepare your environment and install this tool by visiting [this page](Contributing-to-TAP/contributing_devenvironment.md) or going to TAP Console >> Main navigation panel >> **App Development**.
 
 ### Sample Application
 
