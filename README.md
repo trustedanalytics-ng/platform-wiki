@@ -50,7 +50,7 @@ Here are links to edit the documentation pages: **Do not edit the meta data in t
 
 [Scoring Engines](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Model-Scoring/modelscoring_scoringengine.md)
 
-[Scoring Pipelines](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Model-Scoring/modelscoring_scoringpipeline.md)
+[Scoring Pipelines](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Model-Scoring/modelscoring_scoringpipelines.md)
 
 
 
