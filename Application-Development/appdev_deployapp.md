@@ -78,4 +78,4 @@ After binding to the **Redis** service all it's environment variables, like host
 
 ![TAP_console_bind_service.png](/images/TAP_console_bind_service.png)
 
-That's all, you have deployed your first application on TAP. If you would like to know more about binding, go to [this page](/Application-Development/appdev_bindingapps.md)
+That's all, you have deployed your first application on TAP. If you would like to know more about binding, go to the [Binding your Applications on TAP](/Application-Development/appdev_bindingapps.md) documentation page.
