@@ -11,7 +11,7 @@ folder: mydoc
 published: true
 ---
 
-## Model Scoring using a TAP Scoring Engine
+## TAP Scoring Engine
 
 Insert content here: [http://idratherbewriting.com](http://idratherbewriting.com). Use Markdown format.
 
