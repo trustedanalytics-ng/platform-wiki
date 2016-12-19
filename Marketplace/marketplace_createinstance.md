@@ -14,7 +14,7 @@ published: true
 ## Creating a Service Instance
 
 1. From the TAP Console, navigate to **Marketplace** and **Services**, as shown below. 
-![Creating a Service Instance from the Marketplace Step 1](https://github.com/danzsmith53/platform-wiki-0.8/blob/master/images/Marketplace_Creating_Instance_1_v8.png)
+![Creating a Service Instance from the Marketplace Step 1](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/images/Marketplace_Creating_Instance_1_v8.png)
 1. Search for and select the service you want. (Jupyter has been chosen for this example, but these steps apply to any service available in the Marketplace). 
 ![Creating A Service Instance from the Marketplace Step 2](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/images/Marketplace_Creating_Instance_2_v8.png)
 1. From the service details page, choose the plan needed (often there is just one plan), then enter a name for your new service instance in the field to the left of the **Create new instance** button. 
