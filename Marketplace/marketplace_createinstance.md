@@ -4,7 +4,7 @@ keywords: TAP marketplace creating a service instance
 last_updated: 'December, 2016'
 tags:
   - Marketplace
-summary: How to create a service instances in the Marketplace. 
+summary: How to create a service instance in the Marketplace. 
 sidebar: mydoc_sidebar
 permalink: marketplace_createinstance.html
 folder: mydoc
