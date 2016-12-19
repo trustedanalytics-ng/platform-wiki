@@ -1,17 +1,17 @@
 ---
 title: Application Deployment
-keywords: binding applications to services application deployment on TAP
-last_updated: 'October, 2016'
+keywords: application development
+last_updated: 'December, 2016'
 tags:
-  - Application Development
+  - Application Deployment
 summary: Insert the summary paragraph here.  To edit the summary you must edit the meta data for this post. 
 sidebar: mydoc_sidebar
-permalink: appdev_bindingapps.html
+permalink: appdev_applicationdev.html
 folder: mydoc
 published: true
 ---
 
-## Binding Applications to a Service Instance
+## Application Development
 
 Insert content here: [http://idratherbewriting.com](http://idratherbewriting.com). Use Markdown format.
 
