@@ -1,7 +1,7 @@
 ---
 title: Marketplace
 keywords: TAP marketplace creating a service instance
-last_updated: 'Deceber, 2016'
+last_updated: 'December, 2016'
 tags:
   - Marketplace
 summary: How to create a service instances in the Marketplace. 
