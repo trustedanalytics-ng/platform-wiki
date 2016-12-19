@@ -51,5 +51,3 @@ To enter a new defect, follow these steps:
 1. Click the **Create** button at the bottom of the **Create issue** form.
 
 Congratulations! You just created a new defect in JIRA project and became a contributor to the Trusted Analytics Platform.
-
-
