@@ -1,7 +1,7 @@
 ---
 title: Jupyter
 keywords: Jupyter Notebook
-last_updated: 'November, 2016'
+last_updated: 'December, 2016'
 tags:
   - Jupyter
 summary: How users create a Jupyter notebook instance. 
