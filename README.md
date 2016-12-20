@@ -34,7 +34,7 @@ Here are links to edit the documentation pages: **Do not edit the meta data in t
 
 [Data Acquisition](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Data-Ingestion/Data_Acquisition.md)
 
-[Download Data from Amazon D3](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Data-Ingestion/Data_Catalog_Downld_S3.md)
+[Download Data from Amazon S3](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Data-Ingestion/Data_Catalog_Downld_S3.md)
 
 [Data Catalog Ingestion](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Data-Ingestion/Data_Catalog_Ingestion.md)
 
