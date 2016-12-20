@@ -15,17 +15,17 @@ published: true
 
 From the TAP Console, select **Data Science**, then select **Jupyter**.
 
-![Creating a Jupyter Instance Step 1](/images/Create_Jupyter_Inst_v7_STEP1.jpg)
+![Creating a Jupyter Instance Step 1](/images/Create_Jupyter_Inst_Step1_v8.png)
  
-Click inside the form field labeled **Instance name** and assign a name to your instance. 
+Click inside the form field labeled **Instance name** and type a name for your instance. 
 
-![Creating a Jupyter Instance Step 2](/images/Create_Jupyter_Inst_v7_STEP2.jpg)
+![Creating a Jupyter Instance Step 2](/images/Create_Jupyter_Inst_Step2_v8.png)
  
-Select the button **Create new Jupyter instance** to create a new instance.  *The button is not available until a name has been provided in the  Instance name field*.
+Select the button **Create new Jupyter instance** to create a new instance.  *The button is not available until a name has been provided in the Instance name field*.
 
 After 30-60 seconds, refresh your browser screen. Your new Jupyter instance will be listed on the **Data Science >Jupyter** page.
 
-![Creating a Jupyter Instance Step 3](/images/Create_Jupyter_Inst_v7_STEP3.jpg)
+![Creating a Jupyter Instance Step 3](/images/Create_Jupyter_Inst_Step3_v8.png)
 
->Click the **Show** button to show your Jupyter password, so you can copy it for logging into your instance. Click on the link to access your Jupyter instance.
+>Click on the link to access your Jupyter instance.
 
