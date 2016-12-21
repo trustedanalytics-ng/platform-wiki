@@ -18,8 +18,6 @@ The Trusted Analytics Platform is dedicated to ensuring the security and integri
 
 TAP includes an intuitive user interface carefully designed around a data science and  application development collaborative workflow.  Take a [walk through the TAP console](tapwalkthrough.md) to become familiar with the TAP experience.  
 
-EMBED YOUTUBE VIDEO HERE
-
 
 ##  Release Notes
 
