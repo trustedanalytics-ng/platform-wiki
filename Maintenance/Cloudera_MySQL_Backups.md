@@ -1,7 +1,7 @@
 ---
 title: Cloudera mySQL Backups
 keywords: Cloudera mySQL Backup Restore
-last_updated: 'November, 2016'
+last_updated: 'December, 2016'
 tags:
   - Cloudera mySQL Backup Restore
 summary: Backing up and restoring mySQL to/from Cloudera.
@@ -11,7 +11,7 @@ folder: mydoc
 published: true
 ---
 
-## Backing up MySQL
+## Backing up MySQL 
 
 * The MySQL instance used by Cloudera is located on the `cdh-manager` host.
 * The MySQL login and password are stored in the Ansible* vault.
