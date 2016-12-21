@@ -1,7 +1,7 @@
 ---
 title: Cloudera mySQL Backups
 keywords: Cloudera mySQL Backup Restore
-last_updated: 'November, 2016'
+last_updated: 'December, 2016'
 tags:
   - Cloudera mySQL Backup Restore
 summary: Backing up and restoring mySQL to/from Cloudera.
