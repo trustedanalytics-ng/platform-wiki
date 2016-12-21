@@ -14,11 +14,11 @@ published: true
 ## Creating a Service Instance
 
 1. From the TAP Console, navigate to **Marketplace** and **Services**, as shown below. 
-![Creating a Service Instance from the Marketplace Step 1](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/images/Marketplace_Creating_Instance_1_v8.png)
+![Creating a Service Instance from the Marketplace Step 1](/images/Marketplace_Creating_Instance_1_v8.png)
 1. Search for and select the service you want. (Jupyter has been chosen for this example, but these steps apply to any service available in the Marketplace). 
-![Creating A Service Instance from the Marketplace Step 2](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/images/Marketplace_Creating_Instance_2_v8.png)
+![Creating A Service Instance from the Marketplace Step 2](/images/Marketplace_Creating_Instance_2_v8.png)
 1. From the service details page, choose the plan needed (often there is just one plan), then enter a name for your new service instance in the field to the left of the **Create new instance** button. 
-![Creating A Service Instance from the Marketplace Step 3](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/images/Marketplace_Creating_Instance_3_v8.png)
+![Creating A Service Instance from the Marketplace Step 3](/images/Marketplace_Creating_Instance_3_v8.png)
     - If a key-value pair is needed as a parameter for the service, click on **+ Add an extra parameter** to show the  fields for one Key-Value pair. Enter the key and value. (You can click the link again to add another key-value pair. You can also remove a key-value pair by clicking the **x** symbol after a pair.)  
     
     >Many services only have one plan, while others have two or more. Typical differences between plans include resources (nodes, RAM, persistent storage) and implementation options (five options for HDFS). Compare the different plans for your desired service and choose the one that best fits your needs. 
