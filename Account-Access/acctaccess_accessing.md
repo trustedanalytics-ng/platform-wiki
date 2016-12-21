@@ -12,7 +12,7 @@ folder: mydoc
 published: true
 ---
 
-This page shows you how to respond to an initial TAP platform invitation. It also covers ongoing TAP login.
+This page shows you how to respond to an initial TAP platform invitation. It also covers ongoing TAP login. 
 
 ## Initial user access to platform
 
@@ -24,7 +24,7 @@ After receiving the email invite and clicking on the link in the email, you will
 
 Enter your password choice (twice), select the **Terms of Service** checkbox, and click **Create account**. (It's a good idea to read the Terms of Service.)
 
-TAP creates your platform account and gives you access to the single platform organization.
+TAP creates your platform account and gives you access to the platform.
 
 TAP then displays a confirmation screen (shown below). Click on the login link in the confirmation screen to log into the platform. (Remember to save the login link for future use.)
 
