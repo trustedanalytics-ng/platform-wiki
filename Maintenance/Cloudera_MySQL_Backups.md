@@ -11,7 +11,7 @@ folder: mydoc
 published: true
 ---
 
-## Backing up MySQL
+## Backing up MySQL 
 
 * The MySQL instance used by Cloudera is located on the `cdh-manager` host.
 * The MySQL login and password are stored in the Ansible* vault.
