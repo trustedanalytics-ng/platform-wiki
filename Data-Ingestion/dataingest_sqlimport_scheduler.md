@@ -34,7 +34,7 @@ jdbc:postgresql://host:port/database_name?ssl=true&sslfactory=org.postgresql.ssl
 
 ![](/images/Ingestion_JobScheduler_JdbcUri_v8_Step3.png) 
 
-* `Username` and `Password` - These are the credentials to connect to the data source
+* `Username` and `Password` - These are the credentials to connect to the data source  
 ![](/images/Ingestion_JobScheduler_Credentisls_v7_Step4.png)
 
 * `Table` - This is the name of the database table to be imported into HDFS. 
