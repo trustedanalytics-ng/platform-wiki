@@ -16,11 +16,11 @@ The Job Scheduler allows you to import data from a SQL database into HDFS connec
 ### Import data from a SQL database
 From the TAP console main menu, navigate to **Job Scheduler** and then  **Import data**.
 
-![](/images/Step1.jpg)
+![](/images/Ingestion_JobScheduler_v7_Step1.jpg)
 
 TAP displays a form for you to fill out, starting with a job name, as shown below. Pick a unique name for your job.
 
-![](/images/job-name.png)
+![](/images/Ingestion_JobScheduler_JobName_v7_Step2.png)
 
 * `JDBC URI` - You can enter the URI directly, or you can fill in the fields above the URI field to create the required schema for the jdbc URI: 
 ```
@@ -32,13 +32,13 @@ jdbc:postgresql://host:port/database_name?ssl=true&sslfactory=org.postgresql.ssl
 ```
 (Please note that parameters are driver-specific, check database driver documentation for details)
 
-![](/images/TAP_job-scheduler_jdbc-uri.png) 
+![](/images/Ingestion_JobScheduler_JdbcUri_v7_Step3.png) 
 
 * `Username` and `Password` - These are the credentials to connect to the data source
-![](/images/TAP_job-scheduler_username-password.png)
+![](/images/Ingestion_JobScheduler_Credentisls_v7_Step4.png)
 
 * `Table` - This is the name of the database table to be imported into HDFS. 
-![](/images/TAP_job-scheduler_table.png)
+![](/images/Ingestion_JobScheduler_Table_v7_Step5.png)
 
 * `Destination dir` - This is the directory in the target HDFS where you will store the imported data. **Note:** Make sure you have write access rights to this directory.
 
@@ -49,7 +49,7 @@ jdbc:postgresql://host:port/database_name?ssl=true&sslfactory=org.postgresql.ssl
     * `Column name` - The column from the database (unique numeric format), against which `Value` will be checked; used for unique identification of data to be imported.
     * `Value` - A reference value used to filter out records from the source database - only records with values (in a column identified by ‘Column name’) not smaller than this reference ‘Value’ will be imported.
  
-![](/images/TAP_job-scheduler_import-mode-incremental.png)
+![](/images/Ingestion_JobScheduler_ImportIncr_v7_step6.png)
 
 * `Start time` - The start time of your job.
   * **Note:** When you enter a `Start time` prior to the current time, Oozie will try to “catch up” by executing jobs from the past.
