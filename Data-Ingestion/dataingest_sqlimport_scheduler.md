@@ -70,8 +70,8 @@ Selecting **Job Scheduler** then **Job browser** from the TAP Console allows you
 ![](/images/Ingestion_JobScheduler_WorkflowJobs_v8_Step8.png)
 
 There are two tabs on the **Job browser** page:  
-- **Workflow jobs** shows all completed jobs from all the list on Coordinator jobs.  
-- **Coordinator jobs** shows the scheduled jobs created from the Import Data Page (how often they repeat, when the last completed job happened, etc.).  
+- **Workflow jobs** shows all completed jobs from the list on **Coordinator jobs**.  
+- **Coordinator jobs** shows the scheduled jobs created from the **Import Data Page** (how often they repeat, when the last completed job happened, etc.).  
 
 ###Workflow jobs
 
