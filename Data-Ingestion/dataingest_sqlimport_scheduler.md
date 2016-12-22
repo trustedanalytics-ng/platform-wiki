@@ -65,7 +65,7 @@ Once data ingestion is scheduled, click the **Import Data** button at the bottom
 ![](/images/Ingestion_JobScheduler_ImportDataButton_v8_Step12.png)
 
 ## Job browser
-Selecting **Job Scheduler** then **Job browser** from the TAP Console allows you to view scheduled and completed jobs.  
+Selecting **Job Scheduler** then **Job browser** from the TAP Console allows you to view completed and scheduled jobs.  
 
 ![](/images/Ingestion_JobScheduler_WorkflowJobs_v8_Step8.png)
 
