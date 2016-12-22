@@ -65,11 +65,13 @@ Once data ingestion is scheduled, click the **Import Data** button at the bottom
 ![](/images/Ingestion_JobScheduler_ImportDataButton_v8_Step12.png)
 
 ## Job browser
-Selecting **Job Scheduler** then **Job browser** from the TAP main menu allows you to view scheduled jobs. There are two tabs on the **Job browser** page:  
-- **Workflow jobs** shows all completed jobs from all the list on Coordinator jobs.  
-- **Coordinator jobs** shows the scheduled jobs created from the Import Data Page (how often they repeat, when the last completed job happened, etc.).  
+Selecting **Job Scheduler** then **Job browser** from the TAP Console allows you to view scheduled and completed jobs.  
 
 ![](/images/Ingestion_JobScheduler_WorkflowJobs_v8_Step8.png)
+
+There are two tabs on the **Job browser** page:  
+- **Workflow jobs** shows all completed jobs from all the list on Coordinator jobs.  
+- **Coordinator jobs** shows the scheduled jobs created from the Import Data Page (how often they repeat, when the last completed job happened, etc.).  
 
 * `Workflow jobs` - On this tab, you can see a list of workflow jobs. Workflow jobs represent imports from databases to HDFS. Click on `See details` to the right of a job name for additional information (example shown below).
 ![](/images/Ingestion_JobScheduler_Details_v7_Step9.png)
