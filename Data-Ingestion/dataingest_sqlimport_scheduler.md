@@ -75,8 +75,8 @@ There are two tabs on the **Job browser** page:
 
 ###Workflow jobs
 
-This tab lists completed imports from databases to HDFS. Click on `See details` to the right of a job name for additional information (example shown below).
-![](/images/Ingestion_JobScheduler_Details_v8_Step9.png)
+This tab lists completed imports from databases to HDFS. Click on `See details` to the right of a job name for additional information (example shown below).  
+![](/images/Ingestion_JobScheduler_Details_v8_Step9.png)  
   * `Details` - This section provides additional information about the specified workflow job.
   * `See logs` - This section provides logs related to the specified workflow job.
 You can kill the job by clicking on the **Kill** button.
