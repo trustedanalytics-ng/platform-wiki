@@ -13,7 +13,7 @@ published: true
 
 The Job Scheduler allows you to import data from a SQL database into HDFS connected to TAP. Data can be imported in batch mode or by scheduling periodic, automatic updates.
 
-### Import data from a SQL database
+## Import data from a SQL database
 From the TAP Console, navigate to **Job Scheduler > Import data**.
 
 ![](/images/Ingestion_JobScheduler_v8_Step1.png)
@@ -64,7 +64,7 @@ Once data ingestion is scheduled, click the **Import Data** button at the bottom
 
 ![](/images/Ingestion_JobScheduler_ImportDataButton_v8_Step12.png)
 
-### Job browser
+## Job browser
 Selecting **Job Scheduler** then **Job browser** from the TAP main menu allows you to view scheduled jobs. There are two tabs on the **Job browser** page: **Workflow jobs** and **Coordinator jobs**. **Workflow jobs** shows TBD, while **Coordinator jobs** shows TBD.
 
 ![](/images/Ingestion_JobScheduler_WorkflowJobs_v8_Step8.png)
@@ -83,6 +83,6 @@ You can kill the job by clicking on the **Kill** button.
 ![](/images/Intestion_JobScheduler_CoordinatorStarted_v8_Step11.png)
 
 ## See also
-[Job Scheduler FAQ](https://github.com/trustedanalytics/platform-wiki-0.7/wiki/Job-scheduler-faq)
+[Job Scheduler FAQ](https://github.com/trustedanalytics/platform-wiki-0.7/wiki/Job-scheduler-faq) (questions may be moved to Community site)
 
 [Installing custom database drivers](https://github.com/trustedanalytics/platform-wiki-0.7/wiki/Installing-custom-sqoop-database-drivers-for-Import-Data-Scheduler)
