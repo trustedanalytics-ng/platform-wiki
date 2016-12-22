@@ -58,14 +58,14 @@ jdbc:postgresql://host:port/database_name?ssl=true&sslfactory=org.postgresql.ssl
 * `Frequency` - The frequency with which your job will be submitted.
 * `Timezone` - The id of the time zone for the entered start and end time.
 
-![](/images/Ingestion_JobScheduler_SetSchedule_v7_Step7.png)
+![](/images/Ingestion_JobScheduler_SetSchedule_v8_Step7.png)
 
 Once data ingestion is scheduled, click the **Import Data** button at the bottom left of the screen.
 
 ### Job browser
 Selecting **Job Scheduler** then **Job browser** from the TAP main menu allows you to view scheduled jobs. There are two tabs on the **Job browser** page: **Workflow jobs** and **Coordinator jobs**. **Workflow jobs** shows TBD, while **Coordinator jobs** shows TBD.
 
-![](/images/Ingestion_JobScheduler_WorkflowJobs_v7_Step8.png)
+![](/images/Ingestion_JobScheduler_WorkflowJobs_v8_Step8.png)
 
 * `Workflow jobs` - On this tab, you can see a list of workflow jobs. Workflow jobs represent imports from databases to HDFS. Click on `See details` to the right of a job name for additional information (example shown below).
 ![](/images/Ingestion_JobScheduler_Details_v7_Step9.png)
@@ -74,11 +74,11 @@ Selecting **Job Scheduler** then **Job browser** from the TAP main menu allows y
 You can kill the job by clicking on the **Kill** button.
 
 * `Coordinator jobs` -  This tab contains configuration information and manages workflow jobs. Click on `See details`to the right of a job for additional information (example shown below).
-![](/images/Ingestion_JobScheduler_CoordinatorDetails_v7_Step10.png)
+![](/images/Ingestion_JobScheduler_CoordinatorDetails_v8_Step10.png)
   * `Details` - Additional information about the coordinator job.
   * `Started workflow jobs` - List of workflow jobs spawned by the coordinator job. Each workflow job on the list has a `See details` link, which will redirect you to the selected workflow job details.
 
-![](/images/Intestion_JobScheduler_CoordinatorStarted_v7_Step11.png)
+![](/images/Intestion_JobScheduler_CoordinatorStarted_v8_Step11.png)
 
 ## See also
 [Job Scheduler FAQ](https://github.com/trustedanalytics/platform-wiki-0.7/wiki/Job-scheduler-faq)
