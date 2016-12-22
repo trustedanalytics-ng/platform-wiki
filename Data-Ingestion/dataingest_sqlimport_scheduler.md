@@ -60,8 +60,10 @@ jdbc:postgresql://host:port/database_name?ssl=true&sslfactory=org.postgresql.ssl
 
 ![](/images/Ingestion_JobScheduler_SetSchedule_v7_Step7.png)
 
+Once data ingestion is scheduled, click the **Import Data** button at the bottom left of the screen.
+
 ### Job browser
-Selecting **Job Scheduler** then **Job browser** from the TAP main menu allows you to view scheduled jobs. There are two tabs on the **Job browser** page: `Workflow jobs` and `Coordinator jobs`.
+Selecting **Job Scheduler** then **Job browser** from the TAP main menu allows you to view scheduled jobs. There are two tabs on the **Job browser** page: **Workflow jobs** and **Coordinator jobs**. **Workflow jobs** shows TBD, while **Coordinator jobs** shows TBD.
 
 ![](/images/Ingestion_JobScheduler_WorkflowJobs_v7_Step8.png)
 
