@@ -91,6 +91,6 @@ This tab contains configuration information and manages workflow jobs. Click on 
 ![](/images/Intestion_JobScheduler_CoordinatorStarted_v8_Step11.png)
 
 ## See also
-[Job Scheduler FAQ](https://github.com/trustedanalytics/platform-wiki-0.7/wiki/Job-scheduler-faq) (questions may be moved to Community site)
+[Job Scheduler FAQ](https://github.com/trustedanalytics/platform-wiki-0.7/wiki/Job-scheduler-faq)
 
 [Installing custom database drivers](https://github.com/trustedanalytics/platform-wiki-0.7/wiki/Installing-custom-sqoop-database-drivers-for-Import-Data-Scheduler)
