@@ -74,7 +74,7 @@ There are two tabs on the **Job browser** page:
 - **Coordinator jobs** shows the scheduled jobs created from the Import Data Page (how often they repeat, when the last completed job happened, etc.).  
 
 * `Workflow jobs` - On this tab, you can see a list of workflow jobs. Workflow jobs represent imports from databases to HDFS. Click on `See details` to the right of a job name for additional information (example shown below).
-![](/images/Ingestion_JobScheduler_Details_v7_Step9.png)
+![](/images/Ingestion_JobScheduler_Details_v8_Step9.png)
   * `Details` - This section provides additional information about the specified workflow job.
   * `See logs` - This section provides logs related to the specified workflow job.
 You can kill the job by clicking on the **Kill** button.
