@@ -82,8 +82,8 @@ This tab lists completed imports from databases to HDFS. Click on `See details` 
 You can kill the job by clicking on the **Kill** button.
 
 ###Coordinator jobs
-This tab contains configuration information and manages workflow jobs. Click on `See details`to the right of a job for additional information (example shown below).
-![](/images/Ingestion_JobScheduler_CoordinatorDetails_v8_Step10.png)
+This tab contains configuration information and manages workflow jobs. Click on `See details`to the right of a job for additional information (example shown below).  
+![](/images/Ingestion_JobScheduler_CoordinatorDetails_v8_Step10.png)  
   * `Details` - Additional information about the coordinator job.
   * `Started workflow jobs` - List of workflow jobs spawned by the coordinator job. Each workflow job on the list has a `See details` link, which will redirect you to the selected workflow job details.
 
