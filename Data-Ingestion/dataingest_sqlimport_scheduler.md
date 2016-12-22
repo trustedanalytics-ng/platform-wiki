@@ -16,7 +16,7 @@ The Job Scheduler allows you to import data from a SQL database into HDFS connec
 ### Import data from a SQL database
 From the TAP Console, navigate to **Job Scheduler > Import data**.
 
-![](/images/Ingestion_JobScheduler_v7_Step1.jpg)
+![](/images/Ingestion_JobScheduler_v8_Step1.jpg)
 
 TAP displays a form for you to fill out, starting with a job name, as shown below. Pick a unique name for your job.
 
