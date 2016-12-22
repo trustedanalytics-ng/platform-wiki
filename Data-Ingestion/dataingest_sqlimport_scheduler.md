@@ -20,7 +20,7 @@ From the TAP Console, navigate to **Job Scheduler > Import data**.
 
 TAP displays a form for you to fill out, starting with a job name, as shown below. Pick a unique name for your job.
 
-![](/images/Ingestion_JobScheduler_JobName_v7_Step2.png)
+![](/images/Ingestion_JobScheduler_JobName_v8_Step2.png)
 
 * `JDBC URI` - You can enter the URI directly, or you can fill in the fields above the URI field to create the required schema for the jdbc URI: 
 ```
@@ -32,7 +32,7 @@ jdbc:postgresql://host:port/database_name?ssl=true&sslfactory=org.postgresql.ssl
 ```
 (Please note that parameters are driver-specific, check database driver documentation for details)
 
-![](/images/Ingestion_JobScheduler_JdbcUri_v7_Step3.png) 
+![](/images/Ingestion_JobScheduler_JdbcUri_v8_Step3.png) 
 
 * `Username` and `Password` - These are the credentials to connect to the data source
 ![](/images/Ingestion_JobScheduler_Credentisls_v7_Step4.png)
