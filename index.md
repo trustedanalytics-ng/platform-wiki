@@ -24,7 +24,7 @@ You can find a short list of exciting additions and known bugs for this release 
 
 TAP includes an intuitive user interface carefully designed around a data science and  application development collaborative workflow.  
 
-| TAP Console | Walk Through |
+|  |  |
 |-------|--------|
 | **Services Marketplace:** - The Trusted Analytics Platform offers a variety of services enabled for optimized cloud computing. Services include software to enable data analytics, app development and reliable system monitoring. | ![](/images/UI_marketplace_900x.gif) |
 | ![](/images/UI_datacatalog_900x.gif) | **Data Catalog:** - Data ingestion and cataloging in a TAP platform is easy. With just a few clicks or commands you can ingest data once, schedule recurring data ingestion, work with streaming data or quickly find existing data sets. |
