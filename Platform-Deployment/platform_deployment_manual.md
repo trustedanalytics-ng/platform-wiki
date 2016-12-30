@@ -13,6 +13,7 @@ published: true
 ---
 
 Platform Deployment Manual
+
 Trusted Analytics Platform 0.8
 
 >This information is intended for internal Intel use only. Relevant information will be extracted and presented in a public documentation web page for users.
@@ -20,7 +21,7 @@ Trusted Analytics Platform 0.8
 # Introduction
 
 
-Welcome to TAP 0.8 Deployment and Maintenance Manual.
+Welcome to TAP 0.8 Platform Deployment Manual.
 
 The goal of this document is to explain TAP deployment automation and its architecture design, and how to perform essential maintenance procedures.
 
