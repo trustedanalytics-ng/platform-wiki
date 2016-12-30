@@ -1,4 +1,23 @@
-# Maintenance
+---
+title: TAP 0.8 Platform Maintenance Manual
+keywords: platform maintenance manual
+last_updated: 'December 30, 2016'
+tags:
+  - Platform Maintenance
+summary: >-
+  Insert the summary paragraph here. To edit the summary you must edit the meta data for this post.
+sidebar: mydoc_sidebar
+permalink: platform-maintenance-manual.html
+folder: mydoc
+published: true
+---
+
+**Platform Maintenance Manual**
+Trusted Analytics Platform 0.8
+
+>This information is intended for internal Intel use only. Relevant information will be extracted and presented in a public documentation web page for users.
+
+# Maintenance procedures
 
 ## Platform backup and restore
 
