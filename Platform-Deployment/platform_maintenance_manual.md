@@ -17,7 +17,6 @@ Trusted Analytics Platform 0.8
 
 >This information is intended for internal Intel use only. Relevant information will be extracted and presented in a public documentation web page for users.
 
-# Maintenance procedures
 
 ## Platform backup and restore
 
