@@ -121,7 +121,7 @@ Characteristics of this configuration:
      * at least one storage device (200 GB) avaliable for mount if role `hadoop-*` or `storage-master` is installed on the node
 	**Note:** If storage device is not explicitly provided then the master/root drive will be used for storage!
 
-## Production Grade configuration
+## Production grade configuration
 
 Characteristics of this configuration:
 * Redundant functions are distributed among separate nodes to provide performance, high availability (HA) and replication
@@ -834,11 +834,11 @@ Optimal production-grade configurations contain odd number of machines with this
 Installed services:
 - Ceph client
 
-Installed with roles:
+This role should be installed on all machines that need access to persistent storage service provided by Ceph.
+
+**Note:** Automatically installed (no need to be added manually) on machines with roles:
 - `compute-master`
 - `compute-worker`
-
-**Note:** No additional instances required. [???]
 
 ---
 
@@ -860,7 +860,9 @@ Such secret secret data shall be stored in a separate (never shared) file named 
 
 The default file name can be overriden by environment variable `SECRETS`.
 
-This file has to contain param `secrets: true` and, in the future, can be also encrypted using `ansible-vault` (not yet supported in TAP 0.8).
+In the future `tap.config.secrets` can be also encrypted using `ansible-vault` (not yet supported in TAP 0.8).
+
+**Note:** This file must not be empty - at least one parameter is needed!
 
 # TAP Architecture & Core Components
 
