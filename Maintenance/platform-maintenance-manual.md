@@ -27,7 +27,7 @@ WALDEK TO PROVIDE PROCEDURE
 ## Platform upgrades
 
 [???]
-TODO
+TODO: DPNG-10992
 [???]
 
 ## Graceful/safe platfrom shutdown
