@@ -69,4 +69,4 @@ You can change the role for an existing user as follows:
 
 ##Technical specification  
 
-For in-depth technical information on User Management is, see [TAPUserManagementDocumentation.docx.pdf](/pdfs/TAPUserManagementDocumentation.docx.pdf)
+For in-depth technical information on User Management, see [TAPUserManagementDocumentation.docx.pdf](/pdfs/TAPUserManagementDocumentation.docx.pdf)
