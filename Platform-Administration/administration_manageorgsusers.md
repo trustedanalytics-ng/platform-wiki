@@ -43,7 +43,7 @@ Here are the steps to delete a user from the organization:
 
 2. Choose the **User list** tab.
 
-3. Click the **x** (delete symbol) next to user you wish to delete.
+3. Click the **x** (delete symbol) next to user you wish to delete (right side of screen).
 
 4. Confirm the deletion.  
 
