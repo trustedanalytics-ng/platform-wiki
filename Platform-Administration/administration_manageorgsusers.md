@@ -1,7 +1,7 @@
 ---
 title: Platform Administration
 keywords: platform administration
-last_updated: 'November, 2016'
+last_updated: 'January, 2017'
 tags:
   - Platform Administration
 summary: How to invite users and delete and users. 
