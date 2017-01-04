@@ -47,7 +47,7 @@ Here are the steps to delete a user from the organization:
 
 4. Confirm the deletion.  
 
-     ![](/images/PlatformAdmin_Delete_User_v8)
+     ![](/images/PlatformAdmin_Delete_User_v8.png)
 
 5. TAP deletes the user from the organization and displays a confirmation message in the upper right of the screen. Refresh your browser after several seconds to see the deletion reflected on the screen.
 
