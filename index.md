@@ -20,6 +20,11 @@ The Trusted Analytics Platform is dedicated to ensuring the security and integri
 
 You can find a short list of exciting additions and known bugs for the latest release on our [Release Notes](Release_notes.mdnote) page.
 
+##  Getting Started and FAQ's
+
+We provide use case examples to get you started with your TAP environment.  Visit our [community site]
+(https://community.trustedanalytics.org/welcome) for workshops, tutorials and FAQ's that will help you through the TAP workflow.
+
 ## UI Walkthrough
 
 TAP includes an intuitive user interface carefully designed around a data science and  application development collaborative workflow.  
@@ -31,11 +36,3 @@ TAP includes an intuitive user interface carefully designed around a data scienc
 | **Model Catalog:** Store models and allow creating REST endpoints to use models within applications.  | ![](/images/UI_modelcatalog_900x.gif) |
 | ![](/images/UI_appcatalog_900x.gif)  | **Applications Catalog:** Build, upload, run and repurpose any application to show streaming data, predictive analytics results, or take advantage of new IOT device output all from the TAP Applications Catalog. |
 | **Platform Administration:** Monitor your cloud service, keep track of user permissions for added security, ensure your platform is always running smoothly with TAP’s easy to use interface.  | ![](/images/UI_platformadmin_900x.gif) |
-
-
-
-##  Getting Started
-
-We provide use case examples to get you started with your TAP environment.  Visit our [community site](https://community.trustedanalytics.org/welcome) for workshops and tutorials that walk you through the TAP workflow.
-
-
