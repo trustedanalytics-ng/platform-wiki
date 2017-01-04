@@ -55,7 +55,7 @@ Here are the steps to delete a user from the organization:
 
 ##Changing user roles
 
-You can also change the role for an existing user by checking/unchecking the "Organization Admin" checkbox for that user.
+You can change the role for an existing user by checking/unchecking the "Organization Admin" checkbox for that user.
 * Checked = Organization Admin
 * Unchecked = Regular User
 
