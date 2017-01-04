@@ -13,9 +13,9 @@ published: true
 
 ##Adding users to the organization
 
-> System admins can add users to the single platform organization. If the user does *not* already have a user account on the platform, TAP generates an invitation email to the user.
+> System admins can add users to the platform. If the user does *not* already have a user account on the platform, TAP generates an invitation email to the user.
 
-Here are the steps to invite a user to the single platform organization: 
+Here are the steps to invite a user to the platform: 
 
 1. Navigate to **User Management > Manage Organization Users**.
 
@@ -29,8 +29,6 @@ Here are the steps to invite a user to the single platform organization:
   
      ![](/images/PlatformAdmin_Add_User_v8.png)  
   
-For existing platform users, TAP will notify you that the user has been added to the organization. But *you must notify the user* of this addition, as TAP does *not* send any notifications.
-
 If the user does *not* yet have a TAP account, TAP sends an email invitation to the user. For the user view of this process, [go here](/Account-Access/acctaccess_accessing.md).
 
 ##Deleting users from the organization
@@ -50,8 +48,6 @@ Here are the steps to delete a user from the organization:
      ![](/images/PlatformAdmin_Delete_User_v8.png)
 
 5. TAP deletes the user from the organization and displays a confirmation message in the upper right of the screen. Refresh your browser after several seconds to see the deletion reflected on the screen.
-
->This only deletes the user from the organization; their user account still exists at the platform level.
 
 ##Changing user roles
 
