@@ -29,7 +29,7 @@ Here are the steps to invite a user to the platform:
   
      ![](/images/PlatformAdmin_Add_User_v8.png)  
   
-If the user does *not* yet have a TAP account, TAP sends an email invitation to the user. For the user view of this process, [go here](/Account-Access/acctaccess_accessing.md).
+If the user does *not* yet have a TAP account, TAP sends an email invitation to the user. For the user view of this process, visit [Account access](/Account-Access/acctaccess_accessing.md).
 
 ##Deleting users from the organization
 
