@@ -26,4 +26,3 @@ To invite a new user to the platform, perform the following steps:
 9. Enter the e-mail address of the user you want to invite and click **Send invitation**.
 
 Invited users receive an email with a link to the registration page, where they specify their own password. To see this flow from the user’s perspective, [go here](/Account-Access/acctaccess_accessing.md).
-
