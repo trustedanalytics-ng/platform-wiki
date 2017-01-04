@@ -39,16 +39,18 @@ If the user does *not* yet have a TAP account, TAP sends an email invitation to 
 
 Here are the steps to delete a user from the organization:
 
-1. Navigate to **Manage Organization Users**.
+1. Navigate to **User Management > Manage Organization Users**.
 
-2. Click the **x** (delete symbol) next to user you wish to delete.
+2. Choose the **Add user** tab.
 
-3. Confirm the deletion.  
+3. Click the **x** (delete symbol) next to user you wish to delete.
+
+4. Confirm the deletion.  
 
      ![](/images/PlatformAdmin_Delete_User_v8)
 
-4. TAP deletes the user from the organization and displays a confirmation message in the upper right of the screen. Refresh your browser after several seconds to see the deletion reflected on the screen.
+5. TAP deletes the user from the organization and displays a confirmation message in the upper right of the screen. Refresh your browser after several seconds to see the deletion reflected on the screen.
 
 >This only deletes the user from the organization; their user account still exists at the platform level.
 
-For in depth technical specifications, see [TAPUserManagementDocumentation.docx.pdf](/pdfs/TAPUserManagementDocumentation.docx.pdf)
+For in depth technical specifications on User Management, see [TAPUserManagementDocumentation.docx.pdf](/pdfs/TAPUserManagementDocumentation.docx.pdf)
