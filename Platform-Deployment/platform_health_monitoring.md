@@ -1,26 +1,24 @@
 ---
-title: Platform Monitoring
-keywords: Platform Monitoring
+title: Platform Health Monitoring
+keywords: Platform Health Monitoring
 last_updated: 'November, 2016'
 tags:
-  - Platform Monitoring
-summary: Platform Monitoring. 
+  - Platform Health Monitoring
+summary: Platform Health Monitoring. 
 sidebar: mydoc_sidebar
-permalink: platform_monitoring.html
+permalink: platform_health_monitoring.html
 folder: mydoc
 published: true
 ---
 
-## Platform Monitoring
+## Platform Health Monitoring
 TAP monitoring architecture consists of two main elements: 
   * A server in the Cloud that runs a web interface and sends change notifications.
   * A proxy that is deployed onsite and reports to the central server.
-
 We are using Zabbix version 2.4 due to its automatic configuration capabilities.
+
 ##### Monitoring architecture
 ![Monitoring Architecture](/images/TAP_Monitoring_Zabbix_v7.png)
-
-
 
 ## Central server
 

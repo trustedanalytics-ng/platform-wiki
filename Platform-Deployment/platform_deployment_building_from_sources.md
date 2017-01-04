@@ -1,17 +1,17 @@
 ---
-title: Troubleshooting
-keywords: troubleshooting TAP system logs
+title: TAP Platform Deployment
+keywords: platform deployment building artifacts from sources
 last_updated: 'October, 2016'
 tags:
-  - Troubleshooting
+  - Platform Deployment
 summary: Insert the summary paragraph here.  To edit the summary you must edit the meta data for this post. 
 sidebar: mydoc_sidebar
-permalink: troubleshoot_systemlogs.html
+permalink: deployment_buildfromsources.html
 folder: mydoc
 published: true
 ---
 
-## System Logs
+## Building TAP artifacts from sources
 
 Insert content here: [http://idratherbewriting.com](http://idratherbewriting.com). Use Markdown format.
 
