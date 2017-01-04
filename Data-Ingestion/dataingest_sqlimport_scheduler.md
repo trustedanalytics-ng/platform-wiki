@@ -11,7 +11,7 @@ folder: mydoc
 published: true
 ---
 
-The Job Scheduler allows you to import data from a SQL database into HDFS connected to TAP. Data can be imported in batch mode or by scheduling periodic, automatic updates.
+The Job Scheduler allows you to import data from a SQL database into HDFS connected to TAP. Data can be imported in batch mode or by scheduling periodic, automatic updates. The Job Scheduler uses both Oozie and Sqoop to import data.
 
 ## Import data from a SQL database
 From the TAP Console, navigate to **Job Scheduler > Import data**.
@@ -26,16 +26,13 @@ TAP displays a form for you to fill out, starting with a job name, as shown belo
 ```
 jdbc:driver://host:port/database_name
 ```
-You can add optional JDBC URI parameters, for example, to turn on SSL for postgresql connection:
+You can add optional JDBC URI parameters, for example, to turn on SSL for postgreSQL connection:
 ```
 jdbc:postgresql://host:port/database_name?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
 ```
 (Please note that parameters are driver-specific, check database driver documentation for details)
 
 ![](/images/Ingestion_JobScheduler_JdbcUri_v8_Step3.png) 
-
-* `Username` and `Password` - These are the credentials to connect to the data source  
-![](/images/Ingestion_JobScheduler_Credentisls_v8_Step4.png)
 
 * `Table` - This is the name of the database table to be imported into HDFS. 
 ![](/images/Ingestion_JobScheduler_Table_v8_Step5.png)
@@ -56,10 +53,12 @@ jdbc:postgresql://host:port/database_name?ssl=true&sslfactory=org.postgresql.ssl
 * `End time` - The end time of your job. 
   * `End time` should always be later than `Start time`.
 * `Frequency` - The frequency with which your job will be submitted.
-* `Timezone` - The id of the time zone for the entered start and end time.
+* `Timezone` - The ID of the time zone for the entered start and end time.
 
 ![](/images/Ingestion_JobScheduler_SetSchedule_v8_Step7.png)
 
+* `Username` and `Password` - These are the credentials to connect to the data source. 
+![](/images/Ingestion_JobScheduler_Credentisls_v8_Step4.png)
 Once data ingestion is scheduled, click the **Import Data** button at the bottom left of the screen.
 
 ![](/images/Ingestion_JobScheduler_ImportDataButton_v8_Step12.png)
@@ -71,7 +70,7 @@ Selecting **Job Scheduler** then **Job browser** from the TAP Console allows you
 
 There are two tabs on the **Job browser** page:  
 - **Workflow jobs** shows all completed jobs from the list on **Coordinator jobs** tab.  
-- **Coordinator jobs** shows the scheduled jobs created from the **Import Data** page (how often they repeat, when the last completed job happened, etc.).  
+- **Coordinator jobs** shows the scheduled jobs created from the **Import Data** page, such as how often they repeat, when the last completed job happened, etc.
 
 ###Workflow jobs
 
@@ -91,6 +90,5 @@ This tab contains configuration information and manages workflow jobs. Click on 
 ![](/images/Intestion_JobScheduler_CoordinatorStarted_v8_Step11.png)
 
 ## See also
-[Job Scheduler FAQ](https://github.com/trustedanalytics/platform-wiki-0.7/wiki/Job-scheduler-faq)
 
 [Installing custom database drivers](https://github.com/trustedanalytics/platform-wiki-0.7/wiki/Installing-custom-sqoop-database-drivers-for-Import-Data-Scheduler)
