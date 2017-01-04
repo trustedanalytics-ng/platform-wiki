@@ -4,7 +4,7 @@ keywords: platform administration
 last_updated: 'January, 2017'
 tags:
   - Platform Administration
-summary: How to invite users and delete and users. 
+summary: How to invite users and delete users. 
 sidebar: mydoc_sidebar
 permalink: administration_manageorgsusers.html
 folder: mydoc
@@ -17,7 +17,7 @@ published: true
 
 Here are the steps to invite a user to the single platform organization: 
 
-1. Navigate to **User management** and click on **Manage organization users**.
+1. Navigate to **User Management > Manage Organization Users**.
 
 2. Choose the **Add user** tab.
 
@@ -25,9 +25,10 @@ Here are the steps to invite a user to the single platform organization:
 
 4. Choose between the **Regular User** and **Organizational Admin** roles. (Most users will likely be **Regular Users**.)
 
-5. Click the **Add user** button.
-![](/images/Add_User_v7_Crpd.png)
-
+5. Click the **Add user** button.  
+  
+![](/images/PlatformAdmin_Add_User_v8.png)  
+  
 For existing platform users, TAP will notify you that the user has been added to the organization. But *you must notify the user* of this addition, as TAP does *not* send any notifications.
 
 If the user does *not* yet have a TAP account, TAP sends an email invitation to the user. For the user view of this process, [go here](/Account-Access/acctaccess_accessing.md).
@@ -38,12 +39,13 @@ If the user does *not* yet have a TAP account, TAP sends an email invitation to 
 
 Here are the steps to delete a user from the organization:
 
-1. Navigate to **Manage organization users**.
+1. Navigate to **Manage Organization Users**.
 
 2. Click the **x** (delete symbol) next to user you wish to delete.
 
-3. Confirm the deletion.
-![](/images/Delete_User_Organization_v7_Crpd.png)
+3. Confirm the deletion.  
+
+![](/images/PlatformAdmin_Delete_User_v8)
 
 4. TAP deletes the user from the organization and displays a confirmation message in the upper right of the screen. Refresh your browser after several seconds to see the deletion reflected on the screen.
 
