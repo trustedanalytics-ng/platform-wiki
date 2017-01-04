@@ -21,7 +21,7 @@ To invite a new user to the platform, perform the following steps:
 
 9. Navigate to **User Management > Onboarding**.  
   
-![](/images/PlatformAdmin_Onboard_Invite_v8.png)  
+     ![](/images/PlatformAdmin_Onboard_Invite_v8.png)  
   
 9. Enter the e-mail address of the user you want to invite and click **Send invitation**.
 
