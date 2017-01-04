@@ -4,7 +4,7 @@ keywords: platform administration
 last_updated: 'January, 2017'
 tags:
   - Platform Administration
-summary: How to invite users and delete users. 
+summary: How to invite users, delete users, and change user roles. 
 sidebar: mydoc_sidebar
 permalink: administration_manageorgsusers.html
 folder: mydoc
