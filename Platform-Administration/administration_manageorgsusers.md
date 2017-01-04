@@ -53,6 +53,6 @@ Here are the steps to delete a user from the organization:
 
 >This only deletes the user from the organization; their user account still exists at the platform level.
 
->You can also change the role for an existing user by checking/unchecking the "Organization Admin" checkbox for that user.
+>You can also change the role for an existing user by checking/unchecking the "Organization Admin" checkbox for that user. Checked = Organization Admin; unchecked = Regular User.
 
 For in depth technical specifications on User Management, see [TAPUserManagementDocumentation.docx.pdf](/pdfs/TAPUserManagementDocumentation.docx.pdf)
