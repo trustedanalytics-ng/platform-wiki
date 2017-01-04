@@ -19,7 +19,7 @@ To invite a new user to the platform, perform the following steps:
 
 1. Log into TAP as system admin.
 
-9. Navigate to **User Management > Onboarding** tab.  
+9. Navigate to **User Management > Onboarding**.  
 
 ![](/images/PlatformAdmin_Onboard_Invite_v8.png)  
 
