@@ -65,4 +65,4 @@ You can change the role for an existing user as follows:
 * Checked = Organization Admin
 * Unchecked = Regular User
 
-For in depth technical specifications on User Management, see [TAPUserManagementDocumentation.docx.pdf](/pdfs/TAPUserManagementDocumentation.docx.pdf)
+For in-depth technical specifications on User Management, see [TAPUserManagementDocumentation.docx.pdf](/pdfs/TAPUserManagementDocumentation.docx.pdf)
