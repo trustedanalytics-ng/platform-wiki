@@ -59,11 +59,15 @@ You can change the role for an existing user as follows:
 
 1. Navigate to **User Management > Manage Organization Users**.
 
-2. Choose the **User list** tab.
+9. Choose the **User list** tab.
 
-3. Check/uncheck the **Organization Admin** checkbox for the user whose role you want to change:  
+9. Check/uncheck the **Organization Admin** checkbox for the user whose role you want to change:  
+  
+    -Checked = Organization Admin  
+ 
+    -Unchecked = Regular User  
+    
 
-     -Checked = Organization Admin  
-     -Unchecked = Regular User  
+##Technical specification  
 
-For in-depth technical specifications on User Management, see [TAPUserManagementDocumentation.docx.pdf](/pdfs/TAPUserManagementDocumentation.docx.pdf)
+For in-depth technical information on User Management is, see [TAPUserManagementDocumentation.docx.pdf](/pdfs/TAPUserManagementDocumentation.docx.pdf)
