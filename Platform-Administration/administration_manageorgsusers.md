@@ -27,7 +27,7 @@ Here are the steps to invite a user to the single platform organization:
 
 5. Click the **Add user** button.  
   
-![](/images/PlatformAdmin_Add_User_v8.png)  
+     ![](/images/PlatformAdmin_Add_User_v8.png)  
   
 For existing platform users, TAP will notify you that the user has been added to the organization. But *you must notify the user* of this addition, as TAP does *not* send any notifications.
 
@@ -45,7 +45,7 @@ Here are the steps to delete a user from the organization:
 
 3. Confirm the deletion.  
 
-![](/images/PlatformAdmin_Delete_User_v8)
+     ![](/images/PlatformAdmin_Delete_User_v8)
 
 4. TAP deletes the user from the organization and displays a confirmation message in the upper right of the screen. Refresh your browser after several seconds to see the deletion reflected on the screen.
 
