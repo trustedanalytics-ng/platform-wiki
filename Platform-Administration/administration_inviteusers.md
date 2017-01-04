@@ -1,7 +1,7 @@
 ---
 title: Platform Administration
 keywords: platform administration - inviting users
-last_updated: 'November, 2016'
+last_updated: 'January, 2017'
 tags:
   - Platform Administration
 summary: Inviting users to platform. 
