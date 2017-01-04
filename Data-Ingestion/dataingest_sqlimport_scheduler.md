@@ -57,8 +57,10 @@ jdbc:postgresql://host:port/database_name?ssl=true&sslfactory=org.postgresql.ssl
 
 ![](/images/Ingestion_JobScheduler_SetSchedule_v8_Step7.png)
 
-* `Username` and `Password` - These are the credentials to connect to the data source. 
-![](/images/Ingestion_JobScheduler_Credentisls_v8_Step4.png)
+* `Username` and `Password` - These are the credentials to connect to the data source.  
+
+![](/images/Ingestion_JobScheduler_Credentisls_v8_Step4.png)  
+
 Once data ingestion is scheduled, click the **Import Data** button at the bottom left of the screen.
 
 ![](/images/Ingestion_JobScheduler_ImportDataButton_v8_Step12.png)
