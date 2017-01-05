@@ -26,7 +26,7 @@ An instance of a service must be created in order to bind your application to th
 1. Select the **Restage** button to restage the application.  
 ![appdeploy_binding_screen3.jpg](/images/appdeploy_binding_screen3.jpg)
 
-You can unbind a service by selecting the **Unbind** button in the bound service instances list.  
+You can unbind a service by selecting the **Unbind** button in the Bound service instances list.  
 
 ## Binding Using TAP CLI
 
