@@ -1,7 +1,7 @@
 ---
 title: Repositories
 keywords: List of Repositories
-last_updated: 'November, 2016'
+last_updated: 'January, 2017'
 tags:
   - Repositories
 summary: List of repsitories for TAP 0.8. 
@@ -172,6 +172,9 @@ https://github.com/intel-data/ansible-ceph-osd
 Ansible Ceph client:  
 https://github.com/intel-data/ansible-ceph-client
 
+TAP Ceph monitor:
+https://github.com/intel-data/tap-ceph-monitor
+
 UAA client library:  
 https://github.com/intel-data/uaa-lib
 
@@ -180,9 +183,6 @@ https://github.com/intel-data/tap-image-factory
 
 micro-reverse-proxy:  
 https://github.com/intel-data/micro-reverse-proxy
-
-UAA client register job:  
-https://github.com/intel-data/tap-uaa-client-register-job
 
 TAP infrastructure deploy:  
 https://github.com/intel-data/tap-infrastructure-deploy
@@ -210,3 +210,4 @@ https://github.com/intel-data/spring-music
 
 TAP Nginx docker image with dynamic configuration support:  
 https://github.com/intel-data/tap-nginx-dyn-stream
+
