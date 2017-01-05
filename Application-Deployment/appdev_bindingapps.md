@@ -23,7 +23,8 @@ An instance of a service must be created in order to bind your application to th
 1. Select the **Bindings** tab to view the services already bound to the application and a list of services available to bind to the application. 
 ![appdeploy_binding_screen2.jpg](/images/appdeploy_binding_screen2.jpg)
 1. Select the **Bind** button for the service you want to bind to the application.
-1. Select the **Restage>>** button to restage the application.  
+1. Select the **Restage** button to restage the application.  
+![appdeploy_binding_screen3.jpg](/images/appdeploy_binding_screen3.jpg)
 
 ## Binding Using TAP CLI
 
