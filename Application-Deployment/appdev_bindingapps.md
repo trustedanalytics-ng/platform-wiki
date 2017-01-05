@@ -25,3 +25,6 @@ An instance of a service must be created in order to bind your application to th
 1. Select the **Bind** button for the service you want to bind to the application.
 1. Select the **Restage>>** button to restage the application.  
 
+## Binding Using TAP CLI
+
+You can accomplish the same process as above using the TAP CLI.  Visit the [TAP CLI documentation](/Reference-Documents/reference_cli.md) page for details. 
