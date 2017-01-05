@@ -22,7 +22,7 @@ You can find a short list of exciting additions and known bugs for the latest re
 
 ##  Getting Started and FAQ's
 
-We provide use case examples to get you started with your TAP environment.  Visit our [community site]
+Jump right in by trying one of our use case examples, or visit our [community site]
 (https://community.trustedanalytics.org/welcome) for workshops, tutorials and FAQ's that will help you through the TAP workflow.
 
 ## UI Walkthrough
