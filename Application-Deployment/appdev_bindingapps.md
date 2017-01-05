@@ -1,7 +1,7 @@
 ---
 title: Application Deployment
 keywords: binding applications to services application deployment on TAP
-last_updated: 'October, 2016'
+last_updated: 'January, 2017'
 tags:
   - Application Deployment
 summary: Easily integrate instances of data stores as well as 3rd party services to your application. 
@@ -12,6 +12,8 @@ published: true
 ---
 
 ## Binding a Service to your Application
+
+The TAP service broker, which is found in **Marketplace** in the TAP Console, makes it easy to add popular services like MongoDB to your application. This highly extensible aspect of TAP allows you to easily integrate instances of data stores as well as 3rd party services to your application. 
 
 An instance of a service must be created in order to bind your application to that service. See [Creating a new Service Instance](/Platform-Marketplace/marketplace_createinstance.md) for instructions.
 
