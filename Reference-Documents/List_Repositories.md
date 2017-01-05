@@ -172,7 +172,7 @@ https://github.com/intel-data/ansible-ceph-osd
 Ansible Ceph client:  
 https://github.com/intel-data/ansible-ceph-client
 
-TAP Ceph monitor:
+TAP Ceph monitor:  
 https://github.com/intel-data/tap-ceph-monitor
 
 UAA client library:  
