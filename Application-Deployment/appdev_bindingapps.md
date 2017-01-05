@@ -20,7 +20,7 @@ An instance of a service must be created in order to bind your application to th
 1. Navigate to **Applications** from the main menu.
 1. Search for the application you wish to bind and select the **See Details>>** link on the far right of the application row.
 ![appdeploy_binding_screen1.jpg](/images/appdeploy_binding_screen1.jpg)
-1. Select the **Bindings** tab to view the services already bound to the application and a list of services available to bind to the application. 
+1. Select the **Bindings** tab to view the services already bound to your application, and a list of services available to bind to. 
 ![appdeploy_binding_screen2.jpg](/images/appdeploy_binding_screen2.jpg)
 1. Select the **Bind** button for the service you want to bind to the application.
 1. Select the **Restage** button to restage the application.  
