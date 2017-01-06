@@ -33,9 +33,9 @@ This page describes the steps for deploying the spark-tk version of the space-sh
 ## Step 0: Prerequisites  
 The following prerequisites are needed to successfully complete this example:
 - An IDE environment such as IntelliJ IDE Community Edition (or Eclipse)
-- Oracle JDK  1.8
+- Oracle JDK 1.8
 - Apache maven
-- Cloud Foundry CLI  
+- TAP CLI
 
 See the [*Sample environment variables for Windows*](#environment_windows) information at the end of this page when using Windows.
 
@@ -171,10 +171,10 @@ D. In the CLI, invoke maven to create a Java package:
     target/classes/manifest-mqtt.yml
 ```
 
-E. Log into the Cloud Foundry CLI using the following command:
+E. Log into the TAP CLI using the following command:
 
 ```
-    cf login -a your_analytics_platform_uri_here
+    tap login -a your_analytics_platform_uri_here
 ``` 
 
 >Copy the TAP instance URI, then replace `console` at the beginning with `api`. Examples:  
@@ -189,20 +189,20 @@ F. When prompted, enter your:
 * Organization number (if there are multiple organizations)  
 
 
-G. Push the application to the platform using the Cloud Foundry (CF) command:  
+G. Push the application to the platform using the TAP CLI command:  
 
-    `cf push`  
+    `tap push`  
 
 
 >You can see this login and push command sequence in the TAP Console **App Development** tab.
 
-CF uses the `manifest.yml` file to upload the application to TAP. If you used the recommended names earlier, or edited the `manifest.yml` file in the previous step, the application will be started, but *no* data is being sent to it yet.
+The TAP CLI uses the `manifest.yml` file to upload the application to TAP. If you used the recommended names earlier, or edited the `manifest.yml` file in the previous step, the application will be started, but *no* data is being sent to it yet.
 
 
->If you removed the services section from `manifest.yml`, the application will *not* be started yet. First, bind the required service instances (`cf bind-service`) to the application and then restage (`cf restage`) it.  
+>If you removed the services section from `manifest.yml`, the application will *not* be started yet. First, bind the required service instances (`tap bind-service`) to the application and then restage (`tap restage`) it.  
 
 
->If the default application name (`space-shuttle`) is already uploaded to any organization on the TAP platform, you will get an error message stating that the host name is taken. In this case, open the `manifest.yml` file and rename the application. Then attempt the `cf push` again.
+>If the default application name (`space-shuttle`) is already uploaded to any organization on the TAP platform, you will get an error message stating that the host name is taken. In this case, open the `manifest.yml` file and rename the application. Then attempt the `tap push` again.
 
 
 ## Step 8: Sending data to Kafka  
@@ -212,10 +212,10 @@ To send data to the Kafka queue (integrated into TAP), through the Gateway servi
 - Change your directory to `client`, then push `space_shuttle_client` from the client directory to the TAP space with the existing Gateway instance, using this command:
 
 ```
-     cf push space-shuttle-client
+     tap push space-shuttle-client
 ```  
  
->CF uses the `manifest.yml` file in the client directory.  
+>The TAP CLI uses the `manifest.yml` file in the client directory.  
 
 *or*  
 
@@ -225,14 +225,14 @@ Data will start to be sent to the application.
 In the TAP Console, navigate to **Applications** and click the link for the Space Shuttle Client. The space shuttle image appears, followed by the anomaly data grid, and, finally, by anomaly data.
 
 >It may take several minutes for the data grid to appear, and up to several hours for anomaly data to appear. Good data, however, is being sent immediately. You can check on data flow to the application via the following command in your CLI window:  
-`cf logs space-shuttle`  
+`tap logs space-shuttle`  
 Use your actual application name if you chose something other than the default name.  
 
 ##<a name="environment_windows">Sample environment variables for Windows:
 
 ###PATH system environment variable:
 
-- C:\CF\CloudFoundry
+- C:\CF\CloudFoundry  <-- needs revising
 - C:\Program Files\Java\jdk1.8.0_112\bin
 - C:\maven\apache-maven-3.3.9\bin
 
