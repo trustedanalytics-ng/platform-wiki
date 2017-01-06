@@ -70,15 +70,13 @@ A. In the TAP console, navigate to **Data Science > Jupyter**.
 
 B. If a Jupyter instance already exists, skip this step.  If *no* Jupyter instance exists, enter a notebook **Instance Name** and click the **Create a new Jupyter instance** button. This takes less than a minute to complete.
 
-D. For your Jupyter instance, click **Show** to see the password for the instance. Copy the password for use in the next step.
+C. Click the **App Url** link to login to your Jupyter instance.
 
-E. Click the **App Url** link to login to your Jupyter instance, using the password you just copied.
+D. In Jupyter, click the (white) **Upload** button, then navigate to the Space Shuttle notebook file, which can be found here: `space-shuttle-demo-master/sparktkmodelgenerator/sparktk_shuttle_model_generator.ipynb`
 
-F. In Jupyter, click the (white) **Upload** button, then navigate to the Space Shuttle notebook file, which can be found here: `space-shuttle-demo-master/sparktkmodelgenerator/sparktk_shuttle_model_generator.ipynb`
+E. Select the file and click the second (blue) **Upload** button.
 
-G. Select the file and click the second (blue) **Upload** button.
-
-H. In Jupyter, click on the `sparktk_shuttle_model_generator.ipynb` file to open the file.
+F. In Jupyter, click on the `sparktk_shuttle_model_generator.ipynb` file to open the file.
 
 
 ## Step 4: Connecting to TAP server and generating the model
