@@ -29,5 +29,4 @@ After 30-60 seconds, refresh your browser screen. Your new Jupyter instance will
 
 >Click on the link to access your Jupyter instance. TAP automatically authenticates with Jupyter using your TAP credentials.
 
-To understand the technical platform support for supporting Jupyter, see []().
-
+To understand the technical platform support for Jupyter, see [micro-reverse-proxy repo](https://github.com/intel-data/micro-reverse-proxy/blob/Documentation-upgrade/README.md).
