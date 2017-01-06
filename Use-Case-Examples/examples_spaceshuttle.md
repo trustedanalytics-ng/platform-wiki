@@ -115,19 +115,11 @@ I. Click on the model name to see detailed information. Copy the targetURI for t
 
 To create the Scoring Engine service instance:
 
-A. From the TAP console, navigate to **Services > Marketplace**. Select the "Scoring Engine for Spark-tk" service.
+A. From the TAP console, navigate to **Marketplace > Services**.
 
-B. Type the name `space-shuttle-scoring-engine`
+B. Select the button **Add Scoring Engine** for your model. This creates a Scoring Engine that automatically connects to your model.
 
-C. Click **+ Add an extra parameter** and add the URI to your model (from Step 4I) as part of this key/value pair:
-
-```
-    key: uri value: hdfs://path_to_your_model_here  
-```
-
-D. Click the **Create new instance** button.  
-
->This may take a minute or two. You can monitor the process via the **Event Log** tab.
+>This may take a minute or two.
 
 
 ## Step 6: Create instances of additional services  
@@ -138,7 +130,7 @@ Create the following required service instances (if they do *not* exist already)
 - Zookeeper (recommended name: `space-shuttle-zookeeper`, create as **Shared** plan)  
 - Gateway (recommended name: `space-shuttle-gateway`)  
 
-These services can all be found in **Services > Marketplace**.
+These services can all be found in **Marketplace > Services**.
 
 The application will connect to these service instances using Spring Cloud Connectors.
 
