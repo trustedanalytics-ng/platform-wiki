@@ -1,7 +1,7 @@
 ---
 title: Space Shuttle Example - Streaming Data
 keywords: TAP streaming data use case example
-last_updated: 'December, 2016'
+last_updated: 'January, 2017'
 tags:
   - examples space shuttle streaming
 summary: Space shuttle streaming data example for spark-tk. 
@@ -12,6 +12,8 @@ published: true
 ---
 
 ## Use Case: Streaming Data - Space Shuttle Example
+
+(Tested with TAP 0.7.3; needs updating for TAP 0.8.0)
 
 This page describes the steps for deploying the spark-tk version of the space-shuttle-demo application to TAP. Most of the major steps have sub-steps. The link to the GitHub repository for this example is [located here](https://github.com/trustedanalytics/space-shuttle-demo).
 
