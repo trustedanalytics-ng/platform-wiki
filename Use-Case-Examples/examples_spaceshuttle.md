@@ -15,7 +15,7 @@ published: true
 
 (Tested with TAP 0.7.3; needs updating for TAP 0.8.0)
 
-This page describes the steps for deploying the spark-tk version of the space-shuttle-demo application to TAP. Most of the major steps have sub-steps. The link to the GitHub repository for this example is [located here](https://github.com/trustedanalytics/space-shuttle-demo).
+This page describes the steps for deploying the spark-tk version of the space-shuttle-demo application to TAP. Most of the major steps have sub-steps. The link to the GitHub repository for this example is [https://github.com/trustedanalytics/space-shuttle-demo](https://github.com/trustedanalytics/space-shuttle-demo).
 
 | Steps | Summary |
 |:-----:| ------- |
@@ -41,29 +41,27 @@ See the [*Sample environment variables for Windows*](#environment_windows) infor
 
 
 ## Step 1: Clone or Download GitHub repository  
-Clone/download [this GitHub repository](https://github.com/trustedanalytics/space-shuttle-demo) to your local system.
->New to GitHub?  Cloning instructions are  [located here](https://help.github.com/articles/cloning-a-repository/).
+Clone/download [https://github.com/trustedanalytics/space-shuttle-demo](https://github.com/trustedanalytics/space-shuttle-demo) to your local system.
+>New to GitHub?  Cloning instructions are [https://help.github.com/articles/cloning-a-repository/](https://help.github.com/articles/cloning-a-repository/).
 
 
 ## Step 2: Uploading training data set to HDFS  
 
-A. Login to the TAP console and select the organization and space to work in from the drop-down menus in the upper right of the TAP console. 
+A. Login to the TAP console and navigate to **Data catalog > Submit Transfer**.
 
-B. Navigate to **Data catalog > Submit Transfer**.
+B. Select the **input type: Local path**.
 
-C. Select the **input type: Local path**.
+C. Find and select the sample training data file, which can be found here: `space-shuttle-demo-master/sparktkmodelgenerator/train-data.csv`
 
-D. Find and select the sample training data file, which can be found here: `space-shuttle-demo-master/sparktkmodelgenerator/train-data.csv`
+D. Enter a data set title in the **Title** field.
 
-E. Enter a data set title in the **Title** field.
+E. Choose a **Category** if you want keep things organized going forward. (**Other** is the default.)
 
-F. Choose a **Category** if you want to help you keep things organized going forward. (**Other** is the default.)
+F. Click the **Upload** button.
 
-G. Click the **Upload** button.
+G. When the upload is completed, click **OK** in the dialog box. Then click the **Data catalog > Data sets** tab. Your data set is listed.
 
-H. When the upload is completed, click **OK** in the dialog box. Then click the **Data catalog > Data sets** tab. Your data set is listed.
-
-I. Click on the name of the data set to see detailed information. (You will need the URI to the data set later.) 
+H. Click on the name of the data set to see detailed information. (You will need the URI to the data set later.) 
 
 
 ## Step 3: Creating Jupyter instance and uploading Space Shuttle notebook  
