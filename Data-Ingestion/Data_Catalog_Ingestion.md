@@ -4,7 +4,7 @@ keywords: Data Catalog Ingestion
 last_updated: 'November, 2016'
 tags:
   - Data Catalog Ingestion
-summary: How to ingest data into the TAP Data Catalog. 
+summary: How to ingest data to TAP using the data catalog. 
 sidebar: mydoc_sidebar
 permalink: data_catalog-ingestion.html
 folder: mydoc
