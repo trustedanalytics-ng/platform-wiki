@@ -1,10 +1,10 @@
 ---
 title: Platform Administration
 keywords: platform administration
-last_updated: 'November, 2016'
+last_updated: 'January, 2017'
 tags:
   - Platform Administration
-summary: How to invite users and delete and users. 
+summary: How to invite users, delete users, and change user roles. 
 sidebar: mydoc_sidebar
 permalink: administration_manageorgsusers.html
 folder: mydoc
@@ -13,11 +13,11 @@ published: true
 
 ##Adding users to the organization
 
-> System admins can add users to the single platform organization. If the user does *not* already have a user account on the platform, TAP generates an invitation email to the user.
+> System admins can add users to the platform. If the user does *not* already have a user account on the platform, TAP generates an invitation email to the user.
 
-Here are the steps to invite a user to the single platform organization: 
+Here are the steps to invite a user to the platform: 
 
-1. Navigate to **User management** and click on **Manage organization users**.
+1. Navigate to **User Management > Manage Organization Users**.
 
 2. Choose the **Add user** tab.
 
@@ -25,12 +25,11 @@ Here are the steps to invite a user to the single platform organization:
 
 4. Choose between the **Regular User** and **Organizational Admin** roles. (Most users will likely be **Regular Users**.)
 
-5. Click the **Add user** button.
-![](/images/Add_User_v7_Crpd.png)
-
-For existing platform users, TAP will notify you that the user has been added to the organization. But *you must notify the user* of this addition, as TAP does *not* send any notifications.
-
-If the user does *not* yet have a TAP account, TAP sends an email invitation to the user. For the user view of this process, [go here](/Account-Access/acctaccess_accessing.md).
+5. Click the **Add user** button.  
+  
+     ![](/images/PlatformAdmin_Add_User_v8.png)  
+  
+If the user does *not* yet have a TAP account, TAP sends an email invitation to the user. For the user view of this process, visit [Account access](/Account-Access/acctaccess_accessing.md).
 
 ##Deleting users from the organization
 
@@ -38,15 +37,32 @@ If the user does *not* yet have a TAP account, TAP sends an email invitation to 
 
 Here are the steps to delete a user from the organization:
 
-1. Navigate to **Manage organization users**.
+1. Navigate to **User Management > Manage Organization Users**.
 
-2. Click the **x** (delete symbol) next to user you wish to delete.
+2. Choose the **User list** tab.
 
-3. Confirm the deletion.
-![](/images/Delete_User_Organization_v7_Crpd.png)
+3. Click the **x** (delete symbol) next to user you wish to delete (right side of screen).
 
-4. TAP deletes the user from the organization and displays a confirmation message in the upper right of the screen. Refresh your browser after several seconds to see the deletion reflected on the screen.
+4. Confirm the deletion.  
 
->This only deletes the user from the organization; their user account still exists at the platform level.
+     ![](/images/PlatformAdmin_Delete_User_v8.png)
 
-For in depth technical specifications, see [TAPUserManagementDocumentation.docx.pdf](/pdfs/TAPUserManagementDocumentation.docx.pdf)
+5. TAP deletes the user from the organization and displays a confirmation message in the upper right of the screen. Refresh your browser after several seconds to see the deletion reflected on the screen.
+
+##Changing user roles
+
+You can change the role for an existing user as follows:
+
+1. Navigate to **User Management > Manage Organization Users**.
+
+9. Choose the **User list** tab.
+
+9. Check/uncheck the **Organization Admin** checkbox for the user whose role you want to change:  
+  
+    * Checked = Organization Admin  
+    * Unchecked = Regular User  
+    
+
+##Technical specification  
+
+For in-depth technical information on User Management, see [TAPUserManagementDocumentation.pdf](/pdfs/TAPUserManagementDocumentation.pdf)
