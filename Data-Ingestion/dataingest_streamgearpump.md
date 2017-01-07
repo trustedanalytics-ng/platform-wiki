@@ -4,7 +4,7 @@ keywords: TAP data ingestion
 last_updated: 'January, 2016'
 tags:
   - Data Ingestion
-summary: Insert the summary paragraph here.  To edit the summary you must edit the meta data for this post. 
+summary: Using the Gearpump engine to ingest streaming data. 
 sidebar: mydoc_sidebar
 permalink: dataingest_streamgearpump.html
 folder: mydoc
