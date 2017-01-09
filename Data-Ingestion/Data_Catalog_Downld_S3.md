@@ -34,6 +34,6 @@ published: true
 
 9. Select the **Upload** button.
 
->It may take from 30 seconds to a couple of minutes for the download to complete, depending on the size of the data file you are ingesting.
+   >It may take from 30 seconds to a couple of minutes for the download to complete, depending on the size of the data file you are ingesting.
 
 Your data set will now be listed in the **Data Catalog > Data sets** tab.  
