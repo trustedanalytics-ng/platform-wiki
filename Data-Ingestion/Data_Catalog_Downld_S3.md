@@ -22,8 +22,18 @@ published: true
 
     ![Copy Link Address](/images/Data_Ingestion_Download_AWS_S3_2.png)
 
-1. Paste this URL into **Link** field on the TAP Console **Data Catalog > Submit Transfer** tab. 
+9. Paste this URL into **Link** field on the TAP Console **Data Catalog > Submit Transfer** tab. 
 
     ![TAP Data Catalog Submit Transfer](/images/Data_Ingestion_Download_AWS_S3_v8.png)
 
-**Note:** This link is only valid for a certain amount of time (usually 3 minutes or less). Transfers can take longer, but you must submit the transfer request within this time.
+   >This link is only valid for a certain amount of time (usually 3 minutes or less). Transfers can take longer, but you must submit the transfer request within this time.  
+   
+9. Enter a title in the **Title** field. The **Upload** button will *not* be active until a title has been provided.
+
+9. Select a category to help others find your data easily. (**Other** is the default.)  
+
+9. Select the **Upload** button.
+
+>It may take from 30 seconds to a couple of minutes for the download to complete, depending on the size of the data file you are ingesting.
+
+Your data set will now be listed in the **Data Catalog > Data sets** tab.  
