@@ -16,14 +16,14 @@ published: true
 
 9. Right-click your file and select **Download**.
 
-    ![AWS S3 Download](/images/AWS_s3_download1.png)
+    ![AWS S3 Download](/images/Data_Ingestion_Download_AWS_S3_1.png)
 
 9. After clicking **Download**, a pop-up window should open. Right-click the **Download** button in the window and choose **Copy link address**.
 
-    ![Copy Link Address](/images/AWS_s3_download2.png)
+    ![Copy Link Address](/images/Data_Ingestion_Download_AWS_S3_2.png)
 
 1. Paste this URL into **Link** field on the TAP Console **Data Catalog > Submit Transfer** tab. 
 
-    ![TAP Data Catalog Submit Transfer](/images/AWS_s3_download3_v7.png)
+    ![TAP Data Catalog Submit Transfer](/images/Data_Ingestion_Download_AWS_S3_v8.png)
 
 **Note:** This link is only valid for a certain amount of time (usually 3 minutes or less). Transfers can take longer, but you must submit the transfer request within this time.
