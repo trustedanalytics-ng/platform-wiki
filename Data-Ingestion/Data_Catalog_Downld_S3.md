@@ -3,8 +3,8 @@ title: Using Data Catalog to download files from S3
 keywords: Data Catalog S3
 last_updated: 'January, 2017'
 tags:
-  - Data Catalog S3
-summary: Using Data Catalog to download files from S3. 
+  - Data Catalog AWS S3
+summary: Using Data Catalog to download files from AWS S3. 
 sidebar: mydoc_sidebar
 permalink: data_catalog_s3.html
 folder: mydoc
