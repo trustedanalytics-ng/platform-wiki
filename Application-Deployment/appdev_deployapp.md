@@ -4,7 +4,7 @@ keywords: application deployment on TAP
 last_updated: 'October, 2016'
 tags:
   - Application Deployment
-summary: Insert the summary paragraph here.  To edit the summary you must edit the meta data for this post. 
+summary: If you are new to deploying applications on the Trusted Analytics platform (TAP), these steps will guide you through the process. 
 sidebar: mydoc_sidebar
 permalink: appdev_deployapp.html
 folder: mydoc
@@ -13,9 +13,9 @@ published: true
 
 ## Deploying Your First Application
 
-If you are new to deploying applications on the Trusted Analytics platform (TAP), these steps will guide you through the process.
+The steps below use an example application (Spring Music) to walk you through deploying your first application on TAP.
 
-### Tools
+### Prerequisites
 
 Aside from having an IDE to code your application, the primary tool to deploy applications is the CLI (Command Line Interface) for TAP. You can prepare your environment and install this tool by visiting [this page](Contributing-to-TAP/contributing_devenvironment.md) or going to TAP Console >> Main navigation panel >> **App Development**.
 
