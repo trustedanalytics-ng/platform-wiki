@@ -1,17 +1,17 @@
 ---
-title: Use Case Examples
-keywords: TAP streaming data use case example
+title: Model Deloyment
+keywords: deploying models on TAP
 last_updated: 'October, 2016'
 tags:
-  - Examples
+  - Model Publishing
 summary: Insert the summary paragraph here.  To edit the summary you must edit the meta data for this post. 
 sidebar: mydoc_sidebar
-permalink: examples_wenergy.html
+permalink: models_catalog.html
 folder: mydoc
 published: true
 ---
 
-## Use Case: End to End - Wenergy Application
+## Model Catalog
 
 Insert content here: [http://idratherbewriting.com](http://idratherbewriting.com). Use Markdown format.
 
