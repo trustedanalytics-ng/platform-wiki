@@ -1,17 +1,17 @@
 ---
-title: Model Publishing
-keywords: publishing models on TAP
+title: Model Deloyment
+keywords: deploying models on TAP
 last_updated: 'October, 2016'
 tags:
   - Model Publishing
 summary: Insert the summary paragraph here.  To edit the summary you must edit the meta data for this post. 
 sidebar: mydoc_sidebar
-permalink: models_newpages.html
+permalink: models_catalog.html
 folder: mydoc
 published: true
 ---
 
-## Publishing Models on TAP
+## Model Catalog
 
 Insert content here: [http://idratherbewriting.com](http://idratherbewriting.com). Use Markdown format.
 
