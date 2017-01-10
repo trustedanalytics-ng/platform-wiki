@@ -1,17 +1,17 @@
 ---
-title: Contributing to TAP
-keywords: contributing to tap kerberos authentication
+title: Building Analytics
+keywords: building analytics on TAP
 last_updated: 'October, 2016'
 tags:
-  - Contributing
+  - Building Analytics
 summary: Insert the summary paragraph here.  To edit the summary you must edit the meta data for this post. 
 sidebar: mydoc_sidebar
-permalink: contributing_kerberosauth.html
+permalink: buildanalytics_sparktk.html
 folder: mydoc
 published: true
 ---
 
-## Kerberos Authentication
+## Using spark-tk
 
 Insert content here: [http://idratherbewriting.com](http://idratherbewriting.com). Use Markdown format.
 
