@@ -2,8 +2,7 @@
 title: Account Access
 keywords: account access login
 last_updated: 'December, 2016'
-tags:
-  - account_access
+tags: [Account_Access]
 summary: This page shows you how to respond to an initial TAP platform invitation. It also covers ongoing TAP login.
 sidebar: mydoc_sidebar
 permalink: acctaccess_accessing.html
