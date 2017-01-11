@@ -225,6 +225,10 @@ Provisioning steps:
 - connect to your newly created jumpbox host - type `./connect`
 - obtain (donwload or prepare yourself) and extract TAP platform installation package `TAP-<version>-platform.tar.gz` on machine/node with `jumpbox` role in user's (`centos`) home directory - run `tar -zvxf TAP-<version>-platform.tar.gz`
 
+#### AWS domain registration
+
+[ToDo]
+
 ## Platform installation
 
 Having properly provisioned and configured infrastructure (scripts described above completed execution without errors) you can run actual platform installation script:
