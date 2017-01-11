@@ -1,4 +1,4 @@
-﻿---
+---
 title: TAP 0.8 Platform Deployment Manual
 keywords: platform deployment manual
 last_updated: 'December 30, 2016'
@@ -209,7 +209,7 @@ To run AWS infrastructure provisioning you need:
 - internet connection
 
 Provisioning steps:
-- obtain and extract package with TAP infrastructure provisioning scripts `TAP-<version>-infra.tar.gz` - run `tar -zvxf TAP-<version>-infra.tar.gz`
+- obtain and extract package with TAP infrastructure provisioning scripts `TAP-<version>-infra.tar.gz` (if not available as a separate package obtain entire `TAP-<version>-platform.tar.gz`) - run `tar -zvxf TAP-<version>-infra.tar.gz` (or `TAP-<version>-platform.tar.gz` respectively)
 - edit `tap.config` and `tap.config.secrets` configuration files and provide necessary configuration parameters described below (it is recommended to use templates  provided in subdirectory `config-templates`)
 - go into your package directory (`cd ./TAP-<version>`)
 - run infrastructure provisioning script `./deploy.sh infra-aws`
@@ -217,11 +217,7 @@ Provisioning steps:
 - connect to your newly created jumpbox host - type `./connect`
 - obtain (donwload or prepare yourself) and extract TAP platform installation package `TAP-<version>-platform.tar.gz` on machine/node with `jumpbox` role in user's (`centos`) home directory - run `tar -zvxf TAP-<version>-platform.tar.gz`
 
-<<<<<<< HEAD
-+#### AWS domain registration
-=======
 #### AWS domain registration
->>>>>>> origin/master
 
 [ToDo]
 
