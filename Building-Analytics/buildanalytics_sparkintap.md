@@ -21,11 +21,11 @@ The easiest way to get started with Spark on TAP is within a Jupyter notebook, a
 
 2. Open your Jupyter instance and navigate to **examples/spark/README.ipynb**
 
-![Accessing Readme files](/images/Build_Analytics_SparkScreen1.png)
+![Accessing Readme files](/images/Build_Analytics_Spark_Screen1.png)
 
 3. The README notebook demonstrates how to create a SparkContext and some simple Spark code.
 
-![Readme files in Jupyter Sample](/images/Build_Analytics_SparkScreen2.png)
+![Readme files in Jupyter Sample](/images/Build_Analytics_Spark_Screen2.png)
 
 The other example notebooks show how to use Spark dataframes, RDDs, streaming, SQL, and machine learning with K-Means and Linear Regression.
 
@@ -36,10 +36,10 @@ The other example notebooks show how to use Spark dataframes, RDDs, streaming, S
 ###Accessing a terminal from Jupyter
 1. From the Jupyter dashboard, select the **>New** button located in the upper right.
 
-![Accessing a Terminal from Jupyter](/images/Build_Analytics_SparkScreen4.jpg) 
+![Accessing a Terminal from Jupyter](/images/Build_Analytics_Spark_Screen4.png) 
 
 2. Select **>Terminal** from the sub menu to open a new terminal within Jupyter. 
 
-![Jupyter Terminal](/images/Build_Analytics_SparkScreen5.jpg) 
+![Jupyter Terminal](/images/Build_Analytics_Spark_Screen5.png) 
 
 You can enter Spark commands (spark-shell, spark-submit, etc.) in the terminal window.
