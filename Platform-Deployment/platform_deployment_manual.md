@@ -1,4 +1,4 @@
----
+﻿---
 title: TAP 0.8 Platform Deployment Manual
 keywords: platform deployment manual
 last_updated: 'December 30, 2016'
@@ -20,19 +20,15 @@ Trusted Analytics Platform 0.8
 
 # Introduction
 
-
 Welcome to TAP 0.8 Platform Deployment Manual.
 
 The goal of this document is to explain TAP deployment automation and its architecture design, and how to perform essential maintenance procedures.
 
 ## Required knowledge
 
-
 While platform installation for testing purposes is easy, long-term production deployments require more in-depth knowledge of the underlying services and components.
 
-
 Domain areas where administrator skills are assumed:
-
 
 * Linux administration
 * Kubernetes administration (see [[http://kubernetes.io/docs/user-guide/]])
@@ -43,7 +39,6 @@ Domain areas where administrator skills are assumed:
 
 Local workstation requirements:
 * Linux (clean CentOS 7.2.1511)
-
 
 This document freely uses common terminology associated with those areas.
 
@@ -62,9 +57,7 @@ TAP 0.8 core functionalities are based on these technologies:
 * persistent storage: ceph 11
 * hadoop cluster: CDH 5.7.1 (Cloudera Hadoop distribution)
 
-
 These are “typical” TAP installation configurations:
-
 
 ## Minimum configuration
 
@@ -81,7 +74,6 @@ This configuration is recommended for trying out TAP and its analytics features.
          * hadoop-master-primary (in TAP 0.8: CDH Master Primary)
          * hadoop-master-controller (in TAP 0.8: CDH Manager)
          * hadoop-worker (in TAP 0.8: CDH Worker)
-
 
 * Hardware requirements for each node:
      * 24 GB of RAM
@@ -224,6 +216,10 @@ Provisioning steps:
 - register required domain records in your domain name provider
 - connect to your newly created jumpbox host - type `./connect`
 - obtain (donwload or prepare yourself) and extract TAP platform installation package `TAP-<version>-platform.tar.gz` on machine/node with `jumpbox` role in user's (`centos`) home directory - run `tar -zvxf TAP-<version>-platform.tar.gz`
+
++#### AWS domain registration
+
+[ToDo]
 
 ## Platform installation
 
