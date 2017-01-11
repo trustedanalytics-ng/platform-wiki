@@ -34,7 +34,7 @@ The other example notebooks show how to use Spark dataframes, RDDs, streaming, S
 >More information about Spark is available on the [Apache Spark website](http://spark.apache.org/)
 
 ###Accessing a terminal from Jupyter
-1. From the Jupyter dashboard, select the **>New** button located in the upper right.
+1. From the Jupyter dashboard, select the **New** button located in the upper right.
 
 ![Accessing a Terminal from Jupyter](/images/Build_Analytics_Spark_Screen4.png) 
 
