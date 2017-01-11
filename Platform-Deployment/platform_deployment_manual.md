@@ -217,7 +217,11 @@ Provisioning steps:
 - connect to your newly created jumpbox host - type `./connect`
 - obtain (donwload or prepare yourself) and extract TAP platform installation package `TAP-<version>-platform.tar.gz` on machine/node with `jumpbox` role in user's (`centos`) home directory - run `tar -zvxf TAP-<version>-platform.tar.gz`
 
+<<<<<<< HEAD
 +#### AWS domain registration
+=======
+#### AWS domain registration
+>>>>>>> origin/master
 
 [ToDo]
 
