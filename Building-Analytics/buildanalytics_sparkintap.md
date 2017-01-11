@@ -29,7 +29,7 @@ The easiest way to get started with Spark on TAP is within a Jupyter notebook, a
 
 The other example notebooks show how to use Spark dataframes, RDDs, streaming, SQL, and machine learning with K-Means and Linear Regression.
 
-![Readme files in Jupyter Sample](/images/Build_Analytics_Spark_Screen3_New1.png)
+![Readme files in Jupyter Sample](/images/Build_Analytics_Spark_Screen3.png)
 
 >More information about Spark is available on the [Apache Spark website](http://spark.apache.org/)
 
