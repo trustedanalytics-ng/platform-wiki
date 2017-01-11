@@ -38,7 +38,7 @@ The other example notebooks show how to use Spark dataframes, RDDs, streaming, S
 
 ![Accessing a Terminal from Jupyter](/images/Build_Analytics_Spark_Screen4.png) 
 
-2. Select **>Terminal** from the sub menu to open a new terminal within Jupyter. 
+2. Select **Terminal** from the sub menu to open a new terminal within Jupyter. 
 
 ![Jupyter Terminal](/images/Build_Analytics_Spark_Screen5.png) 
 
