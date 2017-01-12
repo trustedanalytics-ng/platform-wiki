@@ -19,10 +19,10 @@ The easiest way to get started with Spark on TAP is within a Jupyter notebook, a
 
 1. First, [create a Jupyter notebook](/Building-Analytics/Creating_Jupyter_Notebook_Instance.md).
 
-2. Open your Jupyter instance and navigate to **examples/spark/README.ipynb**
-
-![Accessing Readme files](/images/Build_Analytics_Spark_Screen1.png)
-
+2. Open your Jupyter instance and navigate to **examples/spark/README.ipynb**  
+  
+![Accessing Readme files](/images/Build_Analytics_Spark_Screen1.png)  
+  
 3. The README notebook demonstrates how to create a SparkContext and some simple Spark code.
 
 ![Readme files in Jupyter Sample](/images/Build_Analytics_Spark_Screen2.png)
