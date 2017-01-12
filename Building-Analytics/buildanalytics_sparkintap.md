@@ -36,7 +36,7 @@ The other example notebooks show how to use Spark dataframes, RDDs, streaming, S
 ###Accessing a terminal from Jupyter
 1. From the Jupyter dashboard, select the **New** button located in the upper right.
 
-![Accessing a Terminal from Jupyter](/images/Build_Analytics_Spark_Screen4.png) 
+    ![Accessing a Terminal from Jupyter](/images/Build_Analytics_Spark_Screen4.png) 
 
 2. Select **Terminal** from the sub menu to open a new terminal within Jupyter. 
 
