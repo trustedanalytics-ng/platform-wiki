@@ -1,4 +1,4 @@
----
+﻿---
 title: TAP 0.8 Platform Deployment Manual
 keywords: platform deployment manual
 last_updated: 'December 30, 2016'
@@ -31,18 +31,16 @@ While platform installation for testing purposes is easy, long-term production d
 Domain areas where administrator skills are assumed:
 
 * Linux administration
-* Kubernetes administration (see [[http://kubernetes.io/docs/user-guide/]])
-* Docker (user-level) (see [[https://docs.docker.com/]]) 
-* Hadoop administration (see [[http://www.cloudera.com/documentation.html]]) 
-* Ceph administration (see [[http://docs.ceph.com/docs/master/]])
+* [Kubernetes administration](http://kubernetes.io/docs/user-guide/)
+* [Docker (user-level)](https://docs.docker.com)
+* [Hadoop administration](http://www.cloudera.com/documentation.html)
+* [Ceph administration](http://docs.ceph.com/docs/master/)
 * IP network administration
 
 Local workstation requirements:
 * Linux (clean CentOS 7.2.1511)
 
 This document freely uses common terminology associated with those areas.
-
-# Deployment
 
 ## Deployment requirements
 
@@ -57,111 +55,37 @@ TAP 0.8 core functionalities are based on these technologies:
 * persistent storage: ceph 11
 * hadoop cluster: CDH 5.7.1 (Cloudera Hadoop distribution)
 
-These are “typical” TAP installation configurations:
-
-## Minimum configuration
-
-This configuration is recommended for trying out TAP and its analytics features.
-
-* The suggested Minimum Configuration layout consist of 2 nodes (hosts) only:
-      1. 1 node (computation machine):
-         * compute-master (in TAP 0.8: kubernetes master)
-         * storage-master (in TAP 0.8: ceph master)
-         * compute-worker (in TAP 0.8: kubernetes worker)
-         * storage-worker (in TAP 0.8: ceph worker)
-         * jumpbox
-      1. 1 node (hadoop machine):
-         * hadoop-master-primary (in TAP 0.8: CDH Master Primary)
-         * hadoop-master-controller (in TAP 0.8: CDH Manager)
-         * hadoop-worker (in TAP 0.8: CDH Worker)
-
-* Hardware requirements for each node:
-     * 24 GB of RAM
-     * 4 CPU cores
-     * 100 GB of HDD for root directory
-     * at least one storage device (200 GB) avaliable for mount if role `hadoop-*` or `storage-master` is installed on the node
-	**Note:** If storage device is not explicitly provided then the master/root drive will be used for storage!
-
-**Note:** The minimal configuration does *not* provide important reliability features that are required for production deployments.
-
-## Medium configuration
-
-Characteristics of this configuration:
-
-* Redundant functions are distributed among separate nodes to provide high availability and data replication
-
-* *Not* focused on raw platform performance, rather on cluster reliability
-
-* Suggested Medium Configuration layout consist of 8 nodes (hosts, HA disabled):
-      1. 1 node:
-         * compute-master (in TAP 0.8: kubernetes master)
-         * storage-master (in TAP 0.8: ceph master)
-         * jumpbox
-      1. 3 nodes:
-         * compute-worker (in TAP 0.8: kubernetes workers)
-         * storage-worker (in TAP 0.8: ceph workers)
-      1. 1 node (it has to be bigger, 32GB RAM):
-         * hadoop-master-primary (in TAP 0.8: CDH Master Primary)
-         * hadoop-master-controller (in TAP 0.8: CDH Manager)
-      1. 3 nodes:
-         * hadoop-worker (in TAP 0.8: CDH Workers)
-
-* Hardware requirements for each node:
-     * 16 GB of RAM
-     * 4 CPU cores
-     * 100 GB of HDD
-     * at least one storage device (200 GB) avaliable for mount if role `hadoop-*` or `storage-master` is installed on the node
-	**Note:** If storage device is not explicitly provided then the master/root drive will be used for storage!
-
-## Production grade configuration
-
-Characteristics of this configuration:
-* Redundant functions are distributed among separate nodes to provide performance, high availability (HA) and replication
-
-* Suggested layout consist of 16+ nodes (hosts):
-      1. 1 node (medium instance, 2CPU + 4GB of RAM):
-         * jumpbox
-      1. 3 nodes (large instance - 2CPU + 8GB of RAM for 10> workers, largex instance - 4CPU + 16GB of RAM for 30> workers, largex2 or even more for bigger clusters):
-         * compute-master (in TAP 0.8: kubernetes master)
-      1. 3+ nodes (large instance, 4 CPU + 16GB of RAM - these nodes provide the real computational power of the cluster):
-         * compute-worker (in TAP 0.8: kubernetes workers)
-      1. 3 nodes (medium instance - 2CPU + 4GB of RAM):
-         * storage-master (in TAP 0.8: ceph master)
-         * storage-worker (in TAP 0.8: ceph workers)
-      1. 0+ nodes (small instance - 2CPU + 2GB of RAM):
-         * storage-worker (in TAP 0.8: ceph workers)
-      1. 1 node (largex instance - 4CPU + 16GB of RAM):
-         * hadoop-master-primary (in TAP 0.8: CDH Master Primary)
-      1. 1 node (largex instance - 4CPU + 16GB of RAM):
-         * hadoop-master-secondary (in TAP 0.8: CDH Master Primary)
-      1. 1 host (largex2 instance - 8CPU + 32GB of RAM):
-         * hadoop-master-controller (in TAP 0.8: CDH Manager)
-      1. 3+ hosts (at least large instance - 4CPU + 16GB of RAM - these nodes provide the real power of YARN in Hadoop cluster):
-         * hadoop-worker (in TAP 0.8: CDH Worker)
-
-* In this setup persistent storage is installed on dedicated nodes (roles: storage-master and storage-worker). You should follow Ceph documentation on recommended hardware setups: [[http://docs.ceph.com/docs/jewel/start/hardware-recommendations/]]
-
-#### Supplement: recommendations for persistent storage service (storage-* nodes)
-
-Ceph, that in TAP 0.8 provides persistent storage service, needs to run 2 daemons - ceph-mon and ceph-osd; good practice is to have minimum 3 ceph-mon and 3 ceph-osd.
-
-It is strongly recommended to allocate for Ceph-OSD (machine role: 'storage-worker') at least 1GB RAM per 1TB storage, 1 storage drive per deamon (SSD - better performance/higher cost, HDD lower performance/lower cost) and 20GB root HDD.
-
-For Ceph-MON (machine role: 'storage-master') at least 1GB RAM and 20GB on root HDD should be allocated.
-
 # Deployment procedure in a nutshell
 
 TAP 0.8 has a unified installation procedure for both bare metal (hardware and operating systems provisioned by the user) and cloud deployments (TAP deployment automation creates infrastructure using APIs made available by IaaS providers).
 
-TAP 0.8 can be installed both from binary installation package or built from sources (procedure of building TAP deployment package from sources has been described below).
+TAP can be installed both from binary installation package or built from sources (procedure of building TAP deployment package from sources has been described below).
 
-TAP 0.8 is using 2 configuration files in yaml/json format called _Config Master File_ and _Config Master File - Secrects_. Both files have to exists in TAP directory, with minimum 1 param inside.
+The deployment procedure is using 2 configuration files in yaml/json format called _Config Master File_ and _Config Master File Secrects_. Both files have to exists in TAP directory, with minimum 1 param inside.
 
 Details on these configuration files are provided in later chapters of this manual.
 
+TAP 0.8 deployment procedure consists of 2 phases described in detail below:
+* [infrastructure provisioning](Infrastructure provisioning)
+* [platform installation](Platform installation)
+
+## Deployment flow
+
+The following diagram shows which Ansible role is executed on which machine group:
+
+[[img/docs.png]]
+
+Deployment is performed by Ansible playbooks.
+
+All roles used during deployment are available in the `roles/` directory. The diagram above shows which role is executed on which machine over time during the deployment process.
+
+Once the deployment of the platform is completed service offerings (provided later via TAP Marketplace) are installed. Role execution flow is as follows:
+
+[[img/apps_docs.png]]
+
 ## Building TAP from sources
 
-TAP deployment package can be built from source code - for build procedure please follow [[https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/platform_deployment_building_from_sources.md]]
+TAP deployment package can be built from source code - for build procedure please follow [TAP builing procedure](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/platform_deployment_building_from_sources.md)
 
 ## Infrastructure provisioning
 
@@ -194,7 +118,7 @@ TAP 0.8 deployment automation has the functionality to provision infrastructure 
 
 The infrastructure being deployed consists of VPC, subnets, EC2 instances, ELB (Elastic Load Balancers).
 
-AWS infrastructure provisioning automation has been done in Ansible, using AWS module ([[http://docs.ansible.com/ansible/guide_aws.html]]). Thanks to that, we obtain proper idempotent design, where re-running automation should fix infrastructure problems.
+AWS infrastructure provisioning automation has been done in Ansible, using [AWS module](http://docs.ansible.com/ansible/guide_aws.html). Thanks to that, we obtain proper idempotent design, where re-running automation should fix infrastructure problems.
 
 Infrastructure provisioning deployment steps generates necessary configuration and inventory files for later use.
 
@@ -210,21 +134,28 @@ To run AWS infrastructure provisioning you need:
 
 Provisioning steps:
 - obtain and extract package with TAP infrastructure provisioning scripts `TAP-<version>-infra.tar.gz` (if not available as a separate package obtain entire `TAP-<version>-platform.tar.gz`) - run `tar -zvxf TAP-<version>-infra.tar.gz` (or `TAP-<version>-platform.tar.gz` respectively)
-- edit `tap.config` and `tap.config.secrets` configuration files and provide necessary configuration parameters described below (it is recommended to use templates  provided in subdirectory `config-templates`)
+- edit Master Config File (`tap.config`) and Master Config File Secrets (`tap.config.secrets`) configuration files and provide necessary configuration parameters described below (it is recommended to use templates  provided in subdirectory `config-templates`)
 - go into your package directory (`cd ./TAP-<version>`)
 - run infrastructure provisioning script `./deploy.sh infra-aws`
 - register required domain records in your domain name provider
 - connect to your newly created jumpbox host - type `./connect`
-- obtain (donwload or prepare yourself) and extract TAP platform installation package `TAP-<version>-platform.tar.gz` on machine/node with `jumpbox` role in user's (`centos`) home directory - run `tar -zvxf TAP-<version>-platform.tar.gz`
+- obtain (download or prepare yourself) and extract TAP platform installation package `TAP-<version>-platform.tar.gz` on machine/node with `jumpbox` role in user's (`centos`) home directory - run `tar -zvxf TAP-<version>-platform.tar.gz`
+
+[???] UPDATE NEEDED [???]
+
+- copy Master Config File (`tap.config`) and Master Config File Secrets (`tap.config.secrets`) from your local machine (with the desired platform configuration and information on actually provisioned infrastructure) onto this `jumpox` machine/node to the directory where you have already extracted TAP platform installation package
+
+[???] WHERE IS INVENTORY ??? [???]
 
 #### AWS domain registration
 
+[???]
 [ToDo]
+[???]
 
 ## Platform installation
 
-Having properly provisioned and configured infrastructure (scripts described above completed execution without errors) you can run actual platform installation script:
-- run `./deploy.sh deploy`
+Having properly provisioned and configured infrastructure (scripts described above completed execution without errors) you can run actual platform installation script: `./deploy.sh deploy`
 
 **Notes:**
 * Properly installed TAP 0.8 can be accessed via web console available under address: http://console.(your-domain-name) where _(your-domain-name)_ is the domain name you have provided in Master Config File (parameter 'wildcard_tap_domain_name' - see details below).
@@ -240,25 +171,10 @@ Having properly provisioned and configured infrastructure (scripts described abo
 
 "The concept that change commands should only be applied when they need to be applied, and that it is better to describe the desired state of a system than the process of how to get to that state. As an analogy, the path from North Carolina in the United States to California involves driving a very long way West but if I were instead in Anchorage, Alaska, driving a long way west is no longer the right way to get to California. Ansible’s Resources like you to say “put me in California” and then decide how to get there. If you were already in California, nothing needs to happen, and it will let you know it didn’t need to change anything."
 
-source: [[http://docs.ansible.com/ansible/glossary.html]]
+Definition taken from [ansible documentation](http://docs.ansible.com/ansible/glossary.html).
 
-# Deployment flow
----
+# Deployment Configuration - Master Config File
 
-The following diagram shows which Ansible role is executed on which machine group:
-
-[[img/docs.png]]
-
-Deployment is performed by Ansible playbooks.
-
-All roles used during deployment are available in the `roles/` directory. The diagram above shows which role is executed on which machine over time during the deployment process.
-
-Once the deployment of the platform is completed service offerings (provided later via TAP Marketplace) are installed. Role execution flow is as follows:
-
-[[img/apps_docs.png]]
-
-
-# Master Config File (tap.config)
 ---
 
 To provide a single configuration point for the entire, quite complex platform, TAP deployment scripts use tap.config file  described in this section.
@@ -279,13 +195,13 @@ Template configuration files with various TAP hardware setups are provided in de
 ## Sample tap.config file
 
 ```
-wildcard_tap_domain_name: "example.com"
+tap_domain_name: "example.com"
 smtp_host: 127.0.0.1
 smtp_password: password
 smtp_port: 25
 smtp_protocol: smtp
 smtp_username: username
-    kerberos_enabled: True
+    kerberos_enabled: true
     all_platform_offerings:
       - consul
       - etcd
@@ -412,45 +328,6 @@ instances:
     user: centos
 ```
 
-## Master Config File - Persistent storage allocation
-
-All machines defined in the Master Config File should define persistent storage they will be allocating for use.
-
-Persistent storage is used by TAP itself, TAP-hosted services, and Hadoop, depending on the functional role of a given machine.
-
-TAP uses attached storage allocation approach.
-
-Attached storage allocation is used whenever storage is provided as OS-visible storage devices that can be exclusively allocated for TAP persistent storage.
-
-Such allocation is recommended also in bare-metal installations: the OS resides on one storage device (should not be smaller than 100GB) while the other available storage devices (physical or virtual discs) can be exclusively allocated for TAP persistent storage.
-
-To attach a persistent storage in this mode the following attribute (part of machine description) must be used:
-
-```
-     storage:
-            devices: *
-```
-
-Such parameters allows allocation for TAP persistent storage of all available unused (unattached) storage devices.
-
-Alternatively, the user can provide a list of named devices to be used for this purpose, such as:
-
-```
-     storage:
-           devices:
-               - /dev/hdd2
-               - /dev/hdd3
-               - /dev/hdd4
-               - /dev/hdd5
-```
-
-TAP 0.8 uses Ceph RADOS Block Device (RBD) to provide reliable, persistent, and distributed network attached storage for containers data storage.
-
-When assigning roles to machines, ensure your follow either official guidance from the Ceph project [[http://docs.ceph.com/docs/master/start/hardware-recommendations/]] or follow TAP configuration recommendations.
-
-In general, you should use a dedicated disk drive on each Ceph storage node.
-
-**Note:** This storage allocation mode *does not create* any storage when the deployment is done in the cloud; it just attaches storage devices already made available for TAP.
 
 ## Master Config File - Parameters
 
@@ -461,18 +338,25 @@ Note: For updates and/or further details please refer to [[https://github.com/tr
 ---
 
 ###### ntp_servers
+
 List of ntp servers used in deployment.
 
 Default: `['0.pool.ntp.org', '1.pool.ntp.org']`
 
 ---
 
-###### tap_version
-Defined TAP package version. Used as version of TAP k8s docker images.
+###### platform_admin_password
+
+Password to by used by TAP Platform administrator to log in into TAP Console.
+
+*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file (please see chapter on Master Config File Secrets).
+
+*Note:* Former name of this parameter: 'admin_password'
 
 ---
 
 ###### wildcard_tap_domain_name
+
 Domain for your TAP cluster applications. Record for `*.<wildcard_tap_domain_name>` should be registered, and should target your load balancer or instance with `compute-master` role.
 
 Default: `[???]`
@@ -480,7 +364,8 @@ Default: `[???]`
 ---
 
 ###### deployment_type
-CDH related param. This option determines the amount of resources allocated for each Hadoop service and process.
+
+CDH-related param. This option determines the amount of resources allocated for each Hadoop service and process.
 
 Configuration types:
 - minimal - environment with minimal performance and resources needed (HA not possible - forced disabled)
@@ -491,6 +376,7 @@ Default: `standard`
 ---
 
 ###### smtp_host
+
 SMTP host address.
 
 Default: `[???]`
@@ -498,6 +384,7 @@ Default: `[???]`
 ---
 
 ###### smtp_port
+
 SMTP port.
 
 Default: `[???]`
@@ -505,6 +392,7 @@ Default: `[???]`
 ---
 
 ###### smtp_protocol
+
 SMTP protocol.
 
 Default: `[???]`
@@ -512,20 +400,27 @@ Default: `[???]`
 ---
 
 ###### smtp_username
+
 SMTP username.
 
 Default: `[???]`
 
+*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file.
+
 ---
 
 ###### smtp_password
+
 SMTP user password.
 
 Default: `[???]`
 
+*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file.
+
 ---
 
 ###### instances
+
 Defines machines/nodes to be used during TAP deployment.
 
 Example:
@@ -633,12 +528,17 @@ Machines defined herein will be later available in TAP cluser under `<name>.inst
 ---
 
 ###### aws_access_key
+
 AWS access key.
+
+*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file (please see chapter on Master Config File - Secrets).
 
 ---
 
 ###### aws_secret_key
 AWS secret key.
+
+*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file (please see chapter on Master Config File - Secrets).
 
 ---
 
@@ -648,7 +548,7 @@ AWS region. More info you can find on [AWS page](http://docs.aws.amazon.com/AWSE
 ---
 
 ###### aws_availability_zone
-AWS availability zone. More info you can find in [AWS page](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#using-regions-availability-zones-describe)
+AWS availability zone. More info you can find on [AWS page](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#using-regions-availability-zones-describe)
 
 ---
 
@@ -664,8 +564,30 @@ aws_base_resource_tags:
 
 ---
 
+###### aws_jumpbox_key_name
+
+[???]
+ToDo
+[???]
+
+*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file (please see chapter on Master Config File - Secrets).
+
+---
+
+###### aws_cluster_key_name
+[???]
+ToDo
+[???]
+
+*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file (please see chapter on Master Config File - Secrets).
+
+---
+
 ###### env_name
-Environment name. Characters allowed:
+
+Environment name. [???] What it is for? [???]
+
+Characters allowed:
 - a-z
 - _ (not as first character)
 - 0-9 (not as first character)
@@ -676,13 +598,29 @@ Environment name. Characters allowed:
 
 ---
 
+###### tap_version
+
+Defined TAP package version. Used as version of TAP k8s docker images.
+
+*Note:* Do not change default value unless you have a strong justification to do so!
+
+---
+
+###### all_platform_offerings
+
+[???]
+ToDo
+[???]
+
+---
+
 ###### hdfs_ha_enabled
 
 Determines if HA on HDFS is enabled. This config option requires at least 3 nodes with installed `hadoop-master*` roles.
 
 Possible values:
-- True (default)
-- False
+- true (default)
+- false
 
 This configuration options is set to False when `deployment_type` is set to `minimal`.
 
@@ -693,10 +631,26 @@ This configuration options is set to False when `deployment_type` is set to `min
 Determines if HA on YARN is enabled. This config option requires at least 2 nodes with installed `hadoop-master*` roles.
 
 Possible values:
-- True (default)
-- False
+- true (default)
+- false
 
 This configuration options is set to False when `deployment_type` is set to `minimal`.
+
+---
+
+###### platform_ssl_private_base64
+
+[???]
+ToDo
+[???]
+
+---
+
+###### platform_ssl_cert_base64
+
+[???]
+ToDo
+[???]
 
 ---
 
@@ -778,7 +732,15 @@ Installed services:
 Installed services:
 - CDH master services
 
+[???]
+What are CDH Master services?
+[???]
+
 **Note:** Optional role. Used to provide zookeeper and kafka with additional computing resources.
+
+[???]
+DEFINE WHICH ROLES ARE COUNTED FOR HA CONFIGURATION - hadoop-controller ? 
+[???]
 
 ---
 
@@ -787,7 +749,7 @@ Installed services:
 Installed services:
 - CDH worker services
 
-**Note:** At least 1 instance required. 
+**Note:** At least 1 instance required.
 
 In minimum TAP installation combined with `hadoop-master-controller` role. This role determines resources available for hdfs, yarn and hbase.
 
@@ -848,7 +810,7 @@ This role requires only 1 CPU and 2 GB RAM.
 
 ---
 
-# Master Config File - Secrets
+## Deployment Configuration - Master Config File Secrets
 
 It is suggested not to keep any passwords and sensitive data in Master Config File as this file also describes platform configuration and can be potentially shared with external parties (ie. providers of maintenance/support services, during troubleshooting, etc.).
 
@@ -859,6 +821,138 @@ The default file name can be overriden by environment variable `SECRETS`.
 In the future `tap.config.secrets` can be also encrypted using `ansible-vault` (not yet supported in TAP 0.8).
 
 **Note:** This file must not be empty - at least one parameter is needed!
+
+## Deployment Configuration - Persistent storage allocation
+
+All machines defined in the Master Config File should define persistent storage they will be allocating for use.
+
+Persistent storage is used by TAP itself, TAP-hosted services, and Hadoop, depending on the functional role of a given machine.
+
+TAP uses attached storage allocation approach.
+
+Attached storage allocation is used whenever storage is provided as OS-visible storage devices that can be exclusively allocated for TAP persistent storage.
+
+Such allocation is recommended also in bare-metal installations: the OS resides on one storage device (should not be smaller than 100GB) while the other available storage devices (physical or virtual discs) can be exclusively allocated for TAP persistent storage.
+
+To attach a persistent storage in this mode the following attribute (part of machine description) must be used:
+
+```
+     storage:
+            devices: *
+```
+
+Such parameters allows allocation for TAP persistent storage of all available unused (unattached) storage devices.
+
+Alternatively, the user can provide a list of named devices to be used for this purpose, such as:
+
+```
+     storage:
+           devices:
+               - /dev/hdd2
+               - /dev/hdd3
+               - /dev/hdd4
+               - /dev/hdd5
+```
+
+TAP 0.8 uses Ceph RADOS Block Device (RBD) to provide reliable, persistent, and distributed network attached storage for containers data storage.
+
+When assigning roles to machines, ensure your follow either official guidance from the Ceph project [[http://docs.ceph.com/docs/master/start/hardware-recommendations/]] or follow TAP configuration recommendations.
+
+In general, you should use a dedicated disk drive on each Ceph storage node.
+
+**Note:** This storage allocation mode *does not create* any storage when the deployment is done in the cloud; it just attaches storage devices already made available for TAP.
+
+# Reference Configurations
+
+## Minimum configuration
+
+This configuration is recommended for trying out TAP and its analytics features.
+
+* The suggested Minimum Configuration layout consist of 2 nodes (hosts) only:
+      1. 1 node (computation machine):
+         * compute-master (in TAP 0.8: kubernetes master)
+         * storage-master (in TAP 0.8: ceph master)
+         * compute-worker (in TAP 0.8: kubernetes worker)
+         * storage-worker (in TAP 0.8: ceph worker)
+         * jumpbox
+      1. 1 node (hadoop machine):
+         * hadoop-master-primary (in TAP 0.8: CDH Master Primary)
+         * hadoop-master-controller (in TAP 0.8: CDH Manager)
+         * hadoop-worker (in TAP 0.8: CDH Worker)
+
+* Hardware requirements for each node:
+     * 24 GB of RAM
+     * 4 CPU cores
+     * 100 GB of HDD for root directory
+     * at least one storage device (200 GB) avaliable for mount if role `hadoop-*` or `storage-master` is installed on the node
+	**Note:** If storage device is not explicitly provided then the master/root drive will be used for storage!
+
+**Note:** The minimal configuration does *not* provide important reliability features that are required for production deployments.
+
+## Medium configuration
+
+Characteristics of this configuration:
+
+* Redundant functions are distributed among separate nodes to provide high availability and data replication
+
+* *Not* focused on raw platform performance, rather on cluster reliability
+
+* Suggested Medium Configuration layout consist of 8 nodes (hosts, HA disabled):
+      1. 1 node:
+         * compute-master (in TAP 0.8: kubernetes master)
+         * storage-master (in TAP 0.8: ceph master)
+         * jumpbox
+      1. 3 nodes:
+         * compute-worker (in TAP 0.8: kubernetes workers)
+         * storage-worker (in TAP 0.8: ceph workers)
+      1. 1 node (it has to be bigger, 32GB RAM):
+         * hadoop-master-primary (in TAP 0.8: CDH Master Primary)
+         * hadoop-master-controller (in TAP 0.8: CDH Manager)
+      1. 3 nodes:
+         * hadoop-worker (in TAP 0.8: CDH Workers)
+
+* Hardware requirements for each node:
+     * 16 GB of RAM
+     * 4 CPU cores
+     * 100 GB of HDD
+     * at least one storage device (200 GB) avaliable for mount if role `hadoop-*` or `storage-master` is installed on the node
+	**Note:** If storage device is not explicitly provided then the master/root drive will be used for storage!
+
+## Production grade configuration
+
+Characteristics of this configuration:
+* Redundant functions are distributed among separate nodes to provide performance, high availability (HA) and replication
+
+* Suggested layout consist of 16+ nodes (hosts):
+      1. 1 node (medium instance, 2CPU + 4GB of RAM):
+         * jumpbox
+      1. 3 nodes (large instance - 2CPU + 8GB of RAM for 10> workers, largex instance - 4CPU + 16GB of RAM for 30> workers, largex2 or even more for bigger clusters):
+         * compute-master (in TAP 0.8: kubernetes master)
+      1. 3+ nodes (large instance, 4 CPU + 16GB of RAM - these nodes provide the real computational power of the cluster):
+         * compute-worker (in TAP 0.8: kubernetes workers)
+      1. 3 nodes (medium instance - 2CPU + 4GB of RAM):
+         * storage-master (in TAP 0.8: ceph master)
+         * storage-worker (in TAP 0.8: ceph workers)
+      1. 0+ nodes (small instance - 2CPU + 2GB of RAM):
+         * storage-worker (in TAP 0.8: ceph workers)
+      1. 1 node (largex instance - 4CPU + 16GB of RAM):
+         * hadoop-master-primary (in TAP 0.8: CDH Master Primary)
+      1. 1 node (largex instance - 4CPU + 16GB of RAM):
+         * hadoop-master-secondary (in TAP 0.8: CDH Master Primary)
+      1. 1 host (largex2 instance - 8CPU + 32GB of RAM):
+         * hadoop-master-controller (in TAP 0.8: CDH Manager)
+      1. 3+ hosts (at least large instance - 4CPU + 16GB of RAM - these nodes provide the real power of YARN in Hadoop cluster):
+         * hadoop-worker (in TAP 0.8: CDH Worker)
+
+* In this setup persistent storage is installed on dedicated nodes (roles: storage-master and storage-worker). You should follow Ceph documentation on recommended hardware setups: [[http://docs.ceph.com/docs/jewel/start/hardware-recommendations/]]
+
+#### Supplement: recommendations for persistent storage service (storage-* nodes)
+
+Ceph, that in TAP 0.8 provides persistent storage service, needs to run 2 daemons - ceph-mon and ceph-osd; good practice is to have minimum 3 ceph-mon and 3 ceph-osd.
+
+It is strongly recommended to allocate for Ceph-OSD (machine role: 'storage-worker') at least 1GB RAM per 1TB storage, 1 storage drive per deamon (SSD - better performance/higher cost, HDD lower performance/lower cost) and 20GB root HDD.
+
+For Ceph-MON (machine role: 'storage-master') at least 1GB RAM and 20GB on root HDD should be allocated.
 
 # TAP Architecture & Core Components
 
