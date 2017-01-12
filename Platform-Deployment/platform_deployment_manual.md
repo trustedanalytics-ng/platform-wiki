@@ -1,7 +1,7 @@
 ﻿---
 title: TAP 0.8 Platform Deployment Manual
 keywords: platform deployment manual
-last_updated: 'December 30, 2016'
+last_updated: 'January 12, 2017'
 tags:
   - Platform Deployment
 summary: >-
@@ -85,7 +85,7 @@ Once the deployment of the platform is completed service offerings (provided lat
 
 ## Building TAP from sources
 
-TAP deployment package can be built from source code - for build procedure please follow [TAP builing procedure](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/platform_deployment_building_from_sources.md)
+TAP deployment package can be built from source code - for build procedure please follow [TAP building procedure](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/platform_deployment_building_from_sources.md)
 
 ## Infrastructure provisioning
 
@@ -331,9 +331,9 @@ instances:
 
 ## Master Config File - Parameters
 
-Note: For updates and/or further details please refer to [[https://github.com/trustedanalytics/tap-deploy/]].
+Note: For updates and/or further details please refer to [tap-deploy git repository](https://github.com/trustedanalytics/tap-deploy/).
 
-### Required Core Paremeters
+### Required Core Parameters
 
 ---
 
@@ -365,7 +365,7 @@ Default: `[???]`
 
 ###### deployment_type
 
-CDH-related param. This option determines the amount of resources allocated for each Hadoop service and process.
+CDH-related parameter. This option determines the amount of resources allocated for each Hadoop service and process.
 
 Configuration types:
 - minimal - environment with minimal performance and resources needed (HA not possible - forced disabled)
@@ -490,7 +490,7 @@ Machines defined herein will be later available in TAP cluser under `<name>.inst
 
 - **connection**
 
-	Connection params used to connect to instance/machine.
+	Connection parameters used to connect to instance/machine.
 
 	For param `type` you can use several values:
 	- `local` - have to be used for role `jumpbox`
@@ -802,7 +802,7 @@ This role should be installed on all machines that need access to persistent sto
 
 #### Role _jumpbox_
 
-Hardened bastion host dedicated to protecting TAP installation from external attacks. It is recommended to be the only machine in TAP clusted exposed to external network. Refer to [[https://en.wikipedia.org/wiki/Bastion_host]] for more details.
+Hardened bastion host dedicated to protecting TAP installation from external attacks. It is recommended to be the only machine in TAP cluster exposed to external network. Refer to [WiKi page on bastion hosts](https://en.wikipedia.org/wiki/Bastion_host) for more details.
 
 In minimum TAP installation will share machine with `compute-master` role but it is strongly recommended to create/use separated machine for this role.
 
@@ -856,7 +856,7 @@ Alternatively, the user can provide a list of named devices to be used for this 
 
 TAP 0.8 uses Ceph RADOS Block Device (RBD) to provide reliable, persistent, and distributed network attached storage for containers data storage.
 
-When assigning roles to machines, ensure your follow either official guidance from the Ceph project [[http://docs.ceph.com/docs/master/start/hardware-recommendations/]] or follow TAP configuration recommendations.
+When assigning roles to machines, ensure your follow either official guidance from the [Ceph project](http://docs.ceph.com/docs/master/start/hardware-recommendations/) or follow TAP configuration recommendations.
 
 In general, you should use a dedicated disk drive on each Ceph storage node.
 
@@ -944,7 +944,7 @@ Characteristics of this configuration:
       1. 3+ hosts (at least large instance - 4CPU + 16GB of RAM - these nodes provide the real power of YARN in Hadoop cluster):
          * hadoop-worker (in TAP 0.8: CDH Worker)
 
-* In this setup persistent storage is installed on dedicated nodes (roles: storage-master and storage-worker). You should follow Ceph documentation on recommended hardware setups: [[http://docs.ceph.com/docs/jewel/start/hardware-recommendations/]]
+* In this setup persistent storage is installed on dedicated nodes (roles: storage-master and storage-worker). You should follow [Ceph documentation](http://docs.ceph.com/docs/jewel/start/hardware-recommendations/) on recommended hardware setups.
 
 #### Supplement: recommendations for persistent storage service (storage-* nodes)
 
@@ -1033,7 +1033,7 @@ To ensure that the entire traffic inside TAP cluster is protected by TLS, TAP pr
 
 ### Implementation
 
-CA Service uses CFSSL [[https://github.com/cloudflare/cfssl]] to generate and manage local Certification Authority. It is exposed via a simplified REST API (a custom one, as cfssl exposes too much functionality).
+CA Service uses [CFSSL](https://github.com/cloudflare/cfssl) to generate and manage local Certification Authority. It is exposed via a simplified REST API (a custom one, as cfssl exposes too much functionality).
 
 To every Kubernetes Pod the platform starts (one exposing some functionality over integrated HTTP server) we add an additional container - with nginx. This Nginx is generated over a CA Service API key and certificate. It is proxying exposed port :443  to 127.0.0.1:80 in the same Pod (targetting an actual application).
 
@@ -1051,8 +1051,8 @@ Lifecycle of the TLS-related Kubernetes Secrets objects:
 
 ## Network connectivity inside TAP
 
-All compute nodes and Hadoop nodes, as well as containers running on TAP, are interconnected using Flannel ([[https://github.com/coreos/flannel]]).
-
+All compute nodes and Hadoop nodes, as well as containers running on TAP, are interconnected using [Flannel](https://github.com/coreos/flannel).
+ 
 This allows every container instance (specifically: Kubernetes Pod) to get its own IP address and full connectivity to other hosts and pods in the TAP environment (assuming  it is supporting only a single organization).
 
 DNS - SkyDNS
@@ -1071,7 +1071,7 @@ You can deploy more than one ELK instance - they will form a cluster. At least 3
 
 ## Container images - docker registry
 
-Most of the TAP components are being shipped as Docker Container Images. In order to save disk space and network bandwidth, there is a whole Docker Registry v2 ([[https://github.com/docker/distribution]]) data directory distributed inside TAP package.
+Most of the TAP components are being shipped as Docker Container Images. In order to save disk space and network bandwidth, there is a whole [Docker Registry v2](https://github.com/docker/distribution) data directory distributed inside TAP package.
 
 During platform installation:
 
@@ -1116,13 +1116,13 @@ Make sure the target machine is in an overall good shape:
 * Ensure that machines have at least 1GB of memory free (or allocated as buffers/cache)
 * Check machine load, using uptime, top, or ps auxf. Machines under very high load can drop packages, timeouts may appear. Machine load should not exceed 70% in healthy, responsive clusters.
 * Check logs:
-   * Modern Linux distributions use Systemd. Use `sudo systemctl` and `sudo journalctl` to view services and logs for the machine. For systemd reference, refer to [[https://wiki.archlinux.org/index.php/Systemd]]
+   * Modern Linux distributions use Systemd. Use `sudo systemctl` and `sudo journalctl` to view services and logs for the machine. For systemd reference, refer to [documentation](https://wiki.archlinux.org/index.php/Systemd).
    * Some older components still use `/var/log/` directory to store logs.
    * The package integrates an ELK stack, which can be used to browse logs across all nodes, applications, and containers. 
       * TODO provide instructions.
 * Check metrics:
    * Using either TAP web console, or
-   * Grafana integrated with TAP. It is available via [[https://grafana.${PLATFORM_WILDCARD_DNS_NAME}]]
+   * Grafana integrated with TAP. It is available via [https://grafana.${PLATFORM_WILDCARD_DNS_NAME}]
 * On Kubernetes nodes:
    * Check pods health, using ``sudo -u tap-admin kubectl get pods`. If everything is in a "Running" state, the pods are healthy. If not, check unhealthy pods logs using `sudo -u tap-admin kubectl logs $POD_ID`, and for overall status `sudo -u tap-admin kubectl describe $POD_ID`.
 
