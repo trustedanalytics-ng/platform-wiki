@@ -42,6 +42,15 @@ The other example notebooks show how to use Spark dataframes, RDDs, streaming, S
 
 2. Select **Terminal** from the sub menu to open a new terminal within Jupyter. 
 
-![Jupyter Terminal](/images/Build_Analytics_Spark_Screen5.png) 
+![Jupyter Terminal](/images/Build_Analytics_Spark_Screen5.png)  
+
+##Troublshooting Tips
+
+### Q: I am using spark-tk and want to save files/export models to my local file system instead of HDFS. How do I do that?
+
+The SparkContext created by `TkContext` follows the system's current Spark configuration. If your system defaults to HDFS, but you want to use a local file system instead, include `use_local_fs=True` when creating your `TkContext`, as follows:  
+  
+      tc = sparktk.TkContext(use_local_fs=True)  
+  
 
 You can enter Spark commands (spark-shell, spark-submit, etc.) in the terminal window.
