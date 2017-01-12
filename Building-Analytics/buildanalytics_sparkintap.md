@@ -4,7 +4,7 @@ keywords: building analytics spark TAP
 last_updated: 'January, 2017'
 tags:
   - Building Analytics spark
-summary: How to get started using open-source spark in TAP. 
+summary: How to get started using spark in TAP. 
 sidebar: mydoc_sidebar
 permalink: buildanalytics_sparktk.html
 folder: mydoc
