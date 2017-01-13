@@ -1,7 +1,7 @@
 ﻿---
 title: TAP 0.8 Platform Deployment Manual
 keywords: platform deployment manual
-last_updated: 'January 12, 2017'
+last_updated: 'January 13, 2017'
 tags:
   - Platform Deployment
 summary: >-
@@ -44,8 +44,7 @@ This document freely uses common terminology associated with those areas.
 
 ## Deployment requirements
 
-
-TAP version 0.8 supports CentOS 7.2.1511 on x86_64 architecture. 
+TAP version 0.8 supports CentOS 7.2.1511 on x86_64 architecture.
 
 *Note:* It is best to provide machines with passwordless `sudo` access and key-based authentication.
 
@@ -141,16 +140,6 @@ Provisioning steps:
 - connect to your newly created jumpbox host - type `./connect`,
 - obtain (download or prepare yourself) and extract TAP platform installation package `TAP-<version>-platform.tar.gz` on machine/node with `jumpbox` role in user's (`centos`) home directory - run `tar -zvxf TAP-<version>-platform.tar.gz`.
 
-[???] UPDATE NEEDED [???]
-
-- copy Master Config File (`tap.config`) and Master Config File Secrets (`tap.config.secrets`) from your local machine (with the desired platform configuration and information on actually provisioned infrastructure) onto this `jumpox` machine/node to the directory where you have already extracted TAP platform installation package
-
-DODAĆ AUTOMATYZACJĘ TEGO KROKU DO WSKAZANEGO KATALOGU NA JUMPOX
-
-keep your TAP config files and generated inventory from ./inventory/k8s
-
-[???] WHERE IS INVENTORY ??? [???]
-
 #### AWS domain registration
 
 Below you will find a sequence of operations needed to register your AWS-hosted TAP cluster in AWS DNS:
@@ -158,10 +147,19 @@ Below you will find a sequence of operations needed to register your AWS-hosted 
 - go to VPC page and enter VPC name (env_name parameter in `tap.config`) there,
 - go to EC2 page and then to Load Balancer page (available via vertical UI menu),
 - then, select your load balancer from the list (you can use *Filter* search panel to filter out the right VPC) and copy to clipboard its DNS name (without *(A Record)* string),
-- having the LB DNS name go to route53 UI page,
-- [???]
+- go to Route53 page and select *Hosted zones*,
+- create new or edit existing record set - *Name* should be `*.<subdomain>.<domain>` (`<subdomain>.<domain>` is your `tap_domain_name` parameter from `tap.config` file), *Type* should equal to CNAME, and as *Value* paste DNS name from load balancer,
+- save your record.
+
+*Note:* For more information on load balancers and DNS please refer to the below chapter named TAP Load Balancing.
 
 ## Platform installation
+
+Please verify on the jmpbox host if the following configuration files are available:
+* `$HOME/tap-configuration/tap.config` (Master Config File you have defined earlier on your machine)
+* `$HOME/tap-configuration/tap.config.secrets` (Master Config File Secrets you have defined earlier on your machine)
+* `$HOME/tap-configuration/tap.inventory.out` (file with TAP cluster inventory automatically generated during infrastructure provissioning)
+* `$HOME/tap-configuration/tap.instance.out` (file with addresses of TAP cluster load balancer(s) to be registered in your DNS operator)
 
 Having properly provisioned and configured infrastructure (scripts described above completed execution without errors) you can run actual platform installation script: `./deploy.sh deploy`.
 
@@ -568,11 +566,9 @@ aws_base_resource_tags:
 
 ###### aws_jumpbox_key_name
 
-[???]
+Name of a key that is to be used (or automatically created, if does not exist) by AWS during deployment provisioning.
 
-nazwa klucza, który zostaanie albo reużyty albo stworzoy (jeśli nie istnieje) przez AWS podczas tworzenia infrastruktury - wykorzystwany do dostępu do maszyny jumbox
-
-[???]
+This key will be then used to access jumpbox machine in TAP cluster.
 
 Default: `<env_name>-jumpbox-key`
 
@@ -580,9 +576,9 @@ Default: `<env_name>-jumpbox-key`
 
 ###### aws_cluster_key_name
 
-nazwa klucza, który zostaanie albo reużyty albo stworzoy (jeśli nie istnieje) przez AWS podczas tworzenia infrastruktury - wykorzystwany do dostępu do wszystkich maszyn poza jumbox
+Name of a key that is to be used (or automatically created, if does not exist) by AWS during deployment provisioning.
 
-[???]
+This key will be then used to access any machine in TAP cluster other than jumbox.
 
 Default: `<env_name>-cluster-key`
 
@@ -590,7 +586,7 @@ Default: `<env_name>-cluster-key`
 
 ###### env_name
 
-Name of TAP instance (used as VPC name, cluster name, etc.). 
+Name of TAP instance (used as VPC name, cluster name, etc.).
 
 Characters allowed:
 - a-z
@@ -631,21 +627,19 @@ This configuration options is set to False when `deployment_type` is set to `min
 
 ###### platform_ssl_private_base64
 
-[???]
-Prywatny klucz prywatny domeny zapisany jako base64 (dla parametru `*.<tap_domain_name>`).
+Private key (base64 encoded) for TAP domain name provided via parameter `*.<tap_domain_name>`.
 
-Jeżeli nie podano, to jest generowany automatycznie.
-[???]
+Generated automatically if not provided by the user.
 
 ---
 
 ###### platform_ssl_cert_base64
 
-[???]
-Podać certyfikat dla domeny jw - najlepiej, gdy jest zaufany.
+Certificate (base64 encoded) for TAP domain name provided via parameter `*.<tap_domain_name>`.
 
-Jeżeli nie podano, to jest generowny certyfikat niezaufany.
-[???]
+Generated automatically if not provided by the user.
+
+*Note:* Automatically generated certificate it *not trusted*.
 
 ---
 
@@ -741,7 +735,7 @@ Installed services:
 
 In minimum TAP installation combined with `hadoop-master-controller` role. This role determines resources available for HDFS, YARN and HBase.
 
-Optimal production-grade configurations contain odd number of machines with this role (`2N + 1`).
+Optimal production-grade configurations contain odd number of machines with this role (2N + 1).
 
 ---
 
@@ -771,7 +765,7 @@ For minimum TAP installation combined with `compute-master` role.
 
 For production environments minimum 3 instances recommended that shall be separated from `compute-*` roles.
 
-Optimal production-grade configurations contain odd number of machines with this role (`2N + 1`).
+Optimal production-grade configurations contain odd number of machines with this role (2N + 1).
 
 ---
 
@@ -873,7 +867,8 @@ This configuration is recommended for trying out TAP and its analytics features.
      * 4 CPU cores
      * 100 GB of HDD for root directory
      * at least one storage device (200 GB) avaliable for mount if role `hadoop-*` or `storage-master` is installed on the node
-	**Note:** If storage device is not explicitly provided then the master/root drive will be used for storage!
+
+**Note:** If storage device is not explicitly provided then the master/root drive will be used for storage!
 
 **Note:** The minimal configuration does *not* provide important reliability features that are required for production deployments.
 
@@ -904,7 +899,8 @@ Characteristics of this configuration:
      * 4 CPU cores
      * 100 GB of HDD
      * at least one storage device (200 GB) avaliable for mount if role `hadoop-*` or `storage-master` is installed on the node
-	**Note:** If storage device is not explicitly provided then the master/root drive will be used for storage!
+
+**Note:** If storage device is not explicitly provided then the master/root drive will be used for storage!
 
 ## Production grade configuration
 
@@ -960,7 +956,7 @@ TAP manages load balancers for the platform in order to:
       ***************
              /\
              ||
-     ******* || ********* TAP BELOW ********** TAP BELOW ********** TAP BELOW *******
+     ******* || ********* TAP BELOW ********** TAP BELOW ********** TAP BELOW ***********
              ||
              \/                                            |--- application1, instance 1
      __________________       ________________________     |
@@ -972,13 +968,6 @@ TAP manages load balancers for the platform in order to:
                                                            |--- core-component, instance 1
                                                            |--- .....
 
-[???]
-
-TASK JIRA: DODAĆ OPIS PO ZAKONCZONEJ INSTLACJI: WYSWIETLIC LISTE (I ZAPISAC) ADRESY LB (KUBERNETES-MASTERY) LUB ELASTIC-LB W AWS
-
-TYMCZASOWE ROZWIAZANIE NA BARE METAL: UZYĆ IP MASZYN Z ROLĄ KUBERNETES-MASTER
-
-[???]
 
 ### Primary Load Balancers
 
@@ -1043,10 +1032,10 @@ Lifecycle of the TLS-related Kubernetes Secrets objects:
 ## Network connectivity inside TAP
 
 All compute nodes and Hadoop nodes, as well as containers running on TAP, are interconnected using [Flannel](https://github.com/coreos/flannel).
- 
+
 This allows every container instance (specifically: Kubernetes Pod) to get its own IP address and full connectivity to other hosts and pods in the TAP environment (assuming  it is supporting only a single organization).
 
-DNS - SkyDNS
+##### DNS - SkyDNS
 
 TAP uses SkyDNS with a Kubernetes plug-in to provide internal domain names for every Kubernetes service. Some DNS records are created during the deployment process for Cloudera Hosts (CDH require such DNS entries).
 
@@ -1104,23 +1093,22 @@ Make sure the target machine is in an overall good shape:
 * Ensure that machines have at least 1GB of memory free (or allocated as buffers/cache)
 * Check machine load, using uptime, top, or ps auxf. Machines under very high load can drop packages, timeouts may appear. Machine load should not exceed 70% in healthy, responsive clusters.
 * Check logs:
-   * Modern Linux distributions use Systemd. Use `sudo systemctl` and `sudo journalctl` to view services and logs for the machine. For systemd reference, refer to [documentation](https://wiki.archlinux.org/index.php/Systemd).
+   * Modern Linux distributions use Systemd. Use `sudo systemctl` and `sudo journalctl` to view services and logs for the machine. For *systemd* reference, refer to [documentation](https://wiki.archlinux.org/index.php/Systemd).
    * Some older components still use `/var/log/` directory to store logs.
    * The package integrates an ELK stack, which can be used to browse logs across all nodes, applications, and containers.
-      * TODO provide instructions.
 * Check metrics:
    * Using either TAP web console, or
-   * Grafana integrated with TAP. It is available via [https://grafana.${PLATFORM_WILDCARD_DNS_NAME}]
+   * Grafana integrated with TAP. It is available via [https://grafana.${PLATFORM_DNS_NAME}]
 * On Kubernetes nodes:
    * Check pods health, using ``sudo -u tap-admin kubectl get pods`. If everything is in a "Running" state, the pods are healthy. If not, check unhealthy pods logs using `sudo -u tap-admin kubectl logs $POD_ID`, and for overall status `sudo -u tap-admin kubectl describe $POD_ID`.
 
 ### Deployment investigation data
 
-When troubleshooting, in addition to information gathered in *General problem investigation* section above, make sure the following files are available and correct:
-
-* `tap.config`
-* `tap.config.secrets`
-* `./logs/*.log`
+When troubleshooting, in addition to information gathered in *General problem investigation* section above, make sure the following files are available:
+* `$HOME/tap-configuration/tap.config` (Master Config File you have defined earlier on your machine)
+* `$HOME/tap-configuration/tap.config.secrets` (Master Config File Secrets you have defined earlier on your machine)
+* `$HOME/tap-configuration/tap.inventory.out` (file with TAP cluster inventory automatically generated during infrastructure provissioning)
+* `$HOME/tap-configuration/tap.instance.out` (file with addresses of TAP cluster load balancer(s) to be registered in your DNS operator)
+* `<tap-installation-package-dir>/logs/*.log`
 
 **Note:** Some configurations files and log files may contain sensitive information, like user credentials.
-
