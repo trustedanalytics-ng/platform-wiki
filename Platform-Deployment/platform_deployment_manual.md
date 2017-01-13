@@ -98,19 +98,19 @@ All machines provided for TAP installation **must not** be shared with other sys
 TAP deployment functionality is universal and assumes only SSH connectivity to all the hosts you want to install TAP on. While this allows you to install platform on almost any kind of physical and virtual machines, whose could be extraordinaly optimized for performance and/or reliability, by default TAP uses only generic hardware features of your hardware infrastructure.
 
 Requirements:
-- each node with `storage-worker` and `hadoop-*` roles should have mounted an additional disk or created a new partiotion if only 1 disk is available - for cloud environments disks will be created automatically based on `tap.config` file.
-- all nodes should be able to connect to each other
+- each node with `storage-worker` and `hadoop-*` roles should have mounted an additional disk or created a new partiotion if only 1 disk is available - for cloud environments disks will be created automatically based on `tap.config` file,
+- all nodes should be able to connect to each other.
 
 Provisioning steps:
-- make sure `CentOS 7.2.1511` is installed on each machine
-- register required domain records in your domain name provider
-- enable ssh access for the user with unlimited sudo access (via key or password) - platform will be deployed using this user
-- run `yum update` and `yum upgrade`, otherwise delete all files from `/etc/yum.repos.d/`.
-- obtain (download or prepare yourself) TAP platform installation package `TAP-<version>-platform.tar.gz`
-- extract this package on machine with `jumpbox` role in user's home directory (`tar -zvxf TAP-<version>-platform.tar.gz`)
-- go into your package directory (`cd ./TAP-<version>`)
-- edit `tap.config` and `tap.config.secrets` configuration files and provide necessary configuration parameters described below (it is recommended to use the most suitable template from the set provided in subdirectory `config-templates`)
-- run `./deploy.sh infra-bare-metal` and wait for completion of infrastructure configuration script (infrastructure needs to be properly configured before actual platform eployment can be perfomed)
+- make sure `CentOS 7.2.1511` is installed on each machine,
+- register required domain records in your domain name provider,
+- enable ssh access for the user with unlimited sudo access (via key or password) - platform will be deployed using this user,
+- run `yum update` and `yum upgrade`, otherwise delete all files from `/etc/yum.repos.d/`,
+- obtain (download or prepare yourself) TAP platform installation package `TAP-<version>-platform.tar.gz`,
+- extract this package on machine with `jumpbox` role in user's home directory (`tar -zvxf TAP-<version>-platform.tar.gz`),
+- go into your package directory (`cd ./TAP-<version>`),
+- edit `tap.config` and `tap.config.secrets` configuration files and provide necessary configuration parameters described below (it is recommended to use the most suitable template from the set provided in subdirectory `config-templates`),
+- run `./deploy.sh infra-bare-metal` and wait for completion of infrastructure configuration script (infrastructure needs to be properly configured before actual platform eployment can be perfomed).
 
 ### AWS
 
@@ -123,45 +123,53 @@ AWS infrastructure provisioning automation has been done in Ansible, using [AWS 
 Infrastructure provisioning deployment steps generates necessary configuration and inventory files for later use.
 
 There are five major subnets allocated:
-- one for jumpbox and nat node(nat node is only required for AWS deployments)
-- two for compute resources, one for masters and one for workers (compute-* roles)
-- one for Hadoop/CDH resources (hadoop-* roles)
-- one for Ceph resoruces (storage-* roles)
+- one for jumpbox and nat node(nat node is only required for AWS deployments),
+- two for compute resources, one for masters and one for workers (compute-* roles),
+- one for Hadoop/CDH resources (hadoop-* roles),
+- one for Ceph resoruces (storage-* roles).
 
 To run AWS infrastructure provisioning you need:
-- instances with CentOS 7.2
-- internet connection
+- instances with CentOS 7.2,
+- internet connection.
 
 Provisioning steps:
-- obtain and extract package with TAP infrastructure provisioning scripts `TAP-<version>-infra.tar.gz` (if not available as a separate package obtain entire `TAP-<version>-platform.tar.gz`) - run `tar -zvxf TAP-<version>-infra.tar.gz` (or `TAP-<version>-platform.tar.gz` respectively)
-- edit Master Config File (`tap.config`) and Master Config File Secrets (`tap.config.secrets`) configuration files and provide necessary configuration parameters described below (it is recommended to use templates  provided in subdirectory `config-templates`)
-- go into your package directory (`cd ./TAP-<version>`)
-- run infrastructure provisioning script `./deploy.sh infra-aws`
-- register required domain records in your domain name provider
-- connect to your newly created jumpbox host - type `./connect`
-- obtain (download or prepare yourself) and extract TAP platform installation package `TAP-<version>-platform.tar.gz` on machine/node with `jumpbox` role in user's (`centos`) home directory - run `tar -zvxf TAP-<version>-platform.tar.gz`
+- obtain and extract package with TAP infrastructure provisioning scripts `TAP-<version>-infra.tar.gz` (if not available as a separate package obtain entire `TAP-<version>-platform.tar.gz`) - run `tar -zvxf TAP-<version>-infra.tar.gz` (or `TAP-<version>-platform.tar.gz` respectively),
+- edit Master Config File (`tap.config`) and Master Config File Secrets (`tap.config.secrets`) configuration files and provide necessary configuration parameters described below (it is recommended to use templates  provided in subdirectory `config-templates`),
+- go into your package directory (`cd ./TAP-<version>`),
+- run infrastructure provisioning script `./deploy.sh infra-aws`,
+- register required domain records in your domain name provider,
+- connect to your newly created jumpbox host - type `./connect`,
+- obtain (download or prepare yourself) and extract TAP platform installation package `TAP-<version>-platform.tar.gz` on machine/node with `jumpbox` role in user's (`centos`) home directory - run `tar -zvxf TAP-<version>-platform.tar.gz`.
 
 [???] UPDATE NEEDED [???]
 
 - copy Master Config File (`tap.config`) and Master Config File Secrets (`tap.config.secrets`) from your local machine (with the desired platform configuration and information on actually provisioned infrastructure) onto this `jumpox` machine/node to the directory where you have already extracted TAP platform installation package
 
+DODAĆ AUTOMATYZACJĘ TEGO KROKU DO WSKAZANEGO KATALOGU NA JUMPOX
+
+keep your TAP config files and generated inventory from ./inventory/k8s
+
 [???] WHERE IS INVENTORY ??? [???]
 
 #### AWS domain registration
 
-[???]
-[ToDo]
-[???]
+Below you will find a sequence of operations needed to register your AWS-hosted TAP cluster in AWS DNS:
+- login into AWS console,
+- go to VPC page and enter VPC name (env_name parameter in `tap.config`) there,
+- go to EC2 page and then to Load Balancer page (available via vertical UI menu),
+- then, select your load balancer from the list (you can use *Filter* search panel to filter out the right VPC) and copy to clipboard its DNS name (without *(A Record)* string),
+- having the LB DNS name go to route53 UI page,
+- [???]
 
 ## Platform installation
 
-Having properly provisioned and configured infrastructure (scripts described above completed execution without errors) you can run actual platform installation script: `./deploy.sh deploy`
+Having properly provisioned and configured infrastructure (scripts described above completed execution without errors) you can run actual platform installation script: `./deploy.sh deploy`.
 
 **Notes:**
 * Properly installed TAP 0.8 can be accessed via web console available under address: http://console.(your-domain-name) where _(your-domain-name)_ is the domain name you have provided in Master Config File (parameter 'wildcard_tap_domain_name' - see details below).
 
 * Your installations logs are stored in your TAP platform installation package directory, in subfolder `logs`.
-* Deployment scripts internally use Ansible (`>=2.1.2.0`), following its idempotent nature. This means you can run `./deploy.sh` deploy over and over again, and only changes will be applied.
+* Deployment scripts internally use Ansible (`>=2.2.1.0`), following its idempotent nature. This means you can run `./deploy.sh` deploy over and over again, and only changes will be applied.
 
 * This feature can be used to repair broken host with TAP 0.8 only.
 
@@ -355,11 +363,11 @@ Password to by used by TAP Platform administrator to log in into TAP Console.
 
 ---
 
-###### wildcard_tap_domain_name
+###### tap_domain_name
 
-Domain for your TAP cluster applications. Record for `*.<wildcard_tap_domain_name>` should be registered, and should target your load balancer or instance with `compute-master` role.
+Domain for your TAP cluster applications. Record for `*.<tap_domain_name>` should be registered, and should target your load balancer or instance with `compute-master` role.
 
-Default: `[???]`
+Default: `<compute-master IP>.xip.gotapaas.eu`
 
 ---
 
@@ -379,15 +387,11 @@ Default: `standard`
 
 SMTP host address.
 
-Default: `[???]`
-
 ---
 
 ###### smtp_port
 
 SMTP port.
-
-Default: `[???]`
 
 ---
 
@@ -395,15 +399,11 @@ Default: `[???]`
 
 SMTP protocol.
 
-Default: `[???]`
-
 ---
 
 ###### smtp_username
 
 SMTP username.
-
-Default: `[???]`
 
 *Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file.
 
@@ -412,8 +412,6 @@ Default: `[???]`
 ###### smtp_password
 
 SMTP user password.
-
-Default: `[???]`
 
 *Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file.
 
@@ -462,7 +460,7 @@ instances:
 
 **machine name**
 
-Machine/instance name is its key in this map (in above example: `cdh` and `compute`). The name has to be unique, otherwise only last defined item with this name is used in deployment. 
+Machine/instance name is its key in this map (in above example: `cdh` and `compute`). The name has to be unique, otherwise only last defined item with this name is used in deployment.
 
 Machines defined herein will be later available in TAP cluser under `<name>.instance.<wildcard_tap_domain_name>` and `<name>` dns names.
 
@@ -536,6 +534,7 @@ AWS access key.
 ---
 
 ###### aws_secret_key
+
 AWS secret key.
 
 *Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file (please see chapter on Master Config File - Secrets).
@@ -543,16 +542,19 @@ AWS secret key.
 ---
 
 ###### aws_region
+
 AWS region. More info you can find on [AWS page](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions)
 
 ---
 
 ###### aws_availability_zone
+
 AWS availability zone. More info you can find on [AWS page](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#using-regions-availability-zones-describe)
 
 ---
 
 ###### aws_base_resource_tags
+
 Tags for each resource created in AWS. Use only strings in quotes.
 
 Example:
@@ -567,25 +569,28 @@ aws_base_resource_tags:
 ###### aws_jumpbox_key_name
 
 [???]
-ToDo
+
+nazwa klucza, który zostaanie albo reużyty albo stworzoy (jeśli nie istnieje) przez AWS podczas tworzenia infrastruktury - wykorzystwany do dostępu do maszyny jumbox
+
 [???]
 
-*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file (please see chapter on Master Config File - Secrets).
+Default: `<env_name>-jumpbox-key`
 
 ---
 
 ###### aws_cluster_key_name
-[???]
-ToDo
+
+nazwa klucza, który zostaanie albo reużyty albo stworzoy (jeśli nie istnieje) przez AWS podczas tworzenia infrastruktury - wykorzystwany do dostępu do wszystkich maszyn poza jumbox
+
 [???]
 
-*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file (please see chapter on Master Config File - Secrets).
+Default: `<env_name>-cluster-key`
 
 ---
 
 ###### env_name
 
-Environment name. [???] What it is for? [???]
+Name of TAP instance (used as VPC name, cluster name, etc.). 
 
 Characters allowed:
 - a-z
@@ -598,25 +603,11 @@ Characters allowed:
 
 ---
 
-###### tap_version
-
-Defined TAP package version. Used as version of TAP k8s docker images.
-
-*Note:* Do not change default value unless you have a strong justification to do so!
-
----
-
-###### all_platform_offerings
-
-[???]
-ToDo
-[???]
-
----
-
 ###### hdfs_ha_enabled
 
-Determines if HA on HDFS is enabled. This config option requires at least 3 nodes with installed `hadoop-master*` roles.
+Determines if HA on HDFS is enabled.
+
+This config option requires at least 3 nodes with installed `hadoop-master*` roles: `hadoop-master-primary`, `hadoop-master-secondary`, `hadoop-master-controller`.
 
 Possible values:
 - true (default)
@@ -628,7 +619,7 @@ This configuration options is set to False when `deployment_type` is set to `min
 
 ###### yarn_ha_enabled
 
-Determines if HA on YARN is enabled. This config option requires at least 2 nodes with installed `hadoop-master*` roles.
+Determines if HA on YARN is enabled. This config option requires at least 2 nodes with installed `hadoop-master*` roles: `hadoop-master-primary`, `hadoop-master-secondary`.
 
 Possible values:
 - true (default)
@@ -641,7 +632,9 @@ This configuration options is set to False when `deployment_type` is set to `min
 ###### platform_ssl_private_base64
 
 [???]
-ToDo
+Prywatny klucz prywatny domeny zapisany jako base64 (dla parametru `*.<tap_domain_name>`).
+
+Jeżeli nie podano, to jest generowany automatycznie.
 [???]
 
 ---
@@ -649,7 +642,9 @@ ToDo
 ###### platform_ssl_cert_base64
 
 [???]
-ToDo
+Podać certyfikat dla domeny jw - najlepiej, gdy jest zaufany.
+
+Jeżeli nie podano, to jest generowny certyfikat niezaufany.
 [???]
 
 ---
@@ -685,6 +680,7 @@ Machines with 'compute-worker' role assigned are used as compute instances for k
 
 Installed services:
 - Kubernetes worker
+- bootstrap docker registry
 
 **Note:** Minimum 1 instance required. For minimal TAP installation can be combined with `compute-master` role.
 
@@ -720,7 +716,7 @@ Installed services:
 
 Installed services:
 - CDH master services
-- HDFS namenode, YARN resource manager
+- HDFS Secondary NameNode, YARN Resource Manager
 
 **Note:** No more than 1 instance. Required only when HA for YARN or HDFS is enabled.
 **Note:** Cannot be combined with `hadoop-master-primary` or `hadoop-master-controller` roles.
@@ -730,28 +726,20 @@ Installed services:
 #### Role _hadoop-master_
 
 Installed services:
-- CDH master services
-
-[???]
-What are CDH Master services?
-[???]
+- CDH master services (Kafka, ZooKeeper)
 
 **Note:** Optional role. Used to provide zookeeper and kafka with additional computing resources.
-
-[???]
-DEFINE WHICH ROLES ARE COUNTED FOR HA CONFIGURATION - hadoop-controller ? 
-[???]
 
 ---
 
 #### Role _hadoop-worker_
 
 Installed services:
-- CDH worker services
+- CDH worker services (HDFS DataNode, YARN Node Manager, HBase)
 
 **Note:** At least 1 instance required.
 
-In minimum TAP installation combined with `hadoop-master-controller` role. This role determines resources available for hdfs, yarn and hbase.
+In minimum TAP installation combined with `hadoop-master-controller` role. This role determines resources available for HDFS, YARN and HBase.
 
 Optimal production-grade configurations contain odd number of machines with this role (`2N + 1`).
 
@@ -975,7 +963,7 @@ TAP manages load balancers for the platform in order to:
      ******* || ********* TAP BELOW ********** TAP BELOW ********** TAP BELOW *******
              ||
              \/                                            |--- application1, instance 1
-     __________________       ________________________     | 
+     __________________       ________________________     |
     |   Primary LB     |     | Ingress Load Balancers |    |--- application1, instance 2
     | (nginx TCP mode) | <=> | nginx HTTPS mode       | -- |
     |__________________|     |________________________|    |--- application2, instance 1
@@ -984,6 +972,13 @@ TAP manages load balancers for the platform in order to:
                                                            |--- core-component, instance 1
                                                            |--- .....
 
+[???]
+
+TASK JIRA: DODAĆ OPIS PO ZAKONCZONEJ INSTLACJI: WYSWIETLIC LISTE (I ZAPISAC) ADRESY LB (KUBERNETES-MASTERY) LUB ELASTIC-LB W AWS
+
+TYMCZASOWE ROZWIAZANIE NA BARE METAL: UZYĆ IP MASZYN Z ROLĄ KUBERNETES-MASTER
+
+[???]
 
 ### Primary Load Balancers
 
@@ -1011,10 +1006,6 @@ With proper generated Nginx configuration files, traffic is distributed to targe
 * Please note that Ingress Load Balancers hosts are pre-loaded with TAP CA certificate and should access internal services over HTTPS.
 
 ### DNS and entry router configuration with multiple Load Balancers
-
-[???]
-ADAM J to describe how to determine number of PLBs
-[???]
 
 In setups with multiple Primary Load Balancer hosts the administrator shall configure:
 
@@ -1091,20 +1082,17 @@ Since the Docker Registry is backed by a Ceph storage and only a single instance
 
 **Note:** minio may also be used as a registry backend.
 
-## Adding custom components to deployment automation
+## Extending deployment automation
 
-To extend TAP installation with your custom services that are not managed by Kubernetes, you simply have to follow general Ansible guidelines. 
+To extend installation automation with your custom services that are not managed by TAP Platform itself, you simply have to follow general Ansible guidelines.
 
-Create a new Role in the `roles` directory and include its execution in the `site.yml` file. You can re-use existing machine group to assign role to, or create a new machine group.
+Create a new Role in the `roles` directory and include it in the `platform.yml` file that defines the sequence of infrastructure provisioning operations (like Kubernetes installation).
 
-[???]
-VERIFY
-[???]
+You can either reuse existing machine group to assign the newly created role to it, or create a new machine group for this purpose (in such case the automation of inventory generation should be updated too).
 
 # Troubleshooting
 
 ## Deployment troubleshooting
-
 
 As with any complex system, both expected failures (e.g., network connectivity) and unexpected failures may appear. This section should prepare you to handle and debug those.
 
@@ -1118,7 +1106,7 @@ Make sure the target machine is in an overall good shape:
 * Check logs:
    * Modern Linux distributions use Systemd. Use `sudo systemctl` and `sudo journalctl` to view services and logs for the machine. For systemd reference, refer to [documentation](https://wiki.archlinux.org/index.php/Systemd).
    * Some older components still use `/var/log/` directory to store logs.
-   * The package integrates an ELK stack, which can be used to browse logs across all nodes, applications, and containers. 
+   * The package integrates an ELK stack, which can be used to browse logs across all nodes, applications, and containers.
       * TODO provide instructions.
 * Check metrics:
    * Using either TAP web console, or
