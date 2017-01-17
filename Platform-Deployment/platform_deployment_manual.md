@@ -800,6 +800,17 @@ This role requires only 1 CPU and 2 GB RAM.
 
 ---
 
+#### 3.2.4.12 Role _platform-monitor_
+
+Role allows remote monitoring of availability and performance of TAP cluster components. [Zabbix](http://http://www.zabbix.com/product) is being used for this purpose.
+
+**Notes:** 
+- This role can be selected no more than once.
+- Can run on any of `compute-*` nodes (it is recommeded to select it on a machine with `compute-master` role).
+- Once the role is selected zabbix-agents will be installed on all machines in the TAP cluster.
+
+---
+
 ## 3.3 Deployment Configuration - Master Config File Secrets
 
 It is suggested not to keep any passwords and sensitive data in Master Config File as this file also describes platform configuration and can be potentially shared with external parties (ie. providers of maintenance/support services, during troubleshooting, etc.).
