@@ -26,9 +26,52 @@ WALDEK TO PROVIDE PROCEDURE
 
 ## Platform upgrades
 
-[???]
-TODO: DPNG-10992
-[???]
+In general, in order to upgrade platform version, it is sufficient to simply download and unpack new release, copy configuration files formerly used to deploy the platform and run deployment again.
+
+Please note that more manual changes may be necessary in case of a major version update, like additional required parameters in configuration files.
+
+It is important to ensure that the platform is backed up before performing upgrade.
+
+Reminder: TAP deployment automation is based on Ansible. Thanks to idempotency, you can run deployment automation multiple times. Each of those times, only changes will be applied.
+
+**Warning:** Automatic upgrade from versions earlier than 0.8.0 is NOT POSSIBLE. 
+
+### Design
+
+There are 4 major components that might require upgrade:
+
+1. Hardware/VM Infrastructure (AWS, additional malchines, changes in role assigments)
+2. Additional base OS based components
+3. Newer versions of base OS packages
+4. Newer versions of TAP container images
+
+First three components shall follow typical Ansible upgrade logic - additional version check and actions performed when upgrade is necessary.
+
+Upgrade process for containers is simpler: Ansible-Kubernetes module "tapkube" edits deployment instances updating image version and then Kubernetes automatically performs rolling deployment.
+
+Desired rolling deployment strategy can be adjusted in the deployment metadata itself, allowing for zero downtime upgrades in post-0.8 TAP releases.
+
+Please note that core platform componnents, which are using database, will detect an older schema version and perform data/schema upgrades on their own. This process happens after those components are (re)started.
+
+### Upgrade procedure details
+
+Please follow the upgrade procedure included with every released version.
+
+### Generic upgrade procedure
+
+Please attempt generic upgrade procedure in not detailed upgrade guidelines are provided for a given patch/upgrade.
+
+1. Download TAP installation/upgrade package.
+2. Unpack it.
+3. Read CHANGELOG file and flow upgrade procedure if attached.
+4. Ensure that you are performing upgrade between versions with supported upgrade transition.
+5. Use configuration files (primarily tap.config and tap.config.secrets) from previous deployment.
+6. Adjust those files and add new options/parameters if needed. Details shall be included in the upgrade procedure.
+7. Perform safe platform shutdown.
+8. Perform platform backup.
+9. Run TAP deployment as usual.
+
+Details on configuration files, troubleshooting, configuration and general deployment procedure you will find in Platform Deployment Manual. 
 
 ## Graceful/safe platfrom shutdown
 
