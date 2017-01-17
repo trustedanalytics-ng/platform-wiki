@@ -113,7 +113,7 @@ Provisioning steps:
 8. edit `tap.config` and `tap.config.secrets` configuration files and provide necessary configuration parameters described below (it is recommended to use the most suitable template from the set provided in subdirectory `config-templates`),
 9. run `./deploy.sh infra-bare-metal` and wait for completion of infrastructure configuration script (infrastructure needs to be properly configured before actual platform eployment can be perfomed).
 
-Once the infrastructure has been successfully provisioned you can now jump to [platform installation](#2.4 Platform installation).
+Once the infrastructure has been successfully provisioned you can now jump to [platform installation](#24-platform-installation).
 
 ### 2.3.2 AWS
 
@@ -144,7 +144,7 @@ Provisioning steps:
 6. connect to your newly created jumpbox host - type `./connect`,
 7. obtain (download or prepare yourself) and extract TAP platform installation package `TAP-<version>-platform.tar.gz` on machine/node with `jumpbox` role in user's (`centos`) home directory - run `tar -zvxf TAP-<version>-platform.tar.gz`.
 
-Once the infrastructure has been successfully provisioned you can now jump to [platform installation](#2.4 Platform installation).
+Once the infrastructure has been successfully provisioned you can now jump to [platform installation](#24-platform-installation).
 
 #### 2.3.2.1 AWS domain registration
 
