@@ -67,8 +67,8 @@ The deployment procedure is using 2 configuration files in yaml/json format call
 Details on these configuration files are provided in later chapters of this manual.
 
 TAP 0.8 deployment procedure consists of 2 phases described in detail below:
-* [Infrastructure provisioning](#2.3 Infrastructure provisioning)
-* [Platform installation](#2.4 Platform installation)
+* [Infrastructure provisioning](#23-infrastructure-provisioning)
+* [Platform installation](#24-platform-installation)
 
 ## 2.1 Deployment flow
 
