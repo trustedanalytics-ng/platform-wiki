@@ -3,7 +3,7 @@ title: TAP 0.8 Platform Deployment Manual
 keywords: platform deployment manual
 last_updated: 'January 17, 2017'
 tags:
-  - Platform Deployment
+  - TAP Platform Deployment
 summary: >-
   Insert the summary paragraph here. To edit the summary you must edit the meta data for this post.
 sidebar: mydoc_sidebar
@@ -416,10 +416,7 @@ instances:
       type: ssh-key
     storage:
       system-partition-size: 100
-      devices:
-        - device: '/dev/sdc'
-        - device: '/dev/sdd'
-        - device: '/dev/sde'
+      devices: [{"device":"/dev/sdb"},{"device":"/dev/sdc"}]
     roles:
       - hadoop-master-controller
       - hadoop-worker
@@ -492,7 +489,7 @@ Machines defined herein will be later available in TAP cluser under `<name>.inst
 	Params:
 
 	- `system-partition-size` - optional, by default 100. Root disks size mounted under `/`, ignored on `bare-metal` installation.
-	- `devices` - device list, minimum 1 device required for roles `storage-worker` and `hadoop-*`. For each device you have to define how this device will be visible in system, for example `/dev/sdb1`. Size param is optional (default value: 200) and used only in cloud installations.
+	- `devices` - device list (yaml syntax, ie. `devices: [{"device":"/dev/sdb"},{"device":"/dev/sdc"}]`), minimum 1 device required for roles `storage-worker` and `hadoop-*`. For each device you have to define how this device will be visible in system, for example `/dev/sdb1`. Size param is optional (default value: 200) and used only in cloud installations.
 
 	In AWS you have to use specific device names. Device name should match `/dev/xvd<nr>`, where `<nr>` it is next device number, starting from `b`:
 	Example:
@@ -586,6 +583,18 @@ Characters allowed:
 
 ---
 
+###### http_proxy
+
+Address of HTTP proxy if it is necessary to access external resources during deployment (like additional software packages, libraries, etc.) and later platform operations.
+
+###### https_proxy
+
+Address of HTTPS proxy if it is necessary to access external resources during deployment (like additional software packages, libraries, etc.) and later platform operations.
+
+###### no_proxy
+
+List of addresses/domains that shall not be proxied.
+
 ###### hdfs_ha_enabled
 
 Determines if HA on HDFS is enabled.
@@ -627,6 +636,18 @@ Certificate (base64 encoded) for TAP domain name provided via parameter `*.<tap_
 Generated automatically if not provided by the user.
 
 *Note:* Automatically generated certificate it *not trusted*.
+
+---
+
+###### berberos_enabled
+
+Determines if Kerberos-based security is enforced accross Hadoop cluster.
+
+Available values:
+- true
+- false
+
+Default value: true
 
 ---
 
