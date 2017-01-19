@@ -1,29 +1,57 @@
 ---
 title: Building Analytics
-keywords: building analytics on TAP
-last_updated: 'October, 2016'
+keywords: building analytics spark-tk
+last_updated: 'January, 2017'
 tags:
-  - Building Analytics
-summary: Insert the summary paragraph here.  To edit the summary you must edit the meta data for this post. 
+  - Building Analytics spark-tk
+summary: How to get started using spark-tk in TAP. 
 sidebar: mydoc_sidebar
 permalink: buildanalytics_sparktk.html
 folder: mydoc
 published: true
 ---
 
-## Using spark-tk
+Spark-tk is an analytics toolkit library that is compatible with Apache Spark. It provides APIs for Python and Scala. This page explains how to use Spark in TAP.
 
-Insert content here: [http://idratherbewriting.com](http://idratherbewriting.com). Use Markdown format.
+>Visit the [Spark-tk repo](https://github.com/trustedanalytics/spark-tk) for additional information.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Getting started with Spark-tk
 
-### Example Image:
+The easiest way to get started with Spark-tk on TAP is within a Jupyter notebook, as follows:
 
-You must first upload the image you want to display into the "images" folder in this repository then use the following example to embed your image:
+1. First, [create a Jupyter notebook](/Building-Analytics/Creating_Jupyter_Notebook_Instance.md).
 
-![EditField_DataCatalog.jpg](/images/EditField_DataCatalog.jpg)
+2. Open your Jupyter instance and navigate to **jupyter-default-notebooks/notebooks/examples/tklibs/sparktk/README.ipynb**  
+  
+    ![Accessing Readme files](/images/Build_Analytics_Spark_Screen1.png)  
+  
+3. The README notebook demonstrates how to create a SparkContext and some simple Spark code.
 
-### Markdown Cheatsheet
+![Readme files in Jupyter Sample](/images/Build_Analytics_Spark_Screen2.png)
 
-Below is a link to the Github Markdown Cheatsheet 
-[https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+The other example notebooks show how to use Spark dataframes, RDDs, streaming, SQL, and machine learning with K-Means and Linear Regression.
+
+![Readme files in Jupyter Sample](/images/Build_Analytics_Spark_Screen3.png)
+
+>More information about Spark is available on the [Apache Spark website](http://spark.apache.org/)
+
+###Accessing a terminal from Jupyter
+1. From the Jupyter dashboard, select the **New** button located in the upper right.
+
+    ![Accessing a Terminal from Jupyter](/images/Build_Analytics_Spark_Screen4.png) 
+
+2. Select **Terminal** from the sub menu to open a new terminal within Jupyter. 
+
+![Jupyter Terminal](/images/Build_Analytics_Spark_Screen5.png)  
+
+
+You can enter Spark commands (spark-shell, spark-submit, etc.) in the terminal window.
+
+##Troublshooting Tips
+
+### Q: I am using spark-tk and want to save files/export models to my local file system instead of HDFS. How do I do that?
+
+The SparkContext created by `TkContext` follows the system's current Spark configuration. If your system defaults to HDFS, but you want to use a local file system instead, include `use_local_fs=True` when creating your `TkContext`, as follows:  
+  
+      tc = sparktk.TkContext(use_local_fs=True)  
+  

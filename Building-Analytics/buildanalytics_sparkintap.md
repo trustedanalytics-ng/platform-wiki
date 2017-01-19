@@ -1,29 +1,45 @@
 ---
 title: Building Analytics
-keywords: building analytics on TAP
-last_updated: 'October, 2016'
+keywords: building analytics spark TAP
+last_updated: 'January, 2017'
 tags:
-  - Building Analytics
-summary: Insert the summary paragraph here.  To edit the summary you must edit the meta data for this post. 
+  - Building Analytics spark
+summary: How to get started using spark in TAP. 
 sidebar: mydoc_sidebar
 permalink: buildanalytics_sparktk.html
 folder: mydoc
 published: true
 ---
 
-## Using spark-tk
+Apache Spark is a general engine for cluster scale computing. It provides APIs for multiple languages including Python, Scala, and SQL. This page explains how to use Spark in TAP.
 
-Insert content here: [http://idratherbewriting.com](http://idratherbewriting.com). Use Markdown format.
+## Getting started with Spark
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The easiest way to get started with Spark on TAP is within a Jupyter notebook, as follows:
 
-### Example Image:
+1. First, [create a Jupyter notebook](/Building-Analytics/Creating_Jupyter_Notebook_Instance.md).
 
-You must first upload the image you want to display into the "images" folder in this repository then use the following example to embed your image:
+2. Open your Jupyter instance and navigate to **examples/spark/README.ipynb**  
+  
+    ![Accessing Readme files](/images/Build_Analytics_Spark_Screen1.png)  
+  
+3. The README notebook demonstrates how to create a SparkContext and some simple Spark code.
 
-![EditField_DataCatalog.jpg](/images/EditField_DataCatalog.jpg)
+![Readme files in Jupyter Sample](/images/Build_Analytics_Spark_Screen2.png)
 
-### Markdown Cheatsheet
+The other example notebooks show how to use Spark dataframes, RDDs, streaming, SQL, and machine learning with K-Means and Linear Regression.
 
-Below is a link to the Github Markdown Cheatsheet 
-[https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+![Readme files in Jupyter Sample](/images/Build_Analytics_Spark_Screen3.png)
+
+>More information about Spark is available on the [Apache Spark website](http://spark.apache.org/)
+
+###Accessing a terminal from Jupyter
+1. From the Jupyter dashboard, select the **New** button located in the upper right.
+
+    ![Accessing a Terminal from Jupyter](/images/Build_Analytics_Spark_Screen4.png) 
+
+2. Select **Terminal** from the sub menu to open a new terminal within Jupyter. 
+
+![Jupyter Terminal](/images/Build_Analytics_Spark_Screen5.png) 
+
+You can enter Spark commands (spark-shell, spark-submit, etc.) in the terminal window.
