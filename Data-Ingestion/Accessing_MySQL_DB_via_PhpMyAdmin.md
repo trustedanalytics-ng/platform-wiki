@@ -1,7 +1,7 @@
 ---
 title: MySQL Credentials
 keywords: MySQL Credentials
-last_updated: 'November, 2016'
+last_updated: 'January, 2017'
 tags:
   - MySQL Credentials
 summary: How to get your MySQL credentials for PhpMyAdmin 
