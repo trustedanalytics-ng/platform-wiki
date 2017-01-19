@@ -401,6 +401,14 @@ SMTP user password.
 
 ---
 
+###### dns
+
+List of external dns servers used in deployment.
+
+Default: empty
+
+---
+
 ###### instances
 
 Defines machines/nodes to be used during TAP deployment.
