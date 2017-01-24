@@ -403,7 +403,7 @@ SMTP user password.
 
 ###### dns
 
-List of external dns servers used in deployment.
+List of external dns servers used in deployment. In isolated enviroment this variable can be disabled by setting `dns_isolation: True`
 
 Default: empty
 
@@ -602,6 +602,12 @@ Address of HTTPS proxy if it is necessary to access external resources during de
 ###### no_proxy
 
 List of addresses/domains that shall not be proxied.
+
+###### dns_isolation
+
+Determines if `dns` list is required. 
+
+This option is useful when installing on isolated network without access to external recursive DNS servers.
 
 ###### hdfs_ha_enabled
 
