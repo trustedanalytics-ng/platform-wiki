@@ -1,7 +1,7 @@
 ﻿---
 title: TAP 0.8 Platform Deployment Manual
 keywords: platform deployment manual
-last_updated: 'January 24, 2017'
+last_updated: 'January 25, 2017'
 tags:
   - TAP Platform Deployment
 summary: >-
