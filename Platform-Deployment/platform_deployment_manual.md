@@ -1,7 +1,7 @@
 ﻿---
 title: TAP 0.8 Platform Deployment Manual
 keywords: platform deployment manual
-last_updated: 'January 17, 2017'
+last_updated: 'January 24, 2017'
 tags:
   - TAP Platform Deployment
 summary: >-
@@ -72,17 +72,25 @@ TAP 0.8 deployment procedure consists of 2 phases described in detail below:
 
 ## 2.1 Deployment flow
 
-The following diagram shows which Ansible role is executed on which machine group:
-
-[[img/docs.png]]
-
 Deployment is performed by Ansible playbooks.
 
 All roles used during deployment are available in the `roles/` directory. The diagram above shows which role is executed on which machine over time during the deployment process.
 
-Once the deployment of the platform is completed service offerings (provided later via TAP Marketplace) are installed. Role execution flow is as follows:
+Installation and configuration of all underlying technologies is being performed as presented below (diagram shows sequence of Ansible role executions on target nodes):
 
-[[img/apps_docs.png]]
+![TAP 0.8 - Platform Deployment - Deployment of underlying technologies](img/tap08-pd-ansible-1-platform-deployment.png)
+
+Then core platform components are installed and configured:
+
+![TAP 0.8 - Platform Deployment - Deployment of core platform components](img/tap08-pd-ansible-2-core-components.png)
+
+Once the deployment of the platform is completed service offerings (provided later via TAP Marketplace) are installed:
+
+![TAP 0.8 - Platform Deployment - Deployment of service offerings](img/tap08-pd-ansible-3-marketplace.png)
+
+Finally, sample applications are deployed:
+
+![TAP 0.8 - Platform Deployment - Deployment of sample applications](img/tap08-pd-ansible-4-samples.png)
 
 ## 2.2 Building TAP from sources
 
@@ -587,13 +595,29 @@ Characters allowed:
 
 Address of HTTP proxy if it is necessary to access external resources during deployment (like additional software packages, libraries, etc.) and later platform operations.
 
+---
+
 ###### https_proxy
 
 Address of HTTPS proxy if it is necessary to access external resources during deployment (like additional software packages, libraries, etc.) and later platform operations.
 
+---
+
 ###### no_proxy
 
 List of addresses/domains that shall not be proxied.
+
+---
+
+###### console_enable_external_ssl
+
+This parameter defines if TAP console is available via HTTP or HTTPS.
+
+Prossible values:
+- true (default, console available only via HTTPS)
+- false
+
+---
 
 ###### hdfs_ha_enabled
 
@@ -605,7 +629,7 @@ Possible values:
 - true (default)
 - false
 
-This configuration options is set to False when `deployment_type` is set to `minimal`.
+This configuration option is set to False when `deployment_type` is set to `minimal`.
 
 ---
 
