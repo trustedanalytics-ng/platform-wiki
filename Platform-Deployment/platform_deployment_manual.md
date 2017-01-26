@@ -345,16 +345,6 @@ Default: `['0.pool.ntp.org', '1.pool.ntp.org']`
 
 ---
 
-###### platform_admin_password
-
-Password to by used by TAP Platform administrator to log in into TAP Console.
-
-*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file (please see chapter on Master Config File Secrets).
-
-*Note:* Former name of this parameter: 'admin_password'
-
----
-
 ###### tap_domain_name
 
 Domain for your TAP cluster applications. Record for `*.<tap_domain_name>` should be registered, and should target your load balancer or instance with `compute-master` role.
@@ -404,6 +394,22 @@ SMTP username.
 ###### smtp_password
 
 SMTP user password.
+
+*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file.
+
+---
+
+###### platform_admin_password
+
+Password to be used by TAP Platform administrator to log in into TAP Console and API.
+
+*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file (please see chapter on Master Config File Secrets).
+
+---
+
+###### cdh_admin_password
+
+CDH admin password (please comply to password requirements imposed by CDH).
 
 *Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file.
 
