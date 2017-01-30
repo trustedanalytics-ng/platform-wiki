@@ -103,63 +103,63 @@ All machines provided for TAP installation **must not** be shared with other sys
 TAP deployment functionality is universal and assumes only SSH connectivity to all the hosts you want to install TAP on. While this allows you to install platform on almost any kind of physical and virtual machines, which could be extraordinaly optimized for performance and/or reliability, by default TAP uses only generic hardware features of your hardware infrastructure.
 
 Requirements:
-- Each node with `storage-worker` and `hadoop-*` roles should have an additional disk mounted (or have a new partition created if only 1 disk is available. For cloud environments, disks will be created automatically based on the `tap.config` file,
+- Each node with `storage-worker` and `hadoop-*` roles should have an additional disk mounted (or have a new partition created if only 1 disk is available. For cloud environments, disks will be created automatically based on the `tap.config` file.
 - All nodes should be able to connect to each other.
 
 Provisioning steps:
-1. Make sure `CentOS 7.2.1511` is installed on each machine  
-2. Register required domain records in your domain name provider  
-3. Enable ssh access for the user with unlimited sudo access (via key or password) - the platform will be deployed using this user  
-4. Run `yum update` and `yum upgrade`, otherwise delete all files from `/etc/yum.repos.d/`  
-5. Obtain (download or prepare yourself) TAP platform installation package `TAP-<version>-platform.tar.gz`  
-6. Extract this package on machine with `jumpbox` role in user's home directory (`tar -zvxf TAP-<version>-platform.tar.gz`)  
-7. Go into your package directory (`cd ./TAP-<version>`)  
-8. Edit `tap.config` and `tap.config.secrets` configuration files and provide necessary configuration parameters described below (it is recommended to use the most suitable template from the set provided in subdirectory `config-templates`)  
-9. Run `./deploy.sh infra-bare-metal` and wait for completion of infrastructure configuration script (infrastructure needs to be properly configured before actual platform eployment can be perfomed)  
+1. Make sure `CentOS 7.2.1511` is installed on each machine.  
+2. Register required domain records in your domain name provider.  
+3. Enable ssh access for the user with unlimited sudo access (via key or password) - the platform will be deployed using this user.  
+4. Run `yum update` and `yum upgrade`, otherwise delete all files from `/etc/yum.repos.d/`.  
+5. Obtain (download or prepare yourself) TAP platform installation package `TAP-<version>-platform.tar.gz`.  
+6. Extract this package on machine with `jumpbox` role in user's home directory (`tar -zvxf TAP-<version>-platform.tar.gz`).  
+7. Go into your package directory (`cd ./TAP-<version>`).  
+8. Edit `tap.config` and `tap.config.secrets` configuration files and provide necessary configuration parameters described below (it is recommended to use the most suitable template from the set provided in subdirectory `config-templates`).  
+9. Run `./deploy.sh infra-bare-metal` and wait for completion of infrastructure configuration script (infrastructure needs to be properly configured before actual platform eployment can be perfomed).  
 
-Once the infrastructure has been successfully provisioned you can now jump to [platform installation](#24-platform-installation).
+Once the infrastructure has been successfully provisioned, you can jump to [platform installation](#24-platform-installation).
 
 ### 2.3.2 AWS
 
 TAP 0.8 deployment automation has the functionality to provision infrastructure on AWS EC2.
 
-The infrastructure being deployed consists of VPC, subnets, EC2 instances, ELB (Elastic Load Balancers).
+The infrastructure being deployed consists of VPC, subnets, EC2 instances, ELBs (Elastic Load Balancers).
 
 AWS infrastructure provisioning automation has been done in Ansible, using [AWS module](http://docs.ansible.com/ansible/guide_aws.html). Thanks to that, we obtain proper idempotent design, where re-running automation should fix infrastructure problems.
 
 Infrastructure provisioning deployment steps generates necessary configuration and inventory files for later use.
 
 There are five major subnets allocated:
-- one for jumpbox and nat node(nat node is only required for AWS deployments),
-- two for compute resources, one for masters and one for workers (compute-* roles),
-- one for Hadoop/CDH resources (hadoop-* roles),
-- one for Ceph resoruces (storage-* roles).
+- One for jumpbox and nat node(nat node is only required for AWS deployments).  
+- Two for compute resources, one for masters and one for workers (compute-* roles).  
+- One for Hadoop/CDH resources (hadoop-* roles).  
+- One for Ceph resoruces (storage-* roles).  
 
 To run AWS infrastructure provisioning you need:
-- instances with CentOS 7.2,
-- internet connection.
+- Instances with CentOS 7.2.  
+- Internet connection.  
 
 Provisioning steps:
-1. obtain and extract package with TAP infrastructure provisioning scripts `TAP-<version>-infra.tar.gz` (if not available as a separate package obtain entire `TAP-<version>-platform.tar.gz`) - run `tar -zvxf TAP-<version>-infra.tar.gz` (or `TAP-<version>-platform.tar.gz` respectively),
-2. edit Master Config File (`tap.config`) and Master Config File Secrets (`tap.config.secrets`) configuration files and provide necessary configuration parameters described below (it is recommended to use templates  provided in subdirectory `config-templates`),
-3. go into your package directory (`cd ./TAP-<version>`),
-4. run infrastructure provisioning script `./deploy.sh infra-aws`,
-5. register required domain records in your domain name provider,
-6. connect to your newly created jumpbox host - type `./connect`,
-7. obtain (download or prepare yourself) and extract TAP platform installation package `TAP-<version>-platform.tar.gz` on machine/node with `jumpbox` role in user's (`centos`) home directory - run `tar -zvxf TAP-<version>-platform.tar.gz`.
+1. Obtain and extract package with TAP infrastructure provisioning scripts `TAP-<version>-infra.tar.gz` (if not available as a separate package obtain entire `TAP-<version>-platform.tar.gz`) - run `tar -zvxf TAP-<version>-infra.tar.gz` (or `TAP-<version>-platform.tar.gz` respectively).  
+2. Edit Master Config File (`tap.config`) and Master Config File Secrets (`tap.config.secrets`) configuration files and provide necessary configuration parameters described below (it is recommended to use templates  provided in subdirectory `config-templates`),
+3. Go into your package directory (`cd ./TAP-<version>`).  
+4. Run infrastructure provisioning script `./deploy.sh infra-aws`.  
+5. Register required domain records in your domain name provider.  
+6. Connect to your newly created jumpbox host - type `./connect`.  
+7. Obtain (download or prepare yourself) and extract TAP platform installation package `TAP-<version>-platform.tar.gz` on machine/node with `jumpbox` role in user's (`centos`) home directory - run `tar -zvxf TAP-<version>-platform.tar.gz`.
 
-Once the infrastructure has been successfully provisioned you can now jump to [platform installation](#24-platform-installation).
+Once the infrastructure has been successfully provisioned you, can jump to [platform installation](#24-platform-installation).
 
 #### 2.3.2.1 AWS domain registration
 
-Below you will find a sequence of operations needed to register your AWS-hosted TAP cluster in AWS DNS:
-1. login into AWS console,
-2. go to VPC page and enter VPC name (env_name parameter in `tap.config`) there,
-3. go to EC2 page and then to Load Balancer page (available via vertical UI menu),
-4. then, select your load balancer from the list (you can use *Filter* search panel to filter out the right VPC) and copy to clipboard its DNS name (without *(A Record)* string),
-5. go to Route53 page and select *Hosted zones*,
-6. create new or edit existing record set - *Name* should be `*.<subdomain>.<domain>` (`<subdomain>.<domain>` is your `tap_domain_name` parameter from `tap.config` file), *Type* should equal to CNAME, and as *Value* paste DNS name from load balancer,
-7. save your record.
+Perform the following sequence of operations needed to register your AWS-hosted TAP cluster in AWS DNS:
+1. Login into AWS console.  
+2. Go to VPC page and enter VPC name (env_name parameter in `tap.config`) there.  
+3. Go to EC2 page and then to Load Balancer page (available via vertical UI menu)>  
+4. Then, select your load balancer from the list (you can use *Filter* search panel to filter out the right VPC) and copy to clipboard its DNS name (without *(A Record)* string)>  
+5. Go to Route53 page and select *Hosted zones*.  
+6. Create new or edit existing record set - *Name* should be `*.<subdomain>.<domain>` (`<subdomain>.<domain>` is your `tap_domain_name` parameter from `tap.config` file), *Type* should equal to CNAME, and as *Value* paste DNS name from load balancer.  
+7. Save your record.
 
 *Note:* For more information on load balancers and DNS please refer to the below chapter named TAP Load Balancing.
 
