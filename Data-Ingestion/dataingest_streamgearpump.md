@@ -18,7 +18,7 @@ Gearpump is incubated by the Apache Software Foundation. For more details about 
 
 ## Using Gearpump in TAP
 
-Within TAP, Gearpump can be used for high velocity data ingestion, stream data processing, online analytics, etc. Currently, a new GearPump Cluster can be created on demand by a TAP user from the Marketplace or from the Data Science menu. 
+Within TAP, Gearpump can be used for high velocity data ingestion, stream data processing, online analytics, etc. Currently, a new Gearpump Cluster can be created on demand by a TAP user from the Marketplace or from the Data Science menu. 
 
 ### Deploying a Gearpump Application using TAP Console
 
@@ -27,7 +27,7 @@ To deploy an application, go to **Data Science** tab in menu and select **Apache
 *updated screenshot to be inserted here*
 
 Click inside the form field labeled **Instance name** and type a name for your instance. Select the button **Create new Apache Gearpump instance** to create a new instance. *The button is not available until a name has been provided in the Instance name field*.
-After 30-60 seconds, refresh your browser screen. Your new GearPump instance will be listed on the **Data Science > Gearpump** page
+After 30-60 seconds, refresh your browser screen. Your new Gearpump instance will be listed on the **Data Science > Gearpump** page
 
 Select desired instance and click **Deploy application** link.
 
