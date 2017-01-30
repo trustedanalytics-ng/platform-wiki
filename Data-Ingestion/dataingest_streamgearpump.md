@@ -35,7 +35,7 @@ Select desired instance and click **Deploy application** link.
 
 In this step you have to select some variables.
 
-1. Application JAR: select jar with '-with-dependiences' extension
+1. Application JAR: select jar with '-with-dependencies' extension
 2. Config file: file to provide settings for application.
 
 To create config follow the [manual Gearpump deployment instructions](https://github.com/intel-data/ingestion-ws-kafka-gearpump-hbase/blob/master/gearpump/README_DEPLOY.md?raw=true).
