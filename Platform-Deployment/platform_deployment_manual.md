@@ -165,23 +165,23 @@ Perform the following sequence of operations needed to register your AWS-hosted 
 
 ## 2.4 Platform installation
 
-Please verify on the jmpbox host if the following configuration files are available:
+Verify on the jumpbox host that the following configuration files are available:
 * `$HOME/tap-configuration/tap.config` (Master Config File you have defined earlier on your machine)
 * `$HOME/tap-configuration/tap.config.secrets` (Master Config File Secrets you have defined earlier on your machine)
 * `$HOME/tap-configuration/tap.inventory.out` (file with TAP cluster inventory automatically generated during infrastructure provissioning)
 * `$HOME/tap-configuration/tap.instance.out` (file with addresses of TAP cluster load balancer(s) to be registered in your DNS operator)
 
-Having properly provisioned and configured infrastructure (scripts described above completed execution without errors) you can run actual platform installation script:
+Having properly provisioned and configured the infrastructure (scripts described above completed execution without errors), you can run the actual platform installation script:
 
 `./deploy.sh deploy`.
 
-* Properly installed TAP 0.8 can be accessed via web console available under address: http://console.(your-domain-name) where _(your-domain-name)_ is the domain name you have provided in Master Config File (parameter 'wildcard_tap_domain_name' - see details below).
+* A properly installed TAP 0.8 instance can be accessed via web console available under address: http://console.(your-domain-name) where _(your-domain-name)_ is the domain name you have provided in Master Config File (parameter 'wildcard_tap_domain_name' - see details below).
 
 **Notes:**
 * Your installations logs are stored in your TAP platform installation package directory, in subfolder `logs`.
-* Deployment scripts internally use Ansible (`>=2.2.1.0`), following its idempotent nature. This means you can run `./deploy.sh` deploy over and over again, and only changes will be applied.
+* Deployment scripts internally use Ansible (`>=2.2.1.0`), following its idempotent nature. This means you can run `./deploy.sh` deploy repeatedly, and only changes will be applied.
 * This feature can be used to repair broken host with TAP 0.8 only.
-* Automatic cluster size extension, shrinking or node role change are not yet supported in TAP 0.8.*.
+* Automatic cluster size extension, shrinking or node role change are *not* yet supported in TAP 0.8.*.
 
 **Idempotency**
 
