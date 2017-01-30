@@ -18,7 +18,7 @@ published: true
 
 # 1 Introduction
 
-Welcome to TAP 0.8 Platform Deployment Manual.
+Welcome to the TAP 0.8 Platform Deployment Manual.
 
 The goal of this document is to explain TAP deployment automation and its architecture design, and how to perform essential maintenance procedures.
 
@@ -58,7 +58,7 @@ TAP 0.8 has a unified installation procedure for both bare metal (hardware and o
 
 TAP can be installed both from binary installation package or built from sources (procedure of building TAP deployment package from sources has been described below).
 
-The deployment procedure is using 2 configuration files in yaml/json format called _Config Master File_ and _Config Master File Secrects_. Both files have to exists in TAP directory, with minimum 1 param inside.
+The deployment procedure is using 2 configuration files in yaml/json format called _Config Master File_ and _Config Master File Secrects_. Both files must exist in the TAP directory, with a minimum of 1 parameter inside.
 
 Details on these configuration files are provided in later chapters of this manual.
 
@@ -90,7 +90,7 @@ Finally, sample applications are deployed:
 
 ## 2.2 Building TAP from sources
 
-TAP deployment package can be built from source code - for build procedure please follow [TAP building procedure](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/platform_deployment_building_from_sources.md)
+TAP deployment package can be built from source code. For the build procedure, see [TAP building procedure](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/platform_deployment_building_from_sources.md)
 
 ## 2.3 Infrastructure provisioning
 
@@ -100,22 +100,22 @@ TAP 0.8 deployment procedure uses infrastructure provided by the user to install
 
 All machines provided for TAP installation **must not** be shared with other systems/platforms.
 
-TAP deployment functionality is universal and assumes only SSH connectivity to all the hosts you want to install TAP on. While this allows you to install platform on almost any kind of physical and virtual machines, whose could be extraordinaly optimized for performance and/or reliability, by default TAP uses only generic hardware features of your hardware infrastructure.
+TAP deployment functionality is universal and assumes only SSH connectivity to all the hosts you want to install TAP on. While this allows you to install platform on almost any kind of physical and virtual machines, which could be extraordinaly optimized for performance and/or reliability, by default TAP uses only generic hardware features of your hardware infrastructure.
 
 Requirements:
-- each node with `storage-worker` and `hadoop-*` roles should have mounted an additional disk or created a new partiotion if only 1 disk is available - for cloud environments disks will be created automatically based on `tap.config` file,
-- all nodes should be able to connect to each other.
+- Each node with `storage-worker` and `hadoop-*` roles should have an additional disk mounted (or have a new partition created if only 1 disk is available. For cloud environments, disks will be created automatically based on the `tap.config` file,
+- All nodes should be able to connect to each other.
 
 Provisioning steps:
-1. make sure `CentOS 7.2.1511` is installed on each machine,
-2. register required domain records in your domain name provider,
-3. enable ssh access for the user with unlimited sudo access (via key or password) - platform will be deployed using this user,
-4. run `yum update` and `yum upgrade`, otherwise delete all files from `/etc/yum.repos.d/`,
-5. obtain (download or prepare yourself) TAP platform installation package `TAP-<version>-platform.tar.gz`,
-6. extract this package on machine with `jumpbox` role in user's home directory (`tar -zvxf TAP-<version>-platform.tar.gz`),
-7. go into your package directory (`cd ./TAP-<version>`),
-8. edit `tap.config` and `tap.config.secrets` configuration files and provide necessary configuration parameters described below (it is recommended to use the most suitable template from the set provided in subdirectory `config-templates`),
-9. run `./deploy.sh infra-bare-metal` and wait for completion of infrastructure configuration script (infrastructure needs to be properly configured before actual platform eployment can be perfomed).
+1. Make sure `CentOS 7.2.1511` is installed on each machine  
+2. Register required domain records in your domain name provider  
+3. Enable ssh access for the user with unlimited sudo access (via key or password) - the platform will be deployed using this user  
+4. Run `yum update` and `yum upgrade`, otherwise delete all files from `/etc/yum.repos.d/`  
+5. Obtain (download or prepare yourself) TAP platform installation package `TAP-<version>-platform.tar.gz`  
+6. Extract this package on machine with `jumpbox` role in user's home directory (`tar -zvxf TAP-<version>-platform.tar.gz`)  
+7. Go into your package directory (`cd ./TAP-<version>`)  
+8. Edit `tap.config` and `tap.config.secrets` configuration files and provide necessary configuration parameters described below (it is recommended to use the most suitable template from the set provided in subdirectory `config-templates`)  
+9. Run `./deploy.sh infra-bare-metal` and wait for completion of infrastructure configuration script (infrastructure needs to be properly configured before actual platform eployment can be perfomed)  
 
 Once the infrastructure has been successfully provisioned you can now jump to [platform installation](#24-platform-installation).
 
