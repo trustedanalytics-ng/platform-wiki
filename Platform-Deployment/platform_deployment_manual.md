@@ -1,11 +1,10 @@
-﻿---
+---
 title: TAP 0.8 Platform Deployment Manual
 keywords: platform deployment manual
 last_updated: 'January 29, 2017'
 tags:
   - TAP Platform Deployment
-summary: >-
-  Insert the summary paragraph here. To edit the summary you must edit the meta data for this post.
+summary: Platform deployment information.
 sidebar: mydoc_sidebar
 permalink: platform-deployment-manual.html
 folder: mydoc
@@ -13,10 +12,7 @@ published: true
 ---
 
 
-
-Platform Deployment Manual
-
-Trusted Analytics Platform 0.8
+# Platform Deployment Manual
 
 >This information is intended for internal Intel use only. Relevant information will be extracted and presented in a public documentation web page for users.
 
