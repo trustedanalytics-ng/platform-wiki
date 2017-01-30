@@ -45,7 +45,7 @@ The other example notebooks show how to use Datacatalog, Frame, Latent Dirichlet
 ![Jupyter Terminal](/images/Build_Analytics_v8_Spark_Start_Screen1.png)  
 
 
-You can enter CLI commands (spark-shell, spark-submit, etc.) in the terminal window.
+You can enter CLI commands (spark-shell, spark-submit, etc.) in the terminal window.  
 
 ##Troublshooting Tips
 
