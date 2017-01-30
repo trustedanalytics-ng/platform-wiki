@@ -23,7 +23,7 @@ The easiest way to get started with Spark-tk on TAP is within a Jupyter notebook
 
 2. Open your Jupyter instance and navigate to **jupyter-default-notebooks/notebooks/examples/tklibs/sparktk/README.ipynb**  
   
-    ![Accessing Readme files](/images/BuildAn_GS_Sparktk_Start_v8_Screen2.PNG)  
+    ![Accessing Readme files](/images/BuildAn_GS_Sparktk_Start_v8_Screen1.PNG)  
    
 3. The README notebook demonstrates how to create a TkContext for Spark-tk and some simple Spark code.
 
