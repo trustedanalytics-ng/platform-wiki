@@ -1,7 +1,7 @@
 ﻿---
 title: TAP 0.8 Platform Deployment Manual
 keywords: platform deployment manual
-last_updated: 'January 25, 2017'
+last_updated: 'January 29, 2017'
 tags:
   - TAP Platform Deployment
 summary: >-
@@ -615,12 +615,12 @@ List of addresses/domains that shall not be proxied.
 
 ---
 
-###### console_enable_external_ssl
+###### enable_external_ssl
 
-This parameter defines if TAP console is available via HTTP or HTTPS.
+This parameter defines if TAP is available via HTTP or HTTPS.
 
 Prossible values:
-- true (default, console available only via HTTPS)
+- true (default, TAP available only via HTTPS)
 - false
 
 ---
