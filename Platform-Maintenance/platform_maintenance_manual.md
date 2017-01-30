@@ -34,7 +34,7 @@ It is important to ensure that the platform is backed up before performing upgra
 
 Reminder: TAP deployment automation is based on Ansible. Thanks to idempotency, you can run deployment automation multiple times. Each of those times, only changes will be applied.
 
-**Warning:** Automatic upgrade from versions earlier than 0.8.0 is NOT POSSIBLE. 
+**Warning:** Automatic upgrade from versions earlier than 0.8.0 is NOT POSSIBLE - all data and platform configuration from earlier versions of TAP must be migrated manually to TAP 0.8+.
 
 ### Design
 

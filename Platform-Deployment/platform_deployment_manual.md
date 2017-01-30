@@ -1,7 +1,7 @@
 ﻿---
 title: TAP 0.8 Platform Deployment Manual
 keywords: platform deployment manual
-last_updated: 'January 17, 2017'
+last_updated: 'January 29, 2017'
 tags:
   - TAP Platform Deployment
 summary: >-
@@ -72,17 +72,25 @@ TAP 0.8 deployment procedure consists of 2 phases described in detail below:
 
 ## 2.1 Deployment flow
 
-The following diagram shows which Ansible role is executed on which machine group:
-
-[[img/docs.png]]
-
 Deployment is performed by Ansible playbooks.
 
 All roles used during deployment are available in the `roles/` directory. The diagram above shows which role is executed on which machine over time during the deployment process.
 
-Once the deployment of the platform is completed service offerings (provided later via TAP Marketplace) are installed. Role execution flow is as follows:
+Installation and configuration of all underlying technologies is being performed as presented below (diagram shows sequence of Ansible role executions on target nodes):
 
-[[img/apps_docs.png]]
+![TAP 0.8 - Platform Deployment - Deployment of underlying technologies](img/tap08-pd-ansible-1-platform-deployment.png)
+
+Then core platform components are installed and configured:
+
+![TAP 0.8 - Platform Deployment - Deployment of core platform components](img/tap08-pd-ansible-2-core-components.png)
+
+Once the deployment of the platform is completed service offerings (provided later via TAP Marketplace) are installed:
+
+![TAP 0.8 - Platform Deployment - Deployment of service offerings](img/tap08-pd-ansible-3-marketplace.png)
+
+Finally, sample applications are deployed:
+
+![TAP 0.8 - Platform Deployment - Deployment of sample applications](img/tap08-pd-ansible-4-samples.png)
 
 ## 2.2 Building TAP from sources
 
@@ -337,16 +345,6 @@ Default: `['0.pool.ntp.org', '1.pool.ntp.org']`
 
 ---
 
-###### platform_admin_password
-
-Password to by used by TAP Platform administrator to log in into TAP Console.
-
-*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file (please see chapter on Master Config File Secrets).
-
-*Note:* Former name of this parameter: 'admin_password'
-
----
-
 ###### tap_domain_name
 
 Domain for your TAP cluster applications. Record for `*.<tap_domain_name>` should be registered, and should target your load balancer or instance with `compute-master` role.
@@ -406,6 +404,22 @@ SMTP user password.
 List of external dns servers used in deployment. In isolated enviroment this variable can be disabled by setting `dns_isolation: True`
 
 Default: empty
+
+---
+
+###### platform_admin_password
+
+Password to be used by TAP Platform administrator to log in into TAP Console and API.
+
+*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file (please see chapter on Master Config File Secrets).
+
+---
+
+###### cdh_admin_password
+
+CDH admin password (please comply to password requirements imposed by CDH).
+
+*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file.
 
 ---
 
@@ -595,19 +609,37 @@ Characters allowed:
 
 Address of HTTP proxy if it is necessary to access external resources during deployment (like additional software packages, libraries, etc.) and later platform operations.
 
+---
+
 ###### https_proxy
 
 Address of HTTPS proxy if it is necessary to access external resources during deployment (like additional software packages, libraries, etc.) and later platform operations.
 
+---
+
 ###### no_proxy
 
 List of addresses/domains that shall not be proxied.
+
 
 ###### dns_isolation
 
 Determines if `dns` list is required. 
 
 This option is useful when installing on isolated network without access to external recursive DNS servers.
+
+---
+
+###### enable_external_ssl
+
+This parameter defines if TAP is available via HTTP or HTTPS.
+
+Prossible values:
+- true (default, TAP available only via HTTPS)
+- false
+
+---
+
 
 ###### hdfs_ha_enabled
 
@@ -619,7 +651,7 @@ Possible values:
 - true (default)
 - false
 
-This configuration options is set to False when `deployment_type` is set to `minimal`.
+This configuration option is set to False when `deployment_type` is set to `minimal`.
 
 ---
 
@@ -811,6 +843,17 @@ Hardened bastion host dedicated to protecting TAP installation from external att
 In minimum TAP installation will share machine with `compute-master` role but it is strongly recommended to create/use separated machine for this role.
 
 This role requires only 1 CPU and 2 GB RAM.
+
+---
+
+#### 3.2.4.12 Role _platform-monitor_
+
+Role allows remote monitoring of availability and performance of TAP cluster components. [Zabbix](http://http://www.zabbix.com/product) is being used for this purpose.
+
+**Notes:** 
+- This role can be selected no more than once.
+- Can run on any of `compute-*` nodes (it is recommeded to select it on a machine with `compute-master` role).
+- Once the role is selected zabbix-agents will be installed on all machines in the TAP cluster.
 
 ---
 
