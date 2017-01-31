@@ -193,15 +193,15 @@ Definition taken from [ansible documentation](http://docs.ansible.com/ansible/gl
 
 ---
 
-To provide a single configuration point for the entire, quite complex platform, TAP deployment scripts use tap.config file  described in this section.
+To provide a single configuration point for the entire, quite complex platform, TAP deployment scripts use the `tap.config` file  described in this section.
 
-During the deployment process other configuration files are being generated automatically (like Ansible inventory file and group var files for various subsystems).
+During the deployment process, other configuration files are being generated automatically (like an Ansible inventory file and group var files for various subsystems).
 
 By default the master configuration file is named `tap.config`
 
 The default file name can be overriden by environment variable `CONFIG`
 
-This file contains global variables overrided in all ansible playbooks and tasks and instance definitions.
+This file contains global variables overrided in all Ansible playbooks and tasks and instance definitions.
 
 Default file format:
 `<param name>: <param value>`
@@ -327,7 +327,7 @@ instances:
 
 ## 3.2 Master Config File - Parameters
 
-Note: For updates and/or further details please refer to [tap-deploy git repository](https://github.com/trustedanalytics/tap-deploy/).
+>For updates and/or further details please refer to [tap-deploy git repository](https://github.com/trustedanalytics/tap-deploy/).
 
 ### 3.2.1 Required Core Parameters
 
@@ -383,7 +383,7 @@ SMTP protocol.
 
 SMTP username.
 
-*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file.
+**Note:** It is strongly recommended to store this parameter in `tap.config.secrets` file.
 
 ---
 
@@ -391,7 +391,7 @@ SMTP username.
 
 SMTP user password.
 
-*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file.
+**Note:** It is strongly recommended to store this parameter in `tap.config.secrets` file.
 
 ---
 
@@ -399,7 +399,7 @@ SMTP user password.
 
 Password to be used by TAP Platform administrator to log in into TAP Console and API.
 
-*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file (please see chapter on Master Config File Secrets).
+**Note:** It is strongly recommended to store this parameter in `tap.config.secrets` file (please see chapter on Master Config File Secrets).
 
 ---
 
@@ -407,7 +407,7 @@ Password to be used by TAP Platform administrator to log in into TAP Console and
 
 CDH admin password (please comply to password requirements imposed by CDH).
 
-*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file.
+**Note:** It is strongly recommended to store this parameter in `tap.config.secrets` file.
 
 ---
 
@@ -452,7 +452,7 @@ instances:
 
 **machine name**
 
-Machine/instance name is its key in this map (in above example: `cdh` and `compute`). The name has to be unique, otherwise only last defined item with this name is used in deployment.
+Machine/instance name is its key in this map (in above example: `cdh` and `compute`). The name has to be unique, otherwise only the last defined item with this name is used in deployment.
 
 Machines defined herein will be later available in TAP cluser under `<name>.instance.<wildcard_tap_domain_name>` and `<name>` dns names.
 
@@ -483,7 +483,7 @@ Machines defined herein will be later available in TAP cluser under `<name>.inst
 	Connection parameters used to connect to instance/machine.
 
 	For param `type` you can use several values:
-	- `local` - have to be used for role `jumpbox`
+	- `local` - must be used for role `jumpbox`
 	- `ssh-key` - connection using key without password while connecting to instance
 	- `ssh-pass` - connection using password while connecting to instance (not supported yet)
 	- `ssh-key-pass` - connection using key with password while connecting to instance (not supported yet)
@@ -499,7 +499,7 @@ Machines defined herein will be later available in TAP cluser under `<name>.inst
 	Params:
 
 	- `system-partition-size` - optional, by default 100. Root disks size mounted under `/`, ignored on `bare-metal` installation.
-	- `devices` - device list (yaml syntax, ie. `devices: [{"device":"/dev/sdb"},{"device":"/dev/sdc"}]`), minimum 1 device required for roles `storage-worker` and `hadoop-*`. For each device you have to define how this device will be visible in system, for example `/dev/sdb1`. Size param is optional (default value: 200) and used only in cloud installations.
+	- `devices` - device list (yaml syntax, for example, `devices: [{"device":"/dev/sdb"},{"device":"/dev/sdc"}]`), minimum 1 device required for roles `storage-worker` and `hadoop-*`. For each device, you have to define how this device will be visible in system, for example `/dev/sdb1`. Size param is optional (default value: 200) and used only in cloud installations.
 
 	In AWS you have to use specific device names. Device name should match `/dev/xvd<nr>`, where `<nr>` it is next device number, starting from `b`:
 	Example:
@@ -521,7 +521,7 @@ Machines defined herein will be later available in TAP cluser under `<name>.inst
 
 AWS access key.
 
-*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file (please see chapter on Master Config File - Secrets).
+**Note:** It is strongly recommended to store this parameter in `tap.config.secrets` file (see chapter on Master Config File - Secrets).
 
 ---
 
@@ -529,7 +529,7 @@ AWS access key.
 
 AWS secret key.
 
-*Note:* It is strongly recommended to store this parameter in `tap.config.secrets` file (please see chapter on Master Config File - Secrets).
+**Note:** It is strongly recommended to store this parameter in `tap.config.secrets` file (see chapter on Master Config File - Secrets).
 
 ---
 
