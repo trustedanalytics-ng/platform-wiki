@@ -839,15 +839,16 @@ Role allows remote monitoring of availability and performance of TAP cluster com
 
 ## 3.3 Deployment Configuration - Master Config File Secrets
 
-It is suggested not to keep any passwords and sensitive data in Master Config File as this file also describes platform configuration and can be potentially shared with external parties (ie. providers of maintenance/support services, during troubleshooting, etc.).
+It is suggested to *not* keep any passwords and sensitive data in Master Config File, as this file also describes platform configuration and can be potentially shared with external parties (for example, providers of maintenance/support services, during troubleshooting, etc.).
 
 Such secret secret data shall be stored in a separate (never shared) file named `tap.config.secrets` - it is used together with Master Config File during deployment (joined in runtime).
 
 The default file name can be overriden by environment variable `SECRETS`.
 
-In the future `tap.config.secrets` can be also encrypted using `ansible-vault` (not yet supported in TAP 0.8).
+In the future, `tap.config.secrets` can be also encrypted using `ansible-vault` (*not* yet supported in TAP 0.8).
 
-**Note:** This file must not be empty - at least one parameter is needed!
+**Note:** This file must *not* be empty - at least one parameter is needed!
+
 
 ## 3.4 Deployment Configuration - Persistent storage allocation
 
@@ -886,10 +887,11 @@ When assigning roles to machines, ensure your follow either official guidance fr
 
 In general, you should use a dedicated disk drive on each Ceph storage node.
 
-**Warning:** All storage devices allocated for TAP will be formated during platform installation so any existing data will be irrevocably lost!
+**Warning: All storage devices allocated for TAP will be formated during platform installation so any existing data will be irrevocably lost!**
 
 **Note:** This storage allocation mode *does not create* any storage when the deployment is done in the cloud; it just attaches storage devices already made available for TAP.
 
+  
 # 4 Reference Configurations
 
 ## 4.1 Minimum configuration
