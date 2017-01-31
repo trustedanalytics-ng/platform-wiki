@@ -13,39 +13,39 @@ published: true
 
 Spark-tk is an analytics toolkit library that is compatible with Apache Spark. It provides APIs for Python and Scala. This page explains how to use Spark in TAP.
 
->Visit the [Spark-tk repo](https://github.com/trustedanalytics/spark-tk) for additional information.
+>Visit the [https://github.com/trustedanalytics/spark-tk](https://github.com/trustedanalytics/spark-tk) for additional information.
 
 ## Getting started with Spark-tk
 
 The easiest way to get started with Spark-tk on TAP is within a Jupyter notebook, as follows:
 
-1. First, [create a Jupyter notebook](/Building-Analytics/Creating_Jupyter_Notebook_Instance.md).
+1. [Create a Jupyter notebook](/Building-Analytics/Creating_Jupyter_Notebook_Instance.md).
 
 2. Open your Jupyter instance and navigate to **jupyter-default-notebooks/notebooks/examples/tklibs/sparktk/README.ipynb**  
   
-    ![Accessing Readme files](/images/Build_Analytics_Spark_Screen1.png)  
-  
-3. The README notebook demonstrates how to create a SparkContext and some simple Spark code.
+    ![Accessing Readme files](/images/BuildAn_GS_Sparktk_Start_v8_Screen1.PNG)  
+   
+3. The README notebook demonstrates how to create a TkContext for Spark-tk and some simple Spark code.
 
-![Readme files in Jupyter Sample](/images/Build_Analytics_Spark_Screen2.png)
+![Readme files in Jupyter Sample](/images/BuildAn_GS_Sparktk_Start_v8_Screen2.PNG)
 
-The other example notebooks show how to use Spark dataframes, RDDs, streaming, SQL, and machine learning with K-Means and Linear Regression.
+The other example notebooks show how to use Datacatalog, Frame, Latent Dirichlet Allocation, and Logistic Regression with Spark-tk.
 
-![Readme files in Jupyter Sample](/images/Build_Analytics_Spark_Screen3.png)
+![Readme files in Jupyter Sample](/images/BuildAn_GS_Sparktk_Start_v8_Screen3.PNG)
 
 >More information about Spark is available on the [Apache Spark website](http://spark.apache.org/)
 
 ###Accessing a terminal from Jupyter
 1. From the Jupyter dashboard, select the **New** button located in the upper right.
 
-    ![Accessing a Terminal from Jupyter](/images/Build_Analytics_Spark_Screen4.png) 
+    ![Accessing a Terminal from Jupyter](/images/BuildAn_GS_Sparktk_Start_v8_Screen4.PNG) 
 
 2. Select **Terminal** from the sub menu to open a new terminal within Jupyter. 
 
-![Jupyter Terminal](/images/Build_Analytics_Spark_Screen5.png)  
+![Jupyter Terminal](/images/BuildAn_GS_Sparktk_Start_v8_Screen5.PNG)  
 
 
-You can enter Spark commands (spark-shell, spark-submit, etc.) in the terminal window.
+You can enter CLI commands (spark-shell, spark-submit, etc.) in the terminal window.
 
 ##Troublshooting Tips
 
