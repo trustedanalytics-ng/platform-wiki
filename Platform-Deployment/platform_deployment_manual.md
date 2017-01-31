@@ -1103,9 +1103,9 @@ Most of the TAP components are being shipped as Docker Container Images. In orde
 
 During platform installation:
 
-1. dedicated Docker Registry v2 is started, backed by empty persistent storage,
-2. temporary Docker Registry v2 is started, with a data directory mounted from the unpacked TAP package,
-3. images are pushed from the temporary Registry to the permanent one.
+1. Dedicated Docker Registry v2 is started, backed by empty persistent storage.  
+2. Temporary Docker Registry v2 is started, with a data directory mounted from the unpacked TAP package.  
+3. Images are pushed from the temporary Registry to the permanent one.
 
 Using this approach, update packages can easily be distributed, which will contain only new versions of *some* images.
 
@@ -1117,7 +1117,7 @@ There are two endpoints for docker registry: one is read-write, the second one i
 
 Since the Docker Registry is backed by a Ceph storage and only a single instance can have a volume mounted in read/write mode, additional instances mount this volume in read-only mode.
 
-**Note:** minio may also be used as a registry backend.
+**Note:** minion may also be used as a registry backend.
 
 ## 5.7 Extending deployment automation
 
@@ -1131,7 +1131,7 @@ You can either reuse existing machine group to assign the newly created role to 
 
 ## 6.1 Deployment troubleshooting
 
-As with any complex system, both expected failures (e.g., network connectivity) and unexpected failures may appear. This section should prepare you to handle and debug those.
+As with any complex system, both expected failures (for example, network connectivity) and unexpected failures may appear. This section should prepare you to handle and debug those.
 
 ## 6.2 General problem investigation procedure
 
