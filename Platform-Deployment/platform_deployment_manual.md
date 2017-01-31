@@ -14,7 +14,7 @@ published: true
 
 # Platform Deployment Manual
 
->This information is intended for internal Intel use only. Relevant information will be extracted and presented in a public documentation web page for users.
+**Note: This information is intended for internal Intel use only. Relevant information will be extracted and presented in a public documentation web page for users.**
 
 # 1 Introduction
 
@@ -44,7 +44,7 @@ This document freely uses common terminology associated with those areas.
 
 TAP version 0.8 supports CentOS 7.2.1511 on x86_64 architecture.
 
-*Note:* It is best to provide machines with passwordless `sudo` access and key-based authentication.
+**Note:** It is best to provide machines with passwordless `sudo` access and key-based authentication.
 
 TAP 0.8 core functionalities are based on these technologies:
 
@@ -161,7 +161,7 @@ Perform the following sequence of operations needed to register your AWS-hosted 
 6. Create new or edit existing record set - *Name* should be `*.<subdomain>.<domain>` (`<subdomain>.<domain>` is your `tap_domain_name` parameter from `tap.config` file), *Type* should equal to CNAME, and as *Value* paste DNS name from load balancer.  
 7. Save your record.
 
-*Note:* For more information on load balancers and DNS please refer to the below chapter named TAP Load Balancing.
+**Note:** For more information on load balancers and DNS please refer to the below chapter named TAP Load Balancing.
 
 ## 2.4 Platform installation
 
@@ -535,13 +535,13 @@ AWS secret key.
 
 ###### aws_region
 
-AWS region. More info you can find on [AWS page](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions)
+AWS region. You can find more information on [AWS page](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions)
 
 ---
 
 ###### aws_availability_zone
 
-AWS availability zone. More info you can find on [AWS page](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#using-regions-availability-zones-describe)
+AWS availability zone. You can find more information on [AWS page](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#using-regions-availability-zones-describe)
 
 ---
 
@@ -560,7 +560,7 @@ aws_base_resource_tags:
 
 ###### aws_jumpbox_key_name
 
-Name of a key that is to be used (or automatically created, if does not exist) by AWS during deployment provisioning.
+Name of a key that is to be used (or automatically created, if does *not* exist) by AWS during deployment provisioning.
 
 This key will be then used to access jumpbox machine in TAP cluster.
 
@@ -570,7 +570,7 @@ Default: `<env_name>-jumpbox-key`
 
 ###### aws_cluster_key_name
 
-Name of a key that is to be used (or automatically created, if does not exist) by AWS during deployment provisioning.
+Name of a key that is to be used (or automatically created, if does *not* exist) by AWS during deployment provisioning.
 
 This key will be then used to access any machine in TAP cluster other than jumbox.
 
@@ -607,7 +607,7 @@ Address of HTTPS proxy if it is necessary to access external resources during de
 
 ###### no_proxy
 
-List of addresses/domains that shall not be proxied.
+List of addresses/domains that shall *not* be proxied.
 
 ---
 
@@ -651,7 +651,7 @@ This configuration options is set to False when `deployment_type` is set to `min
 
 Private key (base64 encoded) for TAP domain name provided via parameter `*.<tap_domain_name>`.
 
-Generated automatically if not provided by the user.
+Generated automatically if *not* provided by the user.
 
 ---
 
@@ -659,9 +659,9 @@ Generated automatically if not provided by the user.
 
 Certificate (base64 encoded) for TAP domain name provided via parameter `*.<tap_domain_name>`.
 
-Generated automatically if not provided by the user.
+Generated automatically if *not* provided by the user.
 
-*Note:* Automatically generated certificate it *not trusted*.
+**Note:** Automatically generated certificate it *not trusted*.
 
 ---
 
@@ -710,7 +710,7 @@ Installed services:
 - Kubernetes worker
 - bootstrap docker registry
 
-**Note:** Minimum 1 instance required. For minimal TAP installation can be combined with `compute-master` role.
+**Note:** Minimum 1 instance required. For a minimal TAP installation, can be combined with `compute-master` role.
 
 ---
 
@@ -736,7 +736,7 @@ Installed services:
 - CDH master services
 - HDFS namenode, YARN resource manager
 
-**Note:** 1 instance if this role is required. In minimal TAP installation combined with `hadoop-master-controller` role.
+**Note:** 1 instance if this role is required. In a minimal TAP installation, combined with `hadoop-master-controller` role.
 
 ---
 
@@ -767,7 +767,7 @@ Installed services:
 
 **Note:** At least 1 instance required.
 
-In minimum TAP installation combined with `hadoop-master-controller` role. This role determines resources available for HDFS, YARN and HBase.
+In a minimum TAP installation, combined with `hadoop-master-controller` role. This role determines resources available for HDFS, YARN and HBase.
 
 Optimal production-grade configurations contain odd number of machines with this role (2N + 1).
 
@@ -782,9 +782,9 @@ Installed services:
 
 **Note:** At least 1 instance required.
 
-In minimum TAP installation combined with `compute-master` role.
+In a minimum TAP installation, combined with `compute-master` role.
 
-For production environments at least 3 instances recommended that shall be separated from `compute-*` roles.
+For production environments with at least 3 instances, recommended that shall be separated from `compute-*` roles.
 
 ---
 
@@ -795,9 +795,9 @@ Installed services:
 
 **Note:** At least 1 instance required.
 
-For minimum TAP installation combined with `compute-master` role.
+For a minimum TAP installation, combined with `compute-master` role.
 
-For production environments minimum 3 instances recommended that shall be separated from `compute-*` roles.
+For production environments with minimum 3 instances, recommended that shall be separated from `compute-*` roles.
 
 Optimal production-grade configurations contain odd number of machines with this role (2N + 1).
 
