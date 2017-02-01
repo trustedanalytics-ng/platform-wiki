@@ -395,6 +395,14 @@ SMTP user password.
 
 ---
 
+###### dns
+
+List of external dns servers used in deployment. In isolated enviroment this variable can be disabled by setting `dns_isolation: True`
+
+Default: empty
+
+---
+
 ###### platform_admin_password
 
 Password to be used by TAP Platform administrator to log in into TAP Console and API.
@@ -609,6 +617,13 @@ Address of HTTPS proxy if it is necessary to access external resources during de
 
 List of addresses/domains that shall *not* be proxied.
 
+
+###### dns_isolation
+
+Determines if `dns` list is required. 
+
+This option is useful when installing on isolated network without access to external recursive DNS servers.
+
 ---
 
 ###### enable_external_ssl
@@ -620,6 +635,7 @@ Prossible values:
 - false
 
 ---
+
 
 ###### hdfs_ha_enabled
 
