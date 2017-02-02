@@ -69,45 +69,49 @@ Details on configuration files, configuration, general deployment procedure, and
     * The notional amount of data stored and the number of objects stored; and,
     * The total amount of data stored. 
 
-### 2.2. Free space monitoring
+### 2.2. Free space monitoring  
 1. Log in to the ceph-master node: `ssh ceph-master`.
 2. Get root privileges: `sudo -i`. (You have access to the ceph CLI and RBD client.)
 3. To monitor space available on the cluster, use `ceph -s`. This returns the information: `space MB used, space MB allocated / space MB available`
 4. To monitor space allocated/available on volumes attached to kubernetes containers use `rbd du`
 
-### 2.2. Allocated space extension/reduction
+### 2.2. Allocated space extension/reduction  
 Watch your cluster capacity. *Never* let the cluster/volume for an OSD to reach full ratio. You can experience unexcepted errors if an OSD hits its capacity limit.
 
-#### 2.2.1. Adding OSDs
+#### 2.2.1. Adding OSDs  
 You can expand your cluster at runtime, using either of two methods to achieve that.
 
-*Recomended method:*
-1. Prepare a CentOS machine like the one you used to deploy ceph.
-2. Login to TAP Jumpbox and go to the `tap-deploy` directory.
-3. In the file inventory/k8s section [osds], add the IP of the CentOS machine
-4. Execute: `ansible-playbook ceph.yml -i inventory/k8s`
+*Recomended method:*  
+1. Prepare a CentOS machine like the one you used to deploy ceph.  
+2. Login to your TAP Jumpbox and go to the `tap-deploy` directory.  
+3. In the file inventory/k8s section [osds], add the IP of the CentOS machine  
+4. Execute: `ansible-playbook ceph.yml -i inventory/k8s`  
 
-*Alternative method:*
-Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/add-or-rm-osds/).
+*Alternate method:*  
+Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/add-or-rm-osds/).  
 
 #### 2.2.2. Removing OSDs
-Never delete OSD if you do not have enough storage to balance data.
+Never delete an OSD if you do *not* have enough storage to balance data.
 
-*Recomended method:*
-  * Login to TAP jumpbox, then to one of ceph-mon. Authorize as a root: `sudo -i`
-  * Check the OSDs tree: `ceph osd tree` - read ID of the node you want to delete.
-  * execute: `ceph osd out osd-id`
-  * watch data migration with `ceph -w` - Status should change from `active+clean` -> `active, some degraded objects` -> `active+clean`. It can take from 5 minute to few hours depends on size of data.
-  * When data migration end ssh to osd-host
-  * execute: `sudo systemctl stop ceph.target`
-  * Go back to ceph-mon and delete: 
+*Recomended method:*  
+1. Login to your TAP Jumpbox, then to ceph-mon.
+2. Authorize as a root: `sudo -i`
+3. Check the OSDs tree: `ceph osd tree` and read the ID of the node you want to delete.
+4. Execute: `ceph osd out osd-id`
+5. Watch data migration with `ceph -w` - Status should change from `active+clean` -> `active, some degraded objects` -> `active+clean`. 
+
+   >It can take from 5 minutes to few hours for this sequence to complete, depending on data size.
+
+6. When the data migration completes, ssh to osd-host
+7. Execute: `sudo systemctl stop ceph.target`
+8. Go back to ceph-mon and delete: 
     * OSD from crush map: `ceph osd crush remove osd.osd-id`
     * OSD authentication key: `ceph osd del osd.osd-id`
     * OSD: `ceph osd rm osd-id`
-  * Check `ceph -s` - you should see that OSD has been removed.
+9. Check `ceph -s` - you should see that the OSD has been removed.
 
-*Second method:*
-  * Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/add-or-rm-osds/#removing-osds-manual)
+*Alternate method:*  
+Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/add-or-rm-osds/#removing-osds-manual).
 
 #### 2.2.3. Resizing Kubernetes volumes
   * SSH to ceph-mon and authorize as a root: `sudo -i`
