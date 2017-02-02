@@ -82,18 +82,21 @@ Watch your cluster capacity. *Never* let the cluster/volume for an OSD reach ful
 You can expand your cluster at runtime, using either of two methods to achieve this:
 
 *Recomended method:*  
+
 1. Prepare a CentOS machine like the one you used to deploy ceph.  
 2. Login to your TAP Jumpbox and go to the `tap-deploy` directory.  
 3. In the file inventory/k8s section [osds], add the IP of the CentOS machine  
 4. Execute: `ansible-playbook ceph.yml -i inventory/k8s`  
 
 *Alternate method:*  
+
 Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/add-or-rm-osds/).  
 
 #### 2.2.2. Removing OSDs
 **WARNING: Never delete an OSD if you do *not* have enough storage to balance data.**
 
 *Recomended method:*  
+
 1. Login to your TAP Jumpbox, then to ceph-mon.
 2. Authorize as a root: `sudo -i`
 3. Check the OSDs tree: `ceph osd tree` and read the ID of the node you want to delete.
@@ -111,6 +114,7 @@ Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/a
 9. Check `ceph -s` - you should see that the OSD has been removed.
 
 *Alternate method:*  
+
 Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/add-or-rm-osds/#removing-osds-manual).
 
 #### 2.2.3. Resizing Kubernetes volumes
@@ -160,6 +164,6 @@ TAP provides comprehensive metrics (resource utilization, performance, etc.) via
 
 TAP sets static memory and CPU limits on every application it creates, to ensure stable and fair scheduling.
 
-Use the following command to list current resource usage, which is listed per Kubernetes worker:
+Use the following command to list current resource usage, which is listed per Kubernetes worker:  
 
 `$ kubectl describe node worker-0.kubernetes.cluster.local worker-1.kubernetes.cluster.local worker-2.kubernetes.cluster.local  (more worker node hostnames can follow)`
