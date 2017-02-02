@@ -19,10 +19,10 @@ In general, in order to upgrade the TAP platform version, it is sufficient to si
 
 There are 4 major components that might require upgrade:
 
-1. Hardware/VM Infrastructure (AWS, additional malchines, changes in role assigments, etc.)
-2. Additional base OS-based components
-3. Newer versions of base OS packages
-4. Newer versions of TAP container images
+* Hardware/VM Infrastructure (AWS, additional malchines, changes in role assigments, etc.)
+* Additional base OS-based components
+* Newer versions of base OS packages
+* Newer versions of TAP container images
 
 The first three components shall follow typical Ansible upgrade logic - additional version checks and actions are performed when an upgrade is necessary.
 
@@ -38,19 +38,19 @@ Follow the upgrade procedure provided with every released TAP version.
 
 ### 1.3. Generic upgrade procedure
 
-Please attempt generic upgrade procedure in not detailed upgrade guidelines are provided for a given patch/upgrade.
+Use the following generic upgrade procedure unless detailed upgrade guidelines are provided for a given patch/upgrade.
 
-1. Download TAP installation/upgrade package.
+1. Download the TAP installation/upgrade package.
 2. Unpack it.
-3. Read CHANGELOG file and flow upgrade procedure if attached.
-4. Ensure that you are performing upgrade between versions with supported upgrade transition.
+3. Read the CHANGELOG file and flow upgrade procedure if attached.
+4. Ensure that you are performing an upgrade between versions with a supported upgrade transition.
 5. Use configuration files (primarily tap.config and tap.config.secrets) from previous deployment.
-6. Adjust those files and add new options/parameters if needed. Details shall be included in the upgrade procedure.
-7. Perform safe platform shutdown.
-8. Perform platform backup.
+6. Adjust those files and add new options/parameters as needed. Details are included in the upgrade procedure.
+7. Perform a safe platform shutdown.
+8. Perform a platform backup.
 9. Run TAP deployment as usual.
 
-Details on configuration files, troubleshooting, configuration and general deployment procedure you will find in Platform Deployment Manual. 
+Details on configuration files, configuration, general deployment procedure, and troublshooting are included in the Platform Deployment Manual. 
 
 ## 2. Persistent storage maintenance
 
