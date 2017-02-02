@@ -1,11 +1,11 @@
 
-#Platform Maintenance Manual for Trusted Analytics Platform 0.8.0#
+#Platform Maintenance Manual for Trusted Analytics Platform 0.8#
 
 **Note: This information is intended for internal Intel use only. Relevant information will be extracted and presented in a public documentation web page for users.**
 
 ## 1. Platform upgrades
 
-In general, in order to upgrade platform version, it is sufficient to simply download and unpack a new release, copy the configuration files formerly used to deploy the platform, and run the deployment again.
+In general, in order to upgrade the TAP platform version, it is sufficient to simply download and unpack a new release, copy the configuration files formerly used to deploy the platform, and run the deployment again.
 
 >Additional manual changes, such as additional required parameter changes in configuration files, may be necessary for major version updates.
 
@@ -19,22 +19,22 @@ In general, in order to upgrade platform version, it is sufficient to simply dow
 
 There are 4 major components that might require upgrade:
 
-1. Hardware/VM Infrastructure (AWS, additional malchines, changes in role assigments)
-2. Additional base OS based components
+1. Hardware/VM Infrastructure (AWS, additional malchines, changes in role assigments, etc.)
+2. Additional base OS-based components
 3. Newer versions of base OS packages
 4. Newer versions of TAP container images
 
-First three components shall follow typical Ansible upgrade logic - additional version check and actions performed when upgrade is necessary.
+The first three components shall follow typical Ansible upgrade logic - additional version checks and actions are performed when an upgrade is necessary.
 
-Upgrade process for containers is simpler: Ansible-Kubernetes module "tapkube" edits deployment instances updating image version and then Kubernetes automatically performs rolling deployment.
+The upgrade process for containers is simpler: Ansible-Kubernetes module "tapkube" edits deployment instances, updating the image version, and then Kubernetes automatically performs a rolling deployment.
 
-Desired rolling deployment strategy can be adjusted in the deployment metadata itself, allowing for zero downtime upgrades in post-0.8 TAP releases.
+The desired rolling deployment strategy can be adjusted in the deployment metadata itself, allowing for zero downtime upgrades in post-0.8 TAP releases.
 
-Please note that core platform componnents, which are using database, will detect an older schema version and perform data/schema upgrades on their own. This process happens after those components are (re)started.
+>Note that core platform componnents that use a database will detect an older schema version and perform data/schema upgrades on their own. This process happens after those components are (re)started.
 
 ### 1.2. Upgrade procedure details
 
-Please follow the upgrade procedure included with every released version.
+Follow the upgrade procedure provided with every released TAP version.
 
 ### 1.3. Generic upgrade procedure
 
