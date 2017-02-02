@@ -1,28 +1,8 @@
----
-title: TAP 0.8 Platform Maintenance Manual
-keywords: platform maintenance manual
-last_updated: 'December 30, 2016'
-tags:
-  - Platform Maintenance
-summary: >-
-  Insert the summary paragraph here. To edit the summary you must edit the meta data for this post.
-sidebar: mydoc_sidebar
-permalink: platform-maintenance-manual.html
-folder: mydoc
-published: true
----
 
 **Platform Maintenance Manual**
 Trusted Analytics Platform 0.8
 
 >This information is intended for internal Intel use only. Relevant information will be extracted and presented in a public documentation web page for users.
-
-
-## Platform backup and restore
-
-[???]
-WALDEK TO PROVIDE PROCEDURE
-[???]
 
 ## Platform upgrades
 
@@ -72,12 +52,6 @@ Please attempt generic upgrade procedure in not detailed upgrade guidelines are 
 9. Run TAP deployment as usual.
 
 Details on configuration files, troubleshooting, configuration and general deployment procedure you will find in Platform Deployment Manual. 
-
-## Graceful/safe platfrom shutdown
-
-[???]
-WALDEK TO PROVIDE PROCEDURE
-[???]
 
 ## Persistent storage maintenance
 
@@ -172,7 +146,6 @@ There can be two scenarios for maintenance - whole cluster and single machine.
   * If instance have mon and osd roles:
     * execute: `ceph osd set noout`
     * execute command: `systemctl stop ceph.target`
-
 
 ## Platform health, space and performance metrics
 
