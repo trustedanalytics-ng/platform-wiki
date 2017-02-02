@@ -56,8 +56,8 @@ Details on configuration files, configuration, general deployment procedure, and
 
 ### 2.1. Health and performance monitoring
 
-1. Log in to ceph-master node: `ssh ceph-master`.
-2. Get root privileges: `sudo -i`. (From now on you have access to the ceph CLI.)
+1. Log in to the ceph-master node: `ssh ceph-master`.
+2. Get root privileges: `sudo -i`. (You have access to the ceph CLI.)
 3. To check health of the cluster (OSDs, MONs, PGs) run `ceph status`
 4. You can watch your cluster health continuously using `ceph -w`. The output provide:
     * Cluster ID
@@ -70,13 +70,13 @@ Details on configuration files, configuration, general deployment procedure, and
     * The total amount of data stored. 
 
 ### 2.2. Free space monitoring
-  * Log in to ceph-master node: `ssh ceph-master`. Afterwards get root privileges: `sudo -i`.
-  * From now on you have access to ceph and RBD CLI.
-  * To monitor space available on the cluster you should use `ceph -s`. You will get information: `space MB used, space MB allocated / space MB available`
-  * To monitor space allocated/available on volumes attached to kubernetes containers use `rbd du`
+1. Log in to the ceph-master node: `ssh ceph-master`.
+2. Get root privileges: `sudo -i`. (You have access to the ceph CLI and RBD client.)
+3. To monitor space available on the cluster, use `ceph -s`. This returns the information: `space MB used, space MB allocated / space MB available`
+4. To monitor space allocated/available on volumes attached to kubernetes containers use `rbd du`
 
 ### 2.2. Allocated space extension/reduction
-You should watch your cluster capacity. Never let cluster/volume to reach full ratio. There can happen unexcepted errors if OSD hit the limit.
+You should watch your cluster capacity. Never let the cluster/volume to reach full ratio. You can experience unexcepted errors if OSD hits its capacity limit.
 
 #### 2.2.1. Adding OSDs
 You can expand your cluster at runtime. You can use two methods to achieve that.
