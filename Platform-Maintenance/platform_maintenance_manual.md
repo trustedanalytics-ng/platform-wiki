@@ -15,7 +15,7 @@ In general, in order to upgrade the TAP platform version, it is sufficient to si
 
 **Warning: Automatic upgrades from versions earlier than 0.8.0 is NOT POSSIBLE; all data and platform configuration from earlier versions of TAP must be migrated manually to TAP 0.8+.**
 
-### 1.1. Design
+### 1.1. Upgrade planning
 
 There are 4 major components that might require upgrade:
 
