@@ -76,7 +76,7 @@ Details on configuration files, configuration, general deployment procedure, and
 4. To monitor space allocated/available on volumes attached to Kubernetes containers use `rbd du`.
 
 ### 2.2. Allocated space extension/reduction  
-Watch your cluster capacity. *Never* let the cluster/volume for an OSD to reach full ratio. You can experience unexcepted errors if an OSD ever hits its capacity limit.
+Watch your cluster capacity. *Never* let the cluster/volume for an OSD reach full ratio. You can experience unexcepted errors if an OSD ever hits its capacity limit.
 
 #### 2.2.1. Adding OSDs  
 You can expand your cluster at runtime, using either of two methods to achieve that.
