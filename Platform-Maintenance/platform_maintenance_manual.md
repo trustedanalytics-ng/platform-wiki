@@ -79,7 +79,7 @@ Details on configuration files, configuration, general deployment procedure, and
 Watch your cluster capacity. *Never* let the cluster/volume for an OSD reach full ratio. You can experience unexcepted errors if an OSD ever hits its capacity limit.
 
 #### 2.2.1. Adding OSDs  
-You can expand your cluster at runtime, using either of two methods to achieve that.
+You can expand your cluster at runtime, using either of two methods to achieve this:
 
 *Recomended method:*  
 1. Prepare a CentOS machine like the one you used to deploy ceph.  
