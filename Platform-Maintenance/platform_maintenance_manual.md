@@ -131,15 +131,15 @@ Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/cephfs/disaster-re
 
 ### 2.4. Safe stop and start procedure 
 
-Ceph have auto-start procedure. If nodes will be restarted due to powerloss they should comeback healthy without administrator help.
+Ceph has an auto-start procedure. If nodes are restarted due to power loss, they should comeback healthy without administrator help.
 
-There can be two scenarios for maintenance - whole cluster and single machine.
+There are two scenarios for maintenance: entire cluster and single machine.
 
 #### 2.4.1. Cluster maintenance:
-  * Login to ceph-mon node. 
-  * Authorize as a root: `sudo -i`
-  * execute: `ceph osd set noout` - prevents osds nodes to be out of cluster.
-  * execute command: `systemctl stop ceph.target` first on all osds nodes, then on all mons nodes.
+1. Login to the ceph-mon node. 
+2. Authorize as a root: `sudo -i`
+3. Execute: `ceph osd set noout` - This prevents osds nodes from being out of the cluster.
+4. Execute command: `systemctl stop ceph.target` first on all osds nodes, then on all mons nodes.
 
 #### 2.4.2. Cluster start procedure:
   * Login to ceph-mon node.
