@@ -38,7 +38,7 @@ Follow the upgrade procedure provided with every released TAP version.
 
 ### 1.3. Generic upgrade procedure
 
-Use the following generic upgrade procedure unless detailed upgrade guidelines are provided for a given patch/upgrade.
+Use the following generic upgrade procedure unless detailed upgrade guidelines are provided for a given patch/upgrade:
 
 1. Download the TAP installation/upgrade package.
 2. Unpack it.
@@ -55,10 +55,11 @@ Details on configuration files, configuration, general deployment procedure, and
 ## 2. Persistent storage maintenance
 
 ### 2.1. Health and performance monitoring
-  * Log in to ceph-master node: `ssh ceph-master`. Afterwards get root privileges: `sudo -i`.
-  * From now on you have access to ceph CLI.
-  * To check health of the cluster (OSDs, MONs, PGs) do `ceph status`
-  * You can watch your cluster health all the time using `ceph -w`. The output provide:
+
+1. Log in to ceph-master node: `ssh ceph-master`.
+2. Get root privileges: `sudo -i`. (From now on you have access to the ceph CLI.)
+3. To check health of the cluster (OSDs, MONs, PGs) run `ceph status`
+4. You can watch your cluster health continuously using `ceph -w`. The output provide:
     * Cluster ID
     * Cluster health status
     * The monitor map epoch and the status of the monitor quorum
