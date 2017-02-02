@@ -91,7 +91,7 @@ You can expand your cluster at runtime, using either of two methods to achieve t
 Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/add-or-rm-osds/).  
 
 #### 2.2.2. Removing OSDs
-Never delete an OSD if you do *not* have enough storage to balance data.
+**WARNING: Never delete an OSD if you do *not* have enough storage to balance data.**
 
 *Recomended method:*  
 1. Login to your TAP Jumpbox, then to ceph-mon.
@@ -119,13 +119,13 @@ Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/a
 3.  ssh to Kubernetes master node.
 4.  Set `scale deployment` to 0 using: `kubectl scale deployment --replicas=0 name-of-deployment`
 5.  Go back to ceph-mon node and execute: `rbd resize --image image-name --size=value` - Value can have size suffix, for example: `1G` = `1024MB`
-6.  Map the volume with rbd CLI: `rbd map image-name` - read mapped i.e.  `/dev/rbd0`
+6.  Map the volume with the rbd CLI: `rbd map image-name` - read mapped i.e.  `/dev/rbd0`
 7.  Resize the file system on the volume: `resize2fs /dev/rbd0`
 8.  Revoke volume mapping: `rbd unmap /dev/rbd0`
 9.  Set `scale application deployment` back to normal: `kubectl scale deployment --replicas=1 name-of-deployment`
 
 ### 2.3. Recovery procedure after Ceph cluster failure
-Ceph has no single point-of-failure and can service requests for data in a “degraded” mode. Ceph is generally self-reparing. However, when problems persist, monitoring OSDs, and placement groups will help you identify the problem.
+Ceph has no single point-of-failure and can service requests for data in a “degraded” mode. Ceph is generally self-reparing. However, when problems persist, monitoring OSDs and placement groups will help you identify the problem.
 
 Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/cephfs/disaster-recovery/) for disaster recovery scenarios.
 
@@ -138,7 +138,7 @@ There are two scenarios for maintenance: entire cluster and single machine.
 #### 2.4.1. Cluster maintenance:
 1. Login to the ceph-mon node.  
 2. Authorize as a root: `sudo -i`  
-3. Execute: `ceph osd set noout` - This prevents osds nodes from being out of the cluster.  
+3. Execute: `ceph osd set noout` to prevent osds nodes from being out of the cluster.  
 4. Execute command: `systemctl stop ceph.target` first on all osds nodes, then on all mons nodes.  
 
 #### 2.4.2. Cluster start procedure:
