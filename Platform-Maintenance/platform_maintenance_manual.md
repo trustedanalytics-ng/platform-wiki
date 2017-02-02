@@ -13,13 +13,13 @@ In general, to upgrade the TAP platform version, it is sufficient to simply down
 
 >TAP deployment automation is based on Ansible. Due to idempotency, you can run deployment automation multiple times. Each time, only changes will be applied.
 
-**Warning: Automatic upgrades from versions earlier than 0.8.0 is NOT POSSIBLE; all data and platform configuration from earlier versions of TAP must be migrated manually to TAP 0.8+.**
+**Warning: Automatic upgrades from versions earlier than 0.8.0 is NOT POSSIBLE; all data and platform configuration information from earlier versions of TAP must be migrated manually to TAP 0.8+.**
 
 ### 1.1. Upgrade planning
 
 There are 4 major components that may require upgrading:
 
-* Hardware/VM Infrastructure (AWS, additional malchines, changes in role assigments, etc.)
+* Hardware/VM Infrastructure (AWS, additional machines, changes in role assigments, etc.)
 * Additional base OS-based components
 * Newer versions of base OS packages
 * Newer versions of TAP container images
@@ -59,24 +59,24 @@ Details on configuration files, configuration, general deployment procedure, and
 1. Log in to the ceph-master node: `ssh ceph-master`.
 2. Get root privileges: `sudo -i`. (You have access to the ceph CLI.)
 3. To check health of the cluster (OSDs, MONs, PGs) run `ceph status`
-4. You can watch your cluster health continuously using `ceph -w`. The output provide:
+4. You can watch your cluster health continuously using `ceph -w`. The output provides:
     * Cluster ID
     * Cluster health status
     * The monitor map epoch and the status of the monitor quorum
     * The OSD map epoch and the status of OSDs
     * The placement group map version
     * The number of placement groups and pools
-    * The notional amount of data stored and the number of objects stored; and,
+    * The notional amount of data stored and the number of objects stored, and,
     * The total amount of data stored. 
 
 ### 2.2. Free space monitoring  
 1. Log in to the ceph-master node: `ssh ceph-master`.
-2. Get root privileges: `sudo -i`. (You have access to the ceph CLI and rbd client.)
+2. Get root privileges: `sudo -i`. (You now have access to the ceph CLI and rbd client.)
 3. To monitor space available on the cluster, use `ceph -s`. This returns the information: `space MB used, space MB allocated / space MB available`
 4. To monitor space allocated/available on volumes attached to Kubernetes containers use `rbd du`.
 
 ### 2.2. Allocated space extension/reduction  
-Watch your cluster capacity. *Never* let the cluster/volume for an OSD to reach full ratio. You can experience unexcepted errors if an OSD hits its capacity limit.
+Watch your cluster capacity. *Never* let the cluster/volume for an OSD to reach full ratio. You can experience unexcepted errors if an OSD ever hits its capacity limit.
 
 #### 2.2.1. Adding OSDs  
 You can expand your cluster at runtime, using either of two methods to achieve that.
