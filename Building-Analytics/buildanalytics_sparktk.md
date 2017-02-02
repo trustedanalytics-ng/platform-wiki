@@ -33,6 +33,7 @@ The other example notebooks show how to use Datacatalog, Frame, Latent Dirichlet
 
 ![Readme files in Jupyter Sample](/images/Build_Analytics_v8_Spark_Start_Screen1.png)
 
+
 >More information about Spark is available on the [Apache Spark website](http://spark.apache.org/)
 
 ###Accessing a terminal from Jupyter
@@ -43,7 +44,6 @@ The other example notebooks show how to use Datacatalog, Frame, Latent Dirichlet
 2. Select **Terminal** from the sub menu to open a new terminal within Jupyter. 
 
 ![Jupyter Terminal](/images/Build_Analytics_v8_Spark_Start_Screen1.png)  
-
 
 You can enter CLI commands (spark-shell, spark-submit, etc.) in the terminal window.
 
