@@ -97,7 +97,7 @@ Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/a
 
 *Recomended method:*  
 
-1. Login to your TAP Jumpbox, then to ceph-mon.
+1. Login to your TAP Jumpbox, then to the ceph-mon node.
 2. Authorize as a root: `sudo -i`
 3. Check the OSDs tree: `ceph osd tree` and read the ID of the node you want to delete.
 4. Execute: `ceph osd out osd-id`
@@ -118,9 +118,9 @@ Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/a
 Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/add-or-rm-osds/#removing-osds-manual).
 
 #### 2.2.3. Resizing Kubernetes volumes
-1.  ssh to ceph-mon and authorize as a root: `sudo -i`
+1.  ssh to the ceph-mon node and authorize as a root: `sudo -i`
 2.  Execute: `rbd du` to check space and volume name.
-3.  ssh to Kubernetes master node.
+3.  ssh to the Kubernetes master node.
 4.  Set `scale deployment` to 0 using: `kubectl scale deployment --replicas=0 name-of-deployment`
 5.  Go back to ceph-mon node and execute: `rbd resize --image image-name --size=value` - Value can have size suffix, for example: `1G` = `1024MB`
 6.  Map the volume with the rbd CLI: `rbd map image-name` - read mapped i.e.  `/dev/rbd0`
