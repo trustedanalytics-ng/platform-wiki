@@ -136,25 +136,25 @@ Ceph has an auto-start procedure. If nodes are restarted due to power loss, they
 There are two scenarios for maintenance: entire cluster and single machine.
 
 #### 2.4.1. Cluster maintenance:
-1. Login to the ceph-mon node. 
-2. Authorize as a root: `sudo -i`
-3. Execute: `ceph osd set noout` - This prevents osds nodes from being out of the cluster.
-4. Execute command: `systemctl stop ceph.target` first on all osds nodes, then on all mons nodes.
+1. Login to the ceph-mon node.  
+2. Authorize as a root: `sudo -i`  
+3. Execute: `ceph osd set noout` - This prevents osds nodes from being out of the cluster.  
+4. Execute command: `systemctl stop ceph.target` first on all osds nodes, then on all mons nodes.  
 
 #### 2.4.2. Cluster start procedure:
-1. Login to the ceph-mon node.
-2. Authorize as a root: `sudo -i`
-3. Execute: `systemctl start ceph.target` first on all mons nodes, then on all osds nodes.
-4. Execute: `ceph osd unset noout`.
+1. Login to the ceph-mon node.  
+2. Authorize as a root: `sudo -i`  
+3. Execute: `systemctl start ceph.target` first on all mons nodes, then on all osds nodes.  
+4. Execute: `ceph osd unset noout`.  
 
 #### 2.4.3. Single node maintenance:
-If an instance has mon and osd roles:
-1. Execute: `ceph osd set noout`
-2. Execute command: `systemctl stop ceph.target`
+If an instance has mon and osd roles:  
+1. Execute: `ceph osd set noout`  
+2. Execute command: `systemctl stop ceph.target`  
 
 ## 3. Platform health, space and performance metrics
 
-TAP provides comprehensive metrics (resource utilization, performance, etc.) via integrated combo of Prometheus and Grafana [[https://prometheus.io/docs/visualization/grafana/]] - platform administrator can easily access them directly from TAP Console.
+TAP provides comprehensive metrics (resource utilization, performance, etc.) via an integrated combination of Prometheus and Grafana [[https://prometheus.io/docs/visualization/grafana/]]. Platform administrators can easily access them directly from TAP Console.
 
 ## 4. Compute resource quota monitoring
 
