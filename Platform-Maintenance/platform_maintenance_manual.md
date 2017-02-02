@@ -76,19 +76,19 @@ Details on configuration files, configuration, general deployment procedure, and
 4. To monitor space allocated/available on volumes attached to kubernetes containers use `rbd du`
 
 ### 2.2. Allocated space extension/reduction
-You should watch your cluster capacity. Never let the cluster/volume to reach full ratio. You can experience unexcepted errors if OSD hits its capacity limit.
+Watch your cluster capacity. *Never* let the cluster/volume for an OSD to reach full ratio. You can experience unexcepted errors if an OSD hits its capacity limit.
 
 #### 2.2.1. Adding OSDs
-You can expand your cluster at runtime. You can use two methods to achieve that.
+You can expand your cluster at runtime, using either of two methods to achieve that.
 
 *Recomended method:*
-  * Prepare a centos machine same as you have used to deploy ceph.
-  * Login to TAP Jumpbox. Go to tap-deploy directory.
-  * In file inventory/k8s section [osds] add IP of the centos machine
-  * Execute: `ansible-playbook ceph.yml -i inventory/k8s`
+1. Prepare a CentOS machine like the one you used to deploy ceph.
+2. Login to TAP Jumpbox and go to the `tap-deploy` directory.
+3. In the file inventory/k8s section [osds], add the IP of the CentOS machine
+4. Execute: `ansible-playbook ceph.yml -i inventory/k8s`
 
 *Alternative method:*
-  * Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/add-or-rm-osds/)
+Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/add-or-rm-osds/).
 
 #### 2.2.2. Removing OSDs
 Never delete OSD if you do not have enough storage to balance data.
