@@ -71,7 +71,7 @@ Details on configuration files, configuration, general deployment procedure, and
 
 ### 2.2. Free space monitoring  
 1. Log in to the ceph-master node: `ssh ceph-master`.
-2. Get root privileges: `sudo -i`. (You have access to the ceph CLI and RBD client.)
+2. Get root privileges: `sudo -i`. (You have access to the ceph CLI and rbd client.)
 3. To monitor space available on the cluster, use `ceph -s`. This returns the information: `space MB used, space MB allocated / space MB available`
 4. To monitor space allocated/available on volumes attached to kubernetes containers use `rbd du`
 
@@ -114,15 +114,15 @@ Never delete an OSD if you do *not* have enough storage to balance data.
 Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/add-or-rm-osds/#removing-osds-manual).
 
 #### 2.2.3. Resizing Kubernetes volumes
-  * SSH to ceph-mon and authorize as a root: `sudo -i`
-  * execute: `rbd du` to check space and volume name.
-  * SSH to kubernetes master node.
-  * Scale deployment to 0 using: `kubectl scale deployment --replicas=0 name-of-deployment`
-  * Go back to ceph-mon node and execute: `rbd resize --image image-name --size=value` - Value can have size suffix i.e. `1G` = `1024MB`
-  * Map volume with rbd CLI: `rbd map image-name` - read mapped i.e.  `/dev/rbd0`
-  * Resize file system on volume: `resize2fs /dev/rbd0`
-  * Revoke volume mapping: `rbd unmap /dev/rbd0`
-  * Scale application deployment back to normal: `kubectl scale deployment --replicas=1 name-of-deployment`
+1.  ssh to ceph-mon and authorize as a root: `sudo -i`
+2.  Execute: `rbd du` to check space and volume name.
+3.  ssh to Kubernetes master node.
+4.  Set `scale deployment` to 0 using: `kubectl scale deployment --replicas=0 name-of-deployment`
+5.  Go back to ceph-mon node and execute: `rbd resize --image image-name --size=value` - Value can have size suffix, for example: `1G` = `1024MB`
+6.  Map the volume with rbd CLI: `rbd map image-name` - read mapped i.e.  `/dev/rbd0`
+7.  Resize the file system on the volume: `resize2fs /dev/rbd0`
+8.  Revoke volume mapping: `rbd unmap /dev/rbd0`
+9.  Set `scale application deployment` back to normal: `kubectl scale deployment --replicas=1 name-of-deployment`
 
 ### 2.3. Recovery procedure after Ceph cluster failure
 Ceph has no single point-of-failure, and can service requests for data in a “degraded” mode. Ceph is generally self-reparing however, when problems persist, monitoring OSDs and placement groups will help you identify the problem.
