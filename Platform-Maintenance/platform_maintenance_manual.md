@@ -125,8 +125,9 @@ Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/a
 9.  Set `scale application deployment` back to normal: `kubectl scale deployment --replicas=1 name-of-deployment`
 
 ### 2.3. Recovery procedure after Ceph cluster failure
-Ceph has no single point-of-failure, and can service requests for data in a “degraded” mode. Ceph is generally self-reparing however, when problems persist, monitoring OSDs and placement groups will help you identify the problem.
-Please refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/cephfs/disaster-recovery/) for disaster recovery scenarios.
+Ceph has no single point-of-failure and can service requests for data in a “degraded” mode. Ceph is generally self-reparing. However, when problems persist, monitoring OSDs, and placement groups will help you identify the problem.
+
+Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/cephfs/disaster-recovery/) for disaster recovery scenarios.
 
 ### 2.4. Safe stop and start procedure 
 
