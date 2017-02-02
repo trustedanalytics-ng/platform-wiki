@@ -123,7 +123,7 @@ Refer to [Ceph documentation](http://docs.ceph.com/docs/jewel/rados/operations/a
 3.  ssh to the Kubernetes master node.
 4.  Set `scale deployment` to 0 using: `kubectl scale deployment --replicas=0 name-of-deployment`
 5.  Go back to ceph-mon node and execute: `rbd resize --image image-name --size=value` - Value can have size suffix, for example: `1G` = `1024MB`
-6.  Map the volume with the rbd CLI: `rbd map image-name` - read mapped i.e.  `/dev/rbd0`
+6.  Map the volume with the rbd CLI: `rbd map image-name` - read mapped, for example: `/dev/rbd0`
 7.  Resize the file system on the volume: `resize2fs /dev/rbd0`
 8.  Revoke volume mapping: `rbd unmap /dev/rbd0`
 9.  Set `scale application deployment` back to normal: `kubectl scale deployment --replicas=1 name-of-deployment`
