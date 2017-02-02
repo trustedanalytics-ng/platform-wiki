@@ -5,15 +5,15 @@
 
 ## 1. Platform upgrades
 
-In general, in order to upgrade platform version, it is sufficient to simply download and unpack new release, copy configuration files formerly used to deploy the platform and run deployment again.
+In general, in order to upgrade platform version, it is sufficient to simply download and unpack a new release, copy the configuration files formerly used to deploy the platform, and run the deployment again.
 
-Please note that more manual changes may be necessary in case of a major version update, like additional required parameters in configuration files.
+>Additional manual changes, such as additional required parameter changes in configuration files, may be necessary for major version updates.
 
-It is important to ensure that the platform is backed up before performing upgrade.
+**Note:** Make sure you back up the existing platform before performing an upgrade.
 
-Reminder: TAP deployment automation is based on Ansible. Thanks to idempotency, you can run deployment automation multiple times. Each of those times, only changes will be applied.
+>TAP deployment automation is based on Ansible. Thanks to idempotency, you can run deployment automation multiple times. Each of those times, only changes will be applied.
 
-**Warning:** Automatic upgrade from versions earlier than 0.8.0 is NOT POSSIBLE - all data and platform configuration from earlier versions of TAP must be migrated manually to TAP 0.8+.
+**Warning: Automatic upgrades from versions earlier than 0.8.0 is NOT POSSIBLE; all data and platform configuration from earlier versions of TAP must be migrated manually to TAP 0.8+.**
 
 ### 1.1. Design
 
