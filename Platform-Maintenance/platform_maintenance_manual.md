@@ -5,19 +5,19 @@
 
 ## 1. Platform upgrades
 
-In general, in order to upgrade the TAP platform version, it is sufficient to simply download and unpack a new release, copy the configuration files formerly used to deploy the platform, and run the deployment again.
+In general, to upgrade the TAP platform version, it is sufficient to simply download and unpack a new release, copy the configuration files previously used to deploy the platform, and run the deployment again.
 
 >Additional manual changes, such as additional required parameter changes in configuration files, may be necessary for major version updates.
 
 **Note:** Make sure you back up the existing platform before performing an upgrade.
 
->TAP deployment automation is based on Ansible. Thanks to idempotency, you can run deployment automation multiple times. Each of those times, only changes will be applied.
+>TAP deployment automation is based on Ansible. Due to idempotency, you can run deployment automation multiple times. Each time, only changes will be applied.
 
 **Warning: Automatic upgrades from versions earlier than 0.8.0 is NOT POSSIBLE; all data and platform configuration from earlier versions of TAP must be migrated manually to TAP 0.8+.**
 
 ### 1.1. Upgrade planning
 
-There are 4 major components that might require upgrade:
+There are 4 major components that may require upgrading:
 
 * Hardware/VM Infrastructure (AWS, additional malchines, changes in role assigments, etc.)
 * Additional base OS-based components
@@ -26,7 +26,7 @@ There are 4 major components that might require upgrade:
 
 The first three components shall follow typical Ansible upgrade logic - additional version checks and actions are performed when an upgrade is necessary.
 
-The upgrade process for containers is simpler: Ansible-Kubernetes module "tapkube" edits deployment instances, updating the image version, and then Kubernetes automatically performs a rolling deployment.
+The upgrade process for containers is simpler: Ansible-Kubernetes module `tapkube` edits deployment instances, updating the image version, and then Kubernetes automatically performs a rolling deployment.
 
 The desired rolling deployment strategy can be adjusted in the deployment metadata itself, allowing for zero downtime upgrades in post-0.8 TAP releases.
 
@@ -44,7 +44,7 @@ Use the following generic upgrade procedure unless detailed upgrade guidelines a
 2. Unpack it.
 3. Read the CHANGELOG file and flow upgrade procedure if attached.
 4. Ensure that you are performing an upgrade between versions with a supported upgrade transition.
-5. Use configuration files (primarily tap.config and tap.config.secrets) from previous deployment.
+5. Use configuration files (primarily `tap.config` and `tap.config.secrets`) from the previous deployment.
 6. Adjust those files and add new options/parameters as needed. Details are included in the upgrade procedure.
 7. Perform a safe platform shutdown.
 8. Perform a platform backup.
@@ -73,7 +73,7 @@ Details on configuration files, configuration, general deployment procedure, and
 1. Log in to the ceph-master node: `ssh ceph-master`.
 2. Get root privileges: `sudo -i`. (You have access to the ceph CLI and rbd client.)
 3. To monitor space available on the cluster, use `ceph -s`. This returns the information: `space MB used, space MB allocated / space MB available`
-4. To monitor space allocated/available on volumes attached to kubernetes containers use `rbd du`
+4. To monitor space allocated/available on volumes attached to Kubernetes containers use `rbd du`.
 
 ### 2.2. Allocated space extension/reduction  
 Watch your cluster capacity. *Never* let the cluster/volume for an OSD to reach full ratio. You can experience unexcepted errors if an OSD hits its capacity limit.
@@ -142,15 +142,15 @@ There are two scenarios for maintenance: entire cluster and single machine.
 4. Execute command: `systemctl stop ceph.target` first on all osds nodes, then on all mons nodes.
 
 #### 2.4.2. Cluster start procedure:
-  * Login to ceph-mon node.
-  * Authorize as a root: `sudo -i`
-  * execute: `systemctl start ceph.target` first on all mons nodes, then on all osds nodes.
-  * execute: `ceph osd unset noout`.
+1. Login to the ceph-mon node.
+2. Authorize as a root: `sudo -i`
+3. Execute: `systemctl start ceph.target` first on all mons nodes, then on all osds nodes.
+4. Execute: `ceph osd unset noout`.
 
 #### 2.4.3. Single node maintenance:
-  * If instance have mon and osd roles:
-    * execute: `ceph osd set noout`
-    * execute command: `systemctl stop ceph.target`
+If an instance has mon and osd roles:
+1. Execute: `ceph osd set noout`
+2. Execute command: `systemctl stop ceph.target`
 
 ## 3. Platform health, space and performance metrics
 
