@@ -1,16 +1,3 @@
----
-title: Cloudera mySQL Backups
-keywords: Cloudera mySQL Backup Restore
-last_updated: 'December, 2016'
-tags:
-  - Cloudera mySQL Backup Restore
-summary: Backing up and restoring mySQL to/from Cloudera.
-sidebar: mydoc_sidebar
-permalink: cloudera-mysql_backups.html
-folder: mydoc
-published: true
----
-
 ## Backing up MySQL 
 
 * The MySQL instance used by Cloudera is located on the `cdh-manager` host.
