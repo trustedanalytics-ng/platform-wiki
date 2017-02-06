@@ -1,16 +1,3 @@
----
-title: Using Data Catalog to download files from S3
-keywords: Data Catalog S3
-last_updated: 'January, 2017'
-tags:
-  - Data Catalog AWS S3
-summary: Using Data Catalog to download files from AWS S3. 
-sidebar: mydoc_sidebar
-permalink: data_catalog_s3.html
-folder: mydoc
-published: true
----
-
 ## Using Data Catalog to download files from S3
 1. Log on to Amazon* S3 and go into the bucket that contains your file.
 
