@@ -1,15 +1,3 @@
----
-title: Account Access
-keywords: account access login
-last_updated: 'December, 2016'
-tags: [Account_Access]
-summary: This page shows you how to respond to an initial TAP platform invitation. It also covers ongoing TAP login.
-sidebar: mydoc_sidebar
-permalink: acctaccess_accessing.html
-folder: mydoc
-published: true
----
-
 ## Initial user access to platform
 
 Initial access to the *platform* is available only by invitation from a system admin. Contact your system admin for a platform invitation. 
