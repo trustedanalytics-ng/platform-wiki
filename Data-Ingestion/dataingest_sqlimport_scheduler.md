@@ -1,16 +1,3 @@
----
-title: Data Ingestion
-keywords: TAP data ingestion sql import scheduler
-last_updated: 'December, 2016'
-tags:
-  - Data Ingestion
-summary: Using the Job Scheduler to perform scheduled data ingestion. 
-sidebar: mydoc_sidebar
-permalink: dataingest_sqlimport_scheduler.html
-folder: mydoc
-published: true
----
-
 The Job Scheduler allows you to import data from a SQL database into HDFS connected to TAP. Data can be imported in batch mode or by scheduling periodic, automatic updates. The Job Scheduler uses both Oozie and Sqoop to import data.
 
 ## Import data from a SQL database
