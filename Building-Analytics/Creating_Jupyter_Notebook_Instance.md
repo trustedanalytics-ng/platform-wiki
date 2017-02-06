@@ -1,16 +1,3 @@
----
-title: Jupyter
-keywords: Jupyter Notebook
-last_updated: 'January, 2017'
-tags:
-  - Jupyter
-summary: How users create a Jupyter notebook instance. 
-sidebar: mydoc_sidebar
-permalink: creating_jupyter_notebook.html
-folder: mydoc
-published: true
----
-
 ## Creating a Jupyter Notebook Instance
 
 From the TAP Console, select **Data Science**, then select **Jupyter**.
