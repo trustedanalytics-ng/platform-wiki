@@ -1,16 +1,3 @@
----
-title: Building Analytics
-keywords: building analytics spark TAP
-last_updated: 'January, 2017'
-tags:
-  - Building Analytics spark
-summary: How to get started using spark in TAP. 
-sidebar: mydoc_sidebar
-permalink: buildanalytics_sparktk.html
-folder: mydoc
-published: true
----
-
 Apache Spark is a general engine for cluster scale computing. It provides APIs for multiple languages including Python, Scala, and SQL. This page explains how to use Spark in TAP.
 
 ## Getting started with Spark
