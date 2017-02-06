@@ -1,15 +1,3 @@
----
-title: Streaming Data Ingestion
-keywords: TAP data ingestion
-last_updated: 'January, 2016'
-tags:
-  - Data Ingestion
-summary: Using the Gearpump engine to ingest streaming data. 
-sidebar: mydoc_sidebar
-permalink: dataingest_streamgearpump.html
-folder: mydoc
-published: true
----
 ## Introduction
 
 Gearpump is a lightweight real-time big data streaming engine. Gearpump is inspired by recent advances in the Akka framework and a desire to improve on existing streaming frameworks.
