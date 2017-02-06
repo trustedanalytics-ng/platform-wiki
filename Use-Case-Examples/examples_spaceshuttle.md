@@ -1,16 +1,3 @@
----
-title: Space Shuttle Example - Streaming Data
-keywords: TAP streaming data use case example
-last_updated: 'January, 2017'
-tags:
-  - examples space shuttle streaming
-summary: Space shuttle streaming data example for spark-tk. 
-sidebar: mydoc_sidebar
-permalink: examples_spaceshuttle.html
-folder: mydoc
-published: true
----
-
 ## Use Case: Streaming Data - Space Shuttle Example
 
 (Tested with TAP 0.7.3; needs updating for TAP 0.8.0)
