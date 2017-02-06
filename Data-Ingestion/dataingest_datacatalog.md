@@ -1,16 +1,3 @@
----
-title: Data Catalog Ingestion
-keywords: Data Catalog Ingestion
-last_updated: 'January, 2016'
-tags:
-  - Data Catalog Ingestion
-summary: How to ingest data to TAP using the data catalog. 
-sidebar: mydoc_sidebar
-permalink: data_catalog_ingestion.html
-folder: mydoc
-published: true
----
-
 ## Importing Data to TAP
 1.  From the TAP Console, select **Data Catalog** from the main menu then select the tab **Submit Transfer**.
 ![Ingesting Data Screen 1](/images/dataingest_datacatingest_screen1.jpg)
