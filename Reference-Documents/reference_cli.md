@@ -1,16 +1,3 @@
----
-title: TAP Reference Documents
-keywords: TAP CLI reference documents
-last_updated: 'October, 2016'
-tags:
-  - Reference
-summary: Insert the summary paragraph here.  To edit the summary you must edit the meta data for this post. 
-sidebar: mydoc_sidebar
-permalink: reference_cli.html
-folder: mydoc
-published: true
----
-
 ## TAP CLI Reference
 
 Insert content here: [http://idratherbewriting.com](http://idratherbewriting.com). Use Markdown format.
