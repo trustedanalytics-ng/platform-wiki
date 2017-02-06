@@ -1,16 +1,3 @@
----
-title: Building Analytics
-keywords: building analytics spark-tk
-last_updated: 'January, 2017'
-tags:
-  - Building Analytics spark-tk
-summary: How to get started using spark-tk in TAP. 
-sidebar: mydoc_sidebar
-permalink: buildanalytics_sparktk.html
-folder: mydoc
-published: true
----
-
 Spark-tk is an analytics toolkit library that is compatible with Apache Spark. It provides APIs for Python and Scala. This page explains how to use Spark in TAP.
 
 >Visit the [https://github.com/trustedanalytics/spark-tk](https://github.com/trustedanalytics/spark-tk) for additional information.
