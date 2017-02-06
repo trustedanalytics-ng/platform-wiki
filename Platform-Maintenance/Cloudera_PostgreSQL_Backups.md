@@ -1,16 +1,3 @@
----
-title: Cloudera PostgreSQL Backups
-keywords: Cloudera PostgreSQL Backup Restore
-last_updated: 'December, 2016'
-tags:
-  - Cloudera PostgreSQL Backup Restore
-summary: Backing up and restoring PostgreSQL to/from Cloudera. 
-sidebar: mydoc_sidebar
-permalink: cloudere_postgresql_backups.html
-folder: mydoc
-published: true
----
-
 ## Backing up PostgreSQL
 
 * The PostgreSQL instance used by Cloudera is located on the `cdh-manager` host. 
