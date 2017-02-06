@@ -1,16 +1,3 @@
----
-title: Repositories
-keywords: List of Repositories
-last_updated: 'January, 2017'
-tags:
-  - Repositories
-summary: List of repsitories for TAP 0.8.0. 
-sidebar: mydoc_sidebar
-permalink: list_repositories.html
-folder: mydoc
-published: true
----
-
 ## List of Repositories for TAP 0.8
 
 Platform tests:  
