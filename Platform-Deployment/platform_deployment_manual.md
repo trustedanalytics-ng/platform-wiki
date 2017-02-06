@@ -1,18 +1,4 @@
----
-title: TAP 0.8 Platform Deployment Manual
-keywords: platform deployment manual
-last_updated: 'January 29, 2017'
-tags:
-  - TAP Platform Deployment
-summary: Platform deployment information.
-sidebar: mydoc_sidebar
-permalink: platform-deployment-manual.html
-folder: mydoc
-published: true
----
-
-
-# Platform Deployment Manual
+#Platform Deployment Manual
 
 **Note: This information is intended for internal Intel use only. Relevant information will be extracted and presented in a public documentation web page for users.**
 
