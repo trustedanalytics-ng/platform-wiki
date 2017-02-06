@@ -1,16 +1,3 @@
----
-title: Application Deployment
-keywords: application deployment on TAP
-last_updated: 'October, 2016'
-tags:
-  - Application Deployment
-summary: If you are new to deploying applications on the Trusted Analytics platform (TAP), these steps will guide you through the process. 
-sidebar: mydoc_sidebar
-permalink: appdev_deployapp.html
-folder: mydoc
-published: true
----
-
 ## Deploying Your First Application
 
 The steps below use an example application (Spring Music) to walk you through deploying your first application on TAP.
