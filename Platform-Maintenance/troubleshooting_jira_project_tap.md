@@ -1,16 +1,3 @@
----
-title: Troubleshooting
-keywords: troubleshooting support jira issues features
-last_updated: 'November, 2016'
-tags:
-  - Troubleshooting
-summary: How users submit issues and feature requests via the JIRA site. 
-sidebar: mydoc_sidebar
-permalink: support_jira_for_tap.html
-folder: mydoc
-published: true
----
-
 ## JIRA Project
 To ease TAP development and use, a JIRA project for TAP has been created.  
 
