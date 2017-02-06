@@ -1,16 +1,4 @@
----
-title: Platform Security Features
-keywords: Platform Security
-last_updated: 'Decmber, 2016'
-tags:
-  - Platform Security
-summary: Platform Security Features for TAP. 
-sidebar: mydoc_sidebar
-permalink: platform_security_features.html
-folder: mydoc
-published: true
----
-
+#Platform Security Features
 ## Overview
 The Trusted Analytics Platform (TAP) is a big data analytics platform designed with security from the ground up. “Trust” applies to TAP as both: 
 - A “trusted platform” that provides strong security mechanisms and simplifies their use, and
