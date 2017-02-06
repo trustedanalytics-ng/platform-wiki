@@ -1,17 +1,4 @@
----
-title: Release Notes
-keywords: Release Notes
-last_updated: 'December, 2016'
-tags:
-  - Release Notes
-summary: Release Notes for TAP 0.8.0
-sidebar: mydoc_sidebar
-permalink: release_notes
-folder: mydoc
-published: true
----
-
-## Release Notes
+# Release Notes
 #General remarks
 TAP 0.8.0 is a major new release to earlier versions of TAP.
 
@@ -34,7 +21,7 @@ TBD
 
 
 
-###Feature B
+##Feature B
 TBD
 
 
@@ -69,39 +56,6 @@ To install a *new* TAP 0.7.4 instance, follow these instructions:
 ##Upgrade Instructions
 To apply the TAP 0.8.0 upgrade follow the instructions [here](https://github.com/trustedanalytics/platform-wiki-0.7/wiki/0.7.4-upgrade-procedure).
 
-
-
-
-#Applications Changed
-
-
-| Application name | TAP 0.7.4 | TAP 0.8.0 |
-| ---------------- | --------- | --------- |
-| a | 1 | 2 |
-| b | 1 | 2 |
-| c | 1 | 2 |
-| d | 1 | 2 |
-| e | 1 | 2 |
-| f | 1 | 2 |
-| g | 1 | 2 |
-| h | 1 | 2 |
-| i | 1 | 2 |
-| j | 1 | 2 |
-| k | 1 | 2 |
-| l | 1 | 2 |
-| m | 1 | 2 |
-
-
-
-
-#Fixed Problems and Issues
-
-
-| Issue Number | Description |
-| ------------ | ----------- |
-| TRACS-xxx | What it B. |
-| TRACS-xxx | What it B. |
-| TRACS-xxx | What it B. |
 
 
 
