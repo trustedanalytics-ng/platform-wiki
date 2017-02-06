@@ -1,16 +1,3 @@
----
-title: Information about Licences
-keywords: TAP Licences
-last_updated: 'November, 2016'
-tags:
-  - TAP Licences
-summary: Information about TAP Licences. 
-sidebar: mydoc_sidebar
-permalink: information_tap_licenses.html
-folder: mydoc
-published: true
----
-
 ##Information about Trusted Analytics Platform Licences
 
 Trusted Analytics Platform (TAP) is an open-source project and all the public repositories in 'trustedanalytics' GitHub org are released under the [Apache Software License](https://www.apache.org/licenses/), Version 2.0. The TAP project uses the Apache license to distribute software and documentation.
