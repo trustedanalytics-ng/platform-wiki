@@ -1,16 +1,3 @@
----
-title: Platform Administration
-keywords: platform administration - inviting users
-last_updated: 'January, 2017'
-tags:
-  - Platform Administration
-summary: Inviting users to platform. 
-sidebar: mydoc_sidebar
-permalink: administration_inviteusers.html
-folder: mydoc
-published: true
----
-
 The TAP user interface allows system admins to invite new users to the platform.
 
 ## Inviting a user to the platform
