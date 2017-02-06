@@ -1,16 +1,3 @@
----
-title: Marketplace
-keywords: TAP marketplace available services
-last_updated: 'December, 2016'
-tags:
-  - Marketplace services
-summary: List and summary of services found in TAP 0.8 marketplace. 
-sidebar: mydoc_sidebar
-permalink: marketplace_services.html
-folder: mydoc
-published: true
----
-
 ## Services Available on TAP
 
 | Service Name | Description | Service Type | Documentation |
