@@ -1,16 +1,3 @@
----
-title: Platform Health Monitoring
-keywords: Platform Health Monitoring
-last_updated: 'November, 2016'
-tags:
-  - Platform Health Monitoring
-summary: Platform Health Monitoring. 
-sidebar: mydoc_sidebar
-permalink: platform_health_monitoring.html
-folder: mydoc
-published: true
----
-
 ## Platform Health Monitoring
 TAP monitoring architecture consists of two main elements: 
   * A server in the Cloud that runs a web interface and sends change notifications.
