@@ -217,8 +217,8 @@ smtp_password: password
 smtp_port: 25
 smtp_protocol: smtp
 smtp_username: username
-    kerberos_enabled: true
-    installed_platform_offerings:
+kerberos_enabled: true
+installed_platform_offerings:
       - couchdb16
       - redis30
       - postgresql93
@@ -681,7 +681,7 @@ Generated automatically if *not* provided by the user.
 
 ---
 
-###### berberos_enabled
+###### kerberos_enabled
 
 Determines if Kerberos-based security is enforced accross Hadoop cluster.
 
