@@ -1,16 +1,3 @@
----
-title: Marketplace
-keywords: TAP marketplace creating a service instance
-last_updated: 'December, 2016'
-tags:
-  - Marketplace
-summary: How to create a service instance in the Marketplace. 
-sidebar: mydoc_sidebar
-permalink: marketplace_createinstance.html
-folder: mydoc
-published: true
----
-
 ## Creating a Service Instance
 
 1. From the TAP Console, navigate to **Marketplace** and **Services**, as shown below. 
