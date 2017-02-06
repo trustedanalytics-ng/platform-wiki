@@ -1,16 +1,3 @@
----
-title: Platform Administration
-keywords: platform administration
-last_updated: 'January, 2017'
-tags:
-  - Platform Administration
-summary: How to invite users, delete users, and change user roles. 
-sidebar: mydoc_sidebar
-permalink: administration_manageorgsusers.html
-folder: mydoc
-published: true
----
-
 ##Adding users to the organization
 
 > System admins can add users to the platform. If the user does *not* already have a user account on the platform, TAP generates an invitation email to the user.
