@@ -6,7 +6,7 @@ TAP 0.8.0 is a major new release to earlier versions of TAP.
 TAP 0.8.0 brings a new architecture and adds new features to 0.7.x.
 
 
-There is not "upgrade" to TAP 0.8.0 as it is a completely new platform installation. You can, however, save your data and migrate that data to TAP 0.8.0.
+There is no "upgrade" to TAP 0.8.0 as it is a completely new platform installation. You can, however, save your data and migrate that data to TAP 0.8.0.
 
 
 All GitHub repositories included in this TAP release were tagged with a 0.8.0 tag.
