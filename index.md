@@ -1,15 +1,3 @@
----
-title: Trusted Analytics Platform (TAP) Documentation
-keywords: Trusted Analytics Platform
-tags:
-  - Overview
-sidebar: mydoc_sidebar
-permalink: index.html
-summary: >-
-  Welcome to the Trusted Analytics Platform version 0.8 documentation.
-published: true
----
-
 ## Overview
 
 The [Trusted Analytics Platform (TAP)](http://www.trustedanalytics.org) is an open source software platform for data scientists and application developers to build and operate domain-specific applications powered by data analytics at scale.
