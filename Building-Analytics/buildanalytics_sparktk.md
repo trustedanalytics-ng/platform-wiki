@@ -6,7 +6,7 @@ Spark-tk is an analytics toolkit library that is compatible with Apache Spark. I
 
 The easiest way to get started with Spark-tk on TAP is within a Jupyter notebook, as follows:
 
-1. [Create a Jupyter notebook](/images/BuildAn_GS_Sparktk_Start_v8_Screen1.PNG.md).
+1. [Create a Jupyter notebook](/Building-Analytics/Creating_Jupyter_Notebook_Instance.md).
 
 2. Open your Jupyter instance and navigate to **jupyter-default-notebooks/notebooks/examples/tklibs/sparktk/README.ipynb**  
   
