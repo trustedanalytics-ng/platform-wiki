@@ -10,15 +10,15 @@ The easiest way to get started with Spark-tk on TAP is within a Jupyter notebook
 
 2. Open your Jupyter instance and navigate to **jupyter-default-notebooks/notebooks/examples/tklibs/sparktk/README.ipynb**  
   
-    ![Accessing Readme files](/images/BuildAn_GS_Sparktk_Start_v8_Screen2.PNG)  
+    ![Accessing Readme files](/images/BuildAn_GS_Sparktk_Start_v8_Screen1.PNG)  
   
 3. The README notebook demonstrates how to create a TkContext for Spark-tk and some simple Spark code.
 
-![Readme files in Jupyter Sample](/images/BuildAn_GS_Sparktk_Start_v8_Screen3.PNG)
+![Readme files in Jupyter Sample](/images/BuildAn_GS_Sparktk_Start_v8_Screen2.PNG)
 
 The other example notebooks show how to use Datacatalog, Frame, Latent Dirichlet Allocation, and Logistic Regression with Spark-tk.
 
-![Readme files in Jupyter Sample](/images/BuildAn_GS_Sparktk_Start_v8_Screen4.PNG)
+![Readme files in Jupyter Sample](/images/BuildAn_GS_Sparktk_Start_v8_Screen3.PNG)
 
 
 >More information about Spark is available on the [Apache Spark website](http://spark.apache.org/)
@@ -26,11 +26,11 @@ The other example notebooks show how to use Datacatalog, Frame, Latent Dirichlet
 ###Accessing a terminal from Jupyter
 1. From the Jupyter dashboard, select the **New** button located in the upper right.
 
-    ![Accessing a Terminal from Jupyter](/images/BuildAn_GS_Sparktk_Start_v8_Screen5.PNG) 
+    ![Accessing a Terminal from Jupyter](/images/BuildAn_GS_Sparktk_Start_v8_Screen4.PNG) 
 
 2. Select **Terminal** from the sub menu to open a new terminal within Jupyter. 
 
-![Jupyter Terminal](/images/BuildAn_GS_Sparktk_Start_v8_Screen6.PNG)  
+![Jupyter Terminal](/images/BuildAn_GS_Sparktk_Start_v8_Screen5.PNG)  
 
 You can enter CLI commands (spark-shell, spark-submit, etc.) in the terminal window.
 
