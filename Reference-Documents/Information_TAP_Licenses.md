@@ -1,4 +1,4 @@
-##Information about Trusted Analytics Platform Licences
+##Information about Trusted Analytics Platform(TAP) NG Licences
 
 Trusted Analytics Platform (TAP) is an open-source project and all the public repositories in 'trustedanalytics' GitHub org are released under the [Apache Software License](https://www.apache.org/licenses/), Version 2.0. The TAP project uses the Apache license to distribute software and documentation.
 
