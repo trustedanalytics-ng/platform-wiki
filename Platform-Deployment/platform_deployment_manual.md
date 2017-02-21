@@ -1,10 +1,8 @@
 #Platform Deployment Manual
 
-**Note: This information is intended for internal Intel use only. Relevant information will be extracted and presented in a public documentation web page for users.**
-
 # 1 Introduction
 
-Welcome to the TAP 0.8 Platform Deployment Manual.
+Welcome to the TAP NG Platform Deployment Manual.
 
 The goal of this document is to explain TAP deployment automation and its architecture design, and how to perform essential maintenance procedures.
 
@@ -32,7 +30,7 @@ TAP version 0.8 supports CentOS 7.2.1511 on x86_64 architecture.
 
 **Note:** It is best to provide machines with passwordless `sudo` access and key-based authentication.
 
-TAP 0.8 core functionalities are based on these technologies:
+TAP NG core functionalities are based on these technologies:
 
 * computing cluster: Kubernetes 1.3
 * persistent storage: ceph 11
@@ -40,7 +38,7 @@ TAP 0.8 core functionalities are based on these technologies:
 
 # 2 Deployment procedure in a nutshell
 
-TAP 0.8 has a unified installation procedure for both bare metal (hardware and operating systems provisioned by the user) and cloud deployments (TAP deployment automation creates infrastructure using APIs made available by IaaS providers).
+TAP NG has a unified installation procedure for both bare metal (hardware and operating systems provisioned by the user) and cloud deployments (TAP deployment automation creates infrastructure using APIs made available by IaaS providers).
 
 TAP can be installed both from binary installation package or built from sources (procedure of building TAP deployment package from sources has been described below).
 
@@ -48,7 +46,7 @@ The deployment procedure is using 2 configuration files in yaml/json format call
 
 Details on these configuration files are provided in later chapters of this manual.
 
-TAP 0.8 deployment procedure consists of 2 phases described in detail below:
+TAP NG deployment procedure consists of 2 phases described in detail below:
 * [Infrastructure provisioning](#23-infrastructure-provisioning)
 * [Platform installation](#24-platform-installation)
 
@@ -60,19 +58,19 @@ All roles used during deployment are available in the `roles/` directory. The di
 
 Installation and configuration of all underlying technologies is being performed as presented below (diagram shows sequence of Ansible role executions on target nodes):
 
-![TAP 0.8 - Platform Deployment - Deployment of underlying technologies](img/tap08-pd-ansible-1-platform-deployment.png)
+![TAP NG - Platform Deployment - Deployment of underlying technologies](img/tap08-pd-ansible-1-platform-deployment.png)
 
 Then core platform components are installed and configured:
 
-![TAP 0.8 - Platform Deployment - Deployment of core platform components](img/tap08-pd-ansible-2-core-components.png)
+![TAP NG - Platform Deployment - Deployment of core platform components](img/tap08-pd-ansible-2-core-components.png)
 
 Once the deployment of the platform is completed service offerings (provided later via TAP Marketplace) are installed:
 
-![TAP 0.8 - Platform Deployment - Deployment of service offerings](img/tap08-pd-ansible-3-marketplace.png)
+![TAP NG - Platform Deployment - Deployment of service offerings](img/tap08-pd-ansible-3-marketplace.png)
 
 Finally, sample applications are deployed:
 
-![TAP 0.8 - Platform Deployment - Deployment of sample applications](img/tap08-pd-ansible-4-samples.png)
+![TAP NG - Platform Deployment - Deployment of sample applications](img/tap08-pd-ansible-4-samples.png)
 
 ## 2.2 Building TAP from sources
 
@@ -82,7 +80,7 @@ TAP deployment package can be built from source code. For the build procedure, s
 
 ### 2.3.1 Bare-metal
 
-TAP 0.8 deployment procedure uses infrastructure provided by the user to install all components of the platform.
+TAP NG deployment procedure uses infrastructure provided by the user to install all components of the platform.
 
 All machines provided for TAP installation **must not** be shared with other systems/platforms.
 
@@ -107,7 +105,7 @@ Once the infrastructure has been successfully provisioned, you can jump to [plat
 
 ### 2.3.2 AWS
 
-TAP 0.8 deployment automation has the functionality to provision infrastructure on AWS EC2.
+TAP NG deployment automation has the functionality to provision infrastructure on AWS EC2.
 
 The infrastructure being deployed consists of VPC, subnets, EC2 instances, ELBs (Elastic Load Balancers).
 
@@ -161,13 +159,13 @@ Having properly provisioned and configured the infrastructure (scripts described
 
 `./deploy.sh deploy`.
 
-* A properly installed TAP 0.8 instance can be accessed via web console available under address: http://console.(your-domain-name) where _(your-domain-name)_ is the domain name you have provided in Master Config File (parameter 'wildcard_tap_domain_name' - see details below).
+* A properly installed TAP NG instance can be accessed via web console available under address: http://console.(your-domain-name) where _(your-domain-name)_ is the domain name you have provided in Master Config File (parameter 'wildcard_tap_domain_name' - see details below).
 
 **Notes:**
 * Your installations logs are stored in your TAP platform installation package directory, in subfolder `logs`.
 * Deployment scripts internally use Ansible (`>=2.2.1.0`), following its idempotent nature. This means you can run `./deploy.sh` deploy repeatedly, and only changes will be applied.
-* This feature can be used to repair broken host with TAP 0.8 only.
-* Automatic cluster size extension, shrinking or node role change are *not* yet supported in TAP 0.8.*.
+* This feature can be used to repair broken host with TAP NG only.
+* Automatic cluster size extension, shrinking or node role change are *not* supported in TAP NG.*.
 
 **Idempotency**
 
@@ -479,12 +477,12 @@ Machines defined herein will be later available in TAP cluser under `<name>.inst
 	For param `type` you can use several values:
 	- `local` - must be used for role `jumpbox`
 	- `ssh-key` - connection using key without password while connecting to instance
-	- `ssh-pass` - connection using password while connecting to instance (not supported yet)
-	- `ssh-key-pass` - connection using key with password while connecting to instance (not supported yet)
+	- `ssh-pass` - connection using password while connecting to instance (not supported)
+	- `ssh-key-pass` - connection using key with password while connecting to instance (not supported)
 
 	Other supported params:
 
-	- `key` - by default `~/.ssh/id_rsa`. Key file location (not supported yet)
+	- `key` - by default `~/.ssh/id_rsa`. Key file location (not supported)
 
 - **storage**
 
@@ -847,7 +845,7 @@ Such secret secret data shall be stored in a separate (never shared) file named 
 
 The default file name can be overriden by environment variable `SECRETS`.
 
-In the future, `tap.config.secrets` can be also encrypted using `ansible-vault` (*not* yet supported in TAP 0.8).
+In the future, `tap.config.secrets` can be also encrypted using `ansible-vault` (*not* supported in TAP NG).
 
 **Note:** This file must *not* be empty - at least one parameter is needed!
 
@@ -883,7 +881,7 @@ Alternatively, the user can provide a list of named devices to be used for this 
                - device: /dev/hdd5
 ```
 
-TAP 0.8 uses Ceph RADOS Block Device (RBD) to provide reliable, persistent, and distributed network attached storage for containers data storage.
+TAP NG uses Ceph RADOS Block Device (RBD) to provide reliable, persistent, and distributed network attached storage for containers data storage.
 
 When assigning roles to machines, ensure your follow either official guidance from the [Ceph project](http://docs.ceph.com/docs/master/start/hardware-recommendations/) or follow TAP configuration recommendations.
 
@@ -902,15 +900,15 @@ This configuration is recommended for trying out TAP and its analytics features.
 
 * The suggested Minimum Configuration layout consist of 2 nodes (hosts) only:
       - 1 node (computation machine):
-         * compute-master (in TAP 0.8: kubernetes master)
-         * storage-master (in TAP 0.8: ceph master)
-         * compute-worker (in TAP 0.8: kubernetes worker)
-         * storage-worker (in TAP 0.8: ceph worker)
+         * compute-master (in TAP NG: kubernetes master)
+         * storage-master (in TAP NG: ceph master)
+         * compute-worker (in TAP NG: kubernetes worker)
+         * storage-worker (in TAP NG: ceph worker)
          * jumpbox
       - 1 node (hadoop machine):
-         * hadoop-master-primary (in TAP 0.8: CDH Master Primary)
-         * hadoop-master-controller (in TAP 0.8: CDH Manager)
-         * hadoop-worker (in TAP 0.8: CDH Worker)
+         * hadoop-master-primary (in TAP NG: CDH Master Primary)
+         * hadoop-master-controller (in TAP NG: CDH Manager)
+         * hadoop-worker (in TAP NG: CDH Worker)
 
 * Hardware requirements for each node:
      * 24 GB of RAM
@@ -932,17 +930,17 @@ Characteristics of this configuration:
 
 * Suggested Medium Configuration layout consist of 8 nodes (hosts, HA disabled):
       - 1 node:
-         * compute-master (in TAP 0.8: kubernetes master)
-         * storage-master (in TAP 0.8: ceph master)
+         * compute-master (in TAP NG: kubernetes master)
+         * storage-master (in TAP NG: ceph master)
          * jumpbox
       - 3 nodes:
-         * compute-worker (in TAP 0.8: kubernetes workers)
-         * storage-worker (in TAP 0.8: ceph workers)
+         * compute-worker (in TAP NG: kubernetes workers)
+         * storage-worker (in TAP NG: ceph workers)
       - 1 node (it has to be bigger, 32GB RAM):
-         * hadoop-master-primary (in TAP 0.8: CDH Master Primary)
-         * hadoop-master-controller (in TAP 0.8: CDH Manager)
+         * hadoop-master-primary (in TAP NG: CDH Master Primary)
+         * hadoop-master-controller (in TAP NG: CDH Manager)
       - 3 nodes:
-         * hadoop-worker (in TAP 0.8: CDH Workers)
+         * hadoop-worker (in TAP NG: CDH Workers)
 
 * Hardware requirements for each node:
      * 16 GB of RAM
@@ -961,28 +959,28 @@ Characteristics of this configuration:
       - 1 node (medium instance, 2CPU + 4GB of RAM):
          * jumpbox
       - 3 nodes (large instance - 2CPU + 8GB of RAM for 10> workers, largex instance - 4CPU + 16GB of RAM for 30> workers, largex2 or even more for bigger clusters):
-         * compute-master (in TAP 0.8: kubernetes master)
+         * compute-master (in TAP NG: kubernetes master)
       - 3+ nodes (large instance, 4 CPU + 16GB of RAM - these nodes provide the real computational power of the cluster):
-         * compute-worker (in TAP 0.8: kubernetes workers)
+         * compute-worker (in TAP NG: kubernetes workers)
       - 3 nodes (medium instance - 2CPU + 4GB of RAM):
-         * storage-master (in TAP 0.8: ceph master)
-         * storage-worker (in TAP 0.8: ceph workers)
+         * storage-master (in TAP NG: ceph master)
+         * storage-worker (in TAP NG: ceph workers)
       - 0+ nodes (small instance - 2CPU + 2GB of RAM):
-         * storage-worker (in TAP 0.8: ceph workers)
+         * storage-worker (in TAP NG: ceph workers)
       - 1 node (largex instance - 4CPU + 16GB of RAM):
-         * hadoop-master-primary (in TAP 0.8: CDH Master Primary)
+         * hadoop-master-primary (in TAP NG: CDH Master Primary)
       - 1 node (largex instance - 4CPU + 16GB of RAM):
-         * hadoop-master-secondary (in TAP 0.8: CDH Master Primary)
+         * hadoop-master-secondary (in TAP NG: CDH Master Primary)
       - 1 host (largex2 instance - 8CPU + 32GB of RAM):
-         * hadoop-master-controller (in TAP 0.8: CDH Manager)
+         * hadoop-master-controller (in TAP NG: CDH Manager)
       - 3+ hosts (at least large instance - 4CPU + 16GB of RAM - these nodes provide the real power of YARN in Hadoop cluster):
-         * hadoop-worker (in TAP 0.8: CDH Worker)
+         * hadoop-worker (in TAP NG: CDH Worker)
 
 * In this setup persistent storage is installed on dedicated nodes (roles: storage-master and storage-worker). You should follow [Ceph documentation](http://docs.ceph.com/docs/jewel/start/hardware-recommendations/) on recommended hardware setups.
 
 #### Supplement: recommendations for persistent storage service (storage-* nodes)
 
-Ceph, that in TAP 0.8 provides persistent storage service, needs to run 2 daemons - ceph-mon and ceph-osd; good practice is to have minimum 3 ceph-mon and 3 ceph-osd.
+Ceph, that in TAP NG provides persistent storage service, needs to run 2 daemons - ceph-mon and ceph-osd; good practice is to have minimum 3 ceph-mon and 3 ceph-osd.
 
 It is strongly recommended to allocate for Ceph-OSD (machine role: 'storage-worker') at least 1GB RAM per 1TB storage, 1 storage drive per deamon (SSD - better performance/higher cost, HDD lower performance/lower cost) and 20GB root HDD.
 
@@ -1040,8 +1038,8 @@ Mode of operation:
 
 With proper generated Nginx configuration files, traffic is distributed to targeted applications, services and components based on the "Host" header in HTTP(S) requests.
 
-* Please note that the TLS certificate passed in Ingress objects are supported in TAP 0.8 (ones over which session key shall be negotiation with the Client from the Internet).
-* Please note that "Endpoint" Kubernetes objects, when backed up with proper "Service" and "Ingress" objects, are supported in TAP 0.8.
+* Please note that the TLS certificate passed in Ingress objects are supported in TAP NG (ones over which session key shall be negotiation with the Client from the Internet).
+* Please note that "Endpoint" Kubernetes objects, when backed up with proper "Service" and "Ingress" objects, are supported in TAP NG.
 * Please note that Ingress Load Balancers hosts are pre-loaded with TAP CA certificate and should access internal services over HTTPS.
 
 ### 5.1.4 DNS and entry router configuration with multiple Load Balancers
@@ -1111,7 +1109,7 @@ During platform installation:
 
 Using this approach, update packages can easily be distributed, which will contain only new versions of *some* images.
 
-**Note:** This update approach is not yet supported in TAP 0.8.
+**Note:** This update approach is not supported in TAP NG.
 
 ## 5.6 HA for docker registry
 
