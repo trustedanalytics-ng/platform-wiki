@@ -26,7 +26,7 @@ This document freely uses common terminology associated with those areas.
 
 ## 1.2 Deployment requirements
 
-TAP version 0.8 supports CentOS 7.2.1511 on x86_64 architecture.
+TAP version supports CentOS 7.2.1511 on x86_64 architecture.
 
 **Note:** It is best to provide machines with passwordless `sudo` access and key-based authentication.
 
@@ -74,7 +74,7 @@ Finally, sample applications are deployed:
 
 ## 2.2 Building TAP from sources
 
-TAP deployment package can be built from source code. For the build procedure, see [TAP building procedure](https://github.com/trustedanalytics/platform-wiki-0.8/blob/master/Platform-Deployment/platform_deployment_building_from_sources.md)
+TAP deployment package can be built from source code. For the build procedure, see [TAP building procedure](https://github.com/trustedanalytics-ng/tap-build-scripts/blob/master/README.md)
 
 ## 2.3 Infrastructure provisioning
 
@@ -311,7 +311,7 @@ instances:
 
 ## 3.2 Master Config File - Parameters
 
->For updates and/or further details please refer to [tap-deploy git repository](https://github.com/trustedanalytics/tap-deploy/).
+>For updates and/or further details please refer to [tap-deploy git repository](https://github.com/trustedanalytics-ng/tap-deploy/).
 
 ### 3.2.1 Required Core Parameters
 
@@ -828,7 +828,7 @@ This role requires only 1 CPU and 2 GB RAM.
 
 #### 3.2.4.12 Role _platform-monitor_
 
-Role allows remote monitoring of availability and performance of TAP cluster components. [Zabbix](http://http://www.zabbix.com/product) is being used for this purpose.
+Role allows remote monitoring of availability and performance of TAP cluster components. [Zabbix](http://www.zabbix.com/product) is being used for this purpose.
 
 **Notes:** 
 - This role can be selected no more than once.
@@ -1070,12 +1070,11 @@ To allow other services and applications to connect to the ones secured with pla
 ### 5.2.2 Architecture Diagram
 
 The following diagram describes how certificates and keys are attached to the Pods:
-
-[[img/ca.png]]
+![](img/ca.png)
 
 Lifecycle of the TLS-related Kubernetes Secrets objects:
 
-[[img/ca2.png]]
+![](img/ca2.png)
 
 ## 5.3 Network connectivity inside TAP
 
