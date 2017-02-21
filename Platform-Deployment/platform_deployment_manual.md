@@ -26,7 +26,7 @@ This document freely uses common terminology associated with those areas.
 
 ## 1.2 Deployment requirements
 
-TAP version supports CentOS 7.2.1511 on x86_64 architecture.
+TAP NG supports CentOS 7.2.1511 on x86_64 architecture.
 
 **Note:** It is best to provide machines with passwordless `sudo` access and key-based authentication.
 
@@ -311,7 +311,7 @@ instances:
 
 ## 3.2 Master Config File - Parameters
 
->For updates and/or further details please refer to [tap-deploy git repository](https://github.com/trustedanalytics-ng/tap-deploy/).
+For updates and/or further details please refer to [tap-deploy git repository](https://github.com/trustedanalytics-ng/tap-deploy/).
 
 ### 3.2.1 Required Core Parameters
 
